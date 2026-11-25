@@ -1573,24 +1573,24 @@
     },
     "effects": [
       {
+        "attackCount": 1,
+        "amountMode": "percent",
+        "inflictChance": 100,
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "poison",
         "type": "heal",
         "trigger": "on_use",
         "target": "self",
         "stat": "atk",
         "amount": 100,
-        "attackCount": 1,
-        "amountMode": "percent",
         "chance": 100,
-        "inflictChance": 100,
-        "duration": 0,
-        "immunityKind": "both",
-        "charges": 0,
-        "stealMode": "temporary",
-        "percent": 10,
-        "cleanseType": "poison"
+        "duration": 0
       }
     ],
-    "image": "assets/items/I028.png"
+    "image": "assets/items/I900.png"
   },
   {
     "id": "I901",
