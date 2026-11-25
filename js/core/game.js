@@ -1,6 +1,38 @@
 (()=>{'use strict';
 const $=id=>document.getElementById(id), TEST_MODE=new URLSearchParams(location.search).get('test')==='1' && ['localhost','127.0.0.1'].includes(location.hostname), AUTO=TEST_MODE?'chainquest_test_auto_v1':'chainquest_auto_v1',MANUAL=TEST_MODE?'chainquest_test_manual_v1':'chainquest_manual_v1';
 const TYPES={equipment:'装備',items:'アイテム',guests:'ゲスト',skills:'スキル'};
+
+// Resolve site-root asset paths under the GitHub Pages project prefix.
+// Local editor/server paths remain relative to the game directory.
+const cqAssetUrl=path=>{
+ if(typeof path!=='string'||!path)return path;
+ if(/^(?:https?:|data:|blob:|\/\/)/i.test(path))return path;
+ const clean=path.replace(/^\/+/, '');
+ if(!/^(?:assets|data|css|js)\//i.test(clean))return path;
+ return new URL(clean,document.baseURI).href;
+};
+// The editor can store common image paths with a leading slash.
+const cqImageUrl=path=>cqAssetUrl(path);
+const cqClampVolume=n=>Math.max(0,Math.min(1,Number(n)||0));
+let voiceVolume=cqClampVolume(Number(localStorage.getItem('cq-voice-volume')??100)/100);
+const cqVoiceLevel=individual=>cqClampVolume(voiceVolume*cqClampVolume(individual));
+const cqVoicePlayers=new Map();
+function cqPlayVoice(audio,individual=1){
+ const level=cqClampVolume(individual);
+ audio.volume=cqVoiceLevel(level);
+ cqVoicePlayers.set(audio,level);
+ const cleanup=()=>cqVoicePlayers.delete(audio);
+ audio.addEventListener('ended',cleanup,{once:true});
+ audio.addEventListener('error',cleanup,{once:true});
+ audio.play().catch(cleanup);
+ return audio;
+}
+function cqSetVoiceVolume(percent){
+ voiceVolume=cqClampVolume(Number(percent)/100);
+ localStorage.setItem('cq-voice-volume',String(Math.round(voiceVolume*100)));
+ for(const [audio,individual] of cqVoicePlayers){if(audio.ended){cqVoicePlayers.delete(audio);continue}audio.volume=cqVoiceLevel(individual)}
+}
+
 let state=null,screen='title',busy=false,bubbleTimer=null,voice=null,previous=-1,shopType='items',pickType=null;
 let catalog={equipment:[],items:[],guests:[],skills:[],enemies:[],scenarios:[],events:[]};let collectionConfig={portrait:'',background:'',requests:[],voices:{},shopSE:{},shopRandomVoices:{}};let collectionTab='all',collectionSelected=null;let characterRows=[];
 // Stage 58: music controller; retains playback position for each track across battles.
@@ -115,11 +147,11 @@ function randomVoice(key){
  try{
   const audio=new Audio(paths[Math.floor(Math.random()*paths.length)]);
   randomVoiceAudio=audio;
-  audio.volume=Math.max(0,Math.min(1,seVolume*Number(setting.volume??100)/100));
+  cqPlayVoice(audio,Number(setting.volume??100)/100);
   const release=()=>{if(randomVoiceAudio===audio)randomVoiceAudio=null};
   audio.addEventListener('ended',release,{once:true});
   audio.addEventListener('error',release,{once:true});
-  audio.play().catch(e=>{release();console.warn('ランダムボイス再生失敗',key,e)});
+  
  }catch(e){console.warn('ランダムボイス再生失敗',key,e)}
 }
 // 共通の決定・キャンセル音。戦闘コマンドには専用SEがあるため重複させない。
@@ -286,7 +318,8 @@ function prepareShopPortraitEntry(){
  node.dataset.portraitGeneration=String((Number(node.dataset.portraitGeneration)||0)+1);
  node.classList.remove('custom-art-ready');
 }
-function commonImgSrc(path){if(path==='assets/ui/coin.png')return commonImg('coin',path);if(path==='assets/ui/medicine.png')return commonImg('medicine',path);return path}
+function commonImgSrc(path){if(path==='assets/ui/coin.png')return cqImageUrl(commonImg('coin',path));if(path==='assets/ui/medicine.png')return cqImageUrl(commonImg('medicine',path));return cqImageUrl(path)}
+document.getElementById('voice-volume')?.addEventListener('input',e=>cqSetVoiceVolume(e.target.value));if(document.getElementById('voice-volume'))document.getElementById('voice-volume').value=Math.round(voiceVolume*100);
 document.getElementById('se-volume')?.addEventListener('input',e=>{seVolume=Number(e.target.value)/100;localStorage.setItem('cq-se-volume',e.target.value)});if(document.getElementById('se-volume'))document.getElementById('se-volume').value=Math.round(seVolume*100);
 fetch('data/common_assets.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(v=>{if(!v)return;Object.assign(commonAssets,v);for(const key of ['home','adventure','battle','victory','defeat'])if(v.bgm?.[key])music.settings[key]=v.bgm[key];applyCommonImages();refreshSharedBackButtons();if(state)renderAdventure();musicSync()}).catch(()=>{});
 let collectionExpression=null,collectionExpressionTimer=null,collectionExpressionAudio=null,collectionExpressionSerial=0;
@@ -295,7 +328,7 @@ function resetShopExpression(){shopExpressionSerial++;if(shopExpressionTimer!==n
 let shopPortraitType='A';
 function playShopAudio(path,onFinish){
  if(!/^assets\/(?:voices|audio\/se)\/[\w.-]+\.mp3$/i.test(path||''))return null;
- try{const audio=new Audio(path);audio.volume=seVolume;audio.addEventListener('ended',onFinish,{once:true});audio.play().catch(()=>onFinish());return audio}catch{return null}
+ try{const audio=new Audio(path);audio.addEventListener('ended',onFinish,{once:true});if(/^assets\/voices\//i.test(path))cqPlayVoice(audio);else{audio.volume=seVolume;audio.play().catch(()=>onFinish())}return audio}catch{return null}
 }
 function shopExpressionVoice(key){
  if(screen!=='shop')return;
@@ -331,10 +364,10 @@ function collectionExpressionVoice(key){
  // SEがない場合・再生できない場合は2秒後に通常表情へ戻す。
  if(!/^assets\/(?:voices|audio\/se)\/[\w.-]+\.mp3$/i.test(path)){collectionExpressionTimer=setTimeout(finish,2000);return}
  try{
-  const audio=new Audio(path);collectionExpressionAudio=audio;audio.volume=seVolume;
+  const audio=new Audio(path);collectionExpressionAudio=audio;if(/^assets\/voices\//i.test(path))cqPlayVoice(audio);else audio.volume=seVolume;
   audio.addEventListener('ended',finish,{once:true});
   audio.addEventListener('error',()=>{if(serial===collectionExpressionSerial){collectionExpressionTimer=setTimeout(finish,2000)}},{once:true});
-  audio.play().catch(()=>{if(serial===collectionExpressionSerial){collectionExpressionTimer=setTimeout(finish,2000)}});
+  if(!/^assets\/voices\//i.test(path))audio.play().catch(()=>{if(serial===collectionExpressionSerial){collectionExpressionTimer=setTimeout(finish,2000)}});
  }catch(e){collectionExpressionTimer=setTimeout(finish,2000)}
 }
 // Collection voices are handled separately by the collection expression player.
@@ -498,7 +531,7 @@ function renderItemPage(){if(!state)return;const tabs=$('item-tabs'),list=$('ite
  $('picker-title').textContent='装備する枠を選択';
  for(const slot of slots){const b=document.createElement('button');b.className='pick-entry';const current=item(itemCategory,pickerSlotId(itemCategory,slot.index));b.textContent=`${slot.label}：${current?.name||'未装備'}`;b.onclick=()=>applyItemSlot(slot.index);root.append(b)}
  $('picker-confirm').hidden=true;detailPanel.hidden=true;
- $('picker-close').onclick=()=>{$('picker').classList.remove('open')};$('picker').classList.add('open')};detail.append(equip);if(canUpgrade){const rank=String(row.rank||'C').toUpperCase(),cost=(UPGRADE_COST[rank]||UPGRADE_COST.C)[lv-1];const up=document.createElement('button');up.className='btn';if(lv>=3)up.textContent='Lv.3';else{up.textContent='強化 ';const med=commonAssets.images?.medicine;if(med){const icon=document.createElement('img');icon.src='/'+med.replace(/^\//,'');icon.alt='おくすり';icon.className='upgrade-medicine-icon';up.append(icon)}else up.append(' 💊');up.append(' ×'+cost)};up.disabled=lv>=3||state.player.medicine<cost||!!state.adventure;up.onclick=()=>modal(`${row.name}を
+ $('picker-close').onclick=()=>{$('picker').classList.remove('open')};$('picker').classList.add('open')};detail.append(equip);if(canUpgrade){const rank=String(row.rank||'C').toUpperCase(),cost=(UPGRADE_COST[rank]||UPGRADE_COST.C)[lv-1];const up=document.createElement('button');up.className='btn';if(lv>=3)up.textContent='Lv.3';else{up.textContent='強化 ';const med=commonAssets.images?.medicine;if(med){const icon=document.createElement('img');icon.src=cqImageUrl(med);icon.alt='おくすり';icon.className='upgrade-medicine-icon';up.append(icon)}else up.append(' 💊');up.append(' ×'+cost)};up.disabled=lv>=3||state.player.medicine<cost||!!state.adventure;up.onclick=()=>modal(`${row.name}を
 Lv.${lv+1}に強化しますか？
 （おくすり×${cost}）`,()=>{if(state.player.medicine<cost||ownedLevel(itemCategory,row.id)!==lv)return;state.player.medicine-=cost;state.itemLevels[itemCategory+':'+row.id]=lv+1;auto();update();renderItemPage();const eventId=itemCategory==='equipment'&&lv+1===3?row.level3EventId:null;const eventKey='equipmentLv3:'+row.id;if(eventId&&!state.flags[eventKey]&&catalog.events.some(e=>e.id===eventId)){state.flags[eventKey]=true;auto();notifyDialog('強化成功',`${row.name} Lv.${lv+1}`,null,()=>runEvent(eventId,{returnTo:'items-page'}))}else notifyDialog('強化成功',`${row.name} Lv.${lv+1}`)});detail.append(up);if(state.adventure){const hint=document.createElement('p');hint.textContent='冒険中は強化できません';detail.append(hint)}}}
 
@@ -512,9 +545,9 @@ function playGuestAffectionVoice(guestId){
  const paths=cfg.paths.filter(p=>/^assets\/(?:voices|audio\/se)\/[\w.-]+\.mp3$/i.test(p));
  if(!paths.length)return;
  const audio=new Audio(paths[Math.floor(Math.random()*paths.length)]);
- guestAffectionAudio=audio;audio.volume=Math.max(0,Math.min(1,seVolume*Number(cfg.volume??100)/100));
+ guestAffectionAudio=audio;cqPlayVoice(audio,Number(cfg.volume??100)/100);
  audio.onended=()=>{if(guestAffectionAudio===audio)guestAffectionAudio=null};
- audio.play().catch(e=>console.warn('ゲスト好感度ボイス再生失敗',guestId,e));
+ 
 }
 // ゲストスキルの専用ボイスは、ノカの共通ランダムボイスとは別チャンネルで再生。
 const guestSkillVoiceAudio={auto:null,manual:null};
@@ -525,9 +558,9 @@ function playGuestSkillVoice(guestId,kind){
  if(!paths.length||Math.random()*100>=Math.max(0,Math.min(100,Number(cfg.chance??100))))return;
  const prior=guestSkillVoiceAudio[kind];if(prior&&!prior.paused&&!prior.ended)return;
  try{const audio=new Audio(paths[Math.floor(Math.random()*paths.length)]);guestSkillVoiceAudio[kind]=audio;
- audio.volume=Math.max(0,Math.min(1,seVolume*Number(cfg.volume??100)/100));
+ cqPlayVoice(audio,Number(cfg.volume??100)/100);
  const release=()=>{if(guestSkillVoiceAudio[kind]===audio)guestSkillVoiceAudio[kind]=null};
- audio.onended=release;audio.onerror=release;audio.play().catch(err=>{release();console.warn('ゲストスキルボイス再生失敗',guestId,kind,err)})
+ audio.onended=release;audio.onerror=release;
  }catch(err){console.warn('ゲストスキルボイス再生失敗',guestId,kind,err)}
 }
 function grantAffection(){const gains=[];state.pendingGuestEvents??=[];for(const id of equippedGuestIds()){const old=state.guestAffection[id]||0;if(old>=20)continue;const next=Math.min(20,old+1);state.guestAffection[id]=next;const guest=item('guests',id);if(next===20&&!state.guestEventsDone[id]){state.guestEventsDone[id]=true;state.pendingGuestEvents.push({guestId:id,eventId:guest?.affectionEventId||null,name:guest?.name||'ゲスト'})}gains.push({id,name:guest?.name||'ゲスト',level:next,bonus:old<10&&next>=10,hearts:affectionHearts(id)})}return gains}
@@ -576,7 +609,7 @@ $('continue').onclick=()=>{renderSaves();go('select')};
 function renderSaves(){const root=$('save-list');root.replaceChildren();for(const [label,key] of [['AUTO SAVE',AUTO],['MANUAL SAVE',MANUAL]]){const s=load(key),b=document.createElement('button');b.className='btn save-entry';b.disabled=!s;if(s){const date=s.savedAt?new Date(s.savedAt).toLocaleString('ja-JP'):'日時不明';b.replaceChildren();const line=document.createElement('span');line.className='save-entry-line';const level=document.createElement('span');level.textContent=`${label}　Lv.${s.player.level}`;line.append(level);for(const [icon,count,name] of [['coin.png',s.player.coins,'コイン'],['medicine.png',s.player.medicine,'おくすり']]){const currency=document.createElement('span');currency.className='save-entry-currency';const pic=document.createElement('img');pic.src=commonImgSrc('assets/ui/'+icon);pic.alt=name;pic.onerror=()=>{pic.style.display='none';currency.setAttribute('aria-label',name+' '+count)};const value=document.createElement('span');value.textContent='×'+String(Math.max(0,Math.floor(Number(count)||0))).padStart(3,'0');currency.append(pic,value);line.append(currency)}b.append(line);const info=document.createElement('span');info.className='save-entry-info';info.textContent=`${s.location||'ホーム'}　|　${date}${s.recoveredFromBackup?'　【バックアップから復旧】':''}`;b.append(info);b.onclick=()=>{state=s;state.adventure=null;state.battle=null;state.novel=null;state.eventProgress=null;state.eventBattlePending=false;state.eventBattlePendingPortrait=false;state.pendingGuestEvent=null;state.pendingGuestEvents=[];battle=null;go('home');}}else b.textContent=`${label}　―　データなし`;root.append(b)}}
 $('save').onclick=()=>{if(!saveSafe()||screen!=='home'){notice('手動セーブはホーム画面で行ってください。');return}modal('現在のデータを手動セーブ枠に保存しますか？',()=>{if(write(MANUAL))notice('手動セーブしました。')})};
 document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>go(b.dataset.go)));
-$('hero').onclick=()=>{if(!state)return;hideBubble();let choices=lines.map((_,i)=>i).filter(i=>i!==previous);if(!choices.length)choices=lines.map((_,i)=>i);const index=choices[Math.floor(Math.random()*choices.length)];previous=index;const line=lines[index];$('bubble').textContent=line.text;$('bubble').hidden=false;if(line.voice){voice=new Audio('assets/voices/'+line.voice);voice.onended=hideBubble;voice.onerror=()=>bubbleTimer=setTimeout(hideBubble,3000);voice.play().catch(()=>bubbleTimer=setTimeout(hideBubble,3000))}else bubbleTimer=setTimeout(hideBubble,3000)};
+$('hero').onclick=()=>{if(!state)return;hideBubble();let choices=lines.map((_,i)=>i).filter(i=>i!==previous);if(!choices.length)choices=lines.map((_,i)=>i);const index=choices[Math.floor(Math.random()*choices.length)];previous=index;const line=lines[index];$('bubble').textContent=line.text;$('bubble').hidden=false;if(line.voice){voice=new Audio('assets/voices/'+line.voice);cqPlayVoice(voice);voice.onended=hideBubble;voice.onerror=()=>bubbleTimer=setTimeout(hideBubble,3000);}else bubbleTimer=setTimeout(hideBubble,3000)};
 async function refreshCatalog(){
  const results=await Promise.all([...Object.keys(TYPES),'enemies','scenarios','events'].map(async k=>{
   const useApi=!chainQuestStaticHosting&&['scenarios','enemies'].includes(k);
@@ -856,7 +889,7 @@ function applySharedButtonArt(button,key){
  img.onload=()=>{if(img.isConnected)img.style.visibility='visible'};
  img.onerror=()=>{if(img.isConnected){img.remove();button.classList.remove('cq-shared-button');if(button.classList.contains('book-start'))button.textContent=button.dataset.cqButtonLabel||'冒険開始'}};
  button.append(img);
- img.src='/'+path.replace(/^\//,'');
+ img.src=cqImageUrl(path);
 }
 function refreshSharedBackButtons(){
  document.querySelectorAll('.screen button').forEach(b=>{
@@ -884,7 +917,7 @@ function renderAdventure(){if(!state)return;const root=$('scenario-list'),active
  if(!start.dataset.cqButtonLabel){start.textContent='冒険開始';start.dataset.cqButtonLabel='冒険開始'}
  // Updates artwork only if the configured image path has actually changed.
  applySharedButtonArt(start,'buttonAdventureStart');
- for(let i=0;i<3;i++){const d=DIFFICULTIES[i],cleared=!!progress[d]?.clears,available=i===0||!!progress[DIFFICULTIES[i-1]]?.clears;const b=document.createElement('button');b.className='book-difficulty'+(d===chosen?' selected':'');b.disabled=!available;b.textContent=d+(cleared?'  ✓':'');if(!available){const lock=commonAssets.images?.slotLocked;if(lock){const im=document.createElement('img');im.src='/'+lock.replace(/^\//,'');im.alt='未解放';im.className='difficulty-lock-image';b.append(im)}else b.append('  🔒')}b.onclick=()=>{bookDifficultyChoice[c.id]=d;renderAdventure()};left.append(b)}
+ for(let i=0;i<3;i++){const d=DIFFICULTIES[i],cleared=!!progress[d]?.clears,available=i===0||!!progress[DIFFICULTIES[i-1]]?.clears;const b=document.createElement('button');b.className='book-difficulty'+(d===chosen?' selected':'');b.disabled=!available;b.textContent=d+(cleared?'  ✓':'');if(!available){const lock=commonAssets.images?.slotLocked;if(lock){const im=document.createElement('img');im.src=cqImageUrl(lock);im.alt='未解放';im.className='difficulty-lock-image';b.append(im)}else b.append('  🔒')}b.onclick=()=>{bookDifficultyChoice[c.id]=d;renderAdventure()};left.append(b)}
  start.onclick=()=>{const d=bookDifficultyChoice[c.id]||'EASY';const index=DIFFICULTIES.indexOf(d);if(index>0&&!progress[DIFFICULTIES[index-1]]?.clears)return;const count=Math.max(1,Math.floor(scenarioAreas(c,d).length||Number(c.areaCount)||1));state.flags??={};state.flags['scenario-viewed:'+c.id]=true;state.adventure={scenarioId:c.id,difficulty:d,area:0,areaCount:count,areaResolved:false,hp:effective('maxHp'),coins:0,pendingTrapDamage:0,uses:{}};counterStore('scenario');state.counters.scenario={};for(const row of counterDefinitions.filter(x=>x.scope==='scenario'))state.counters.scenario[row.id]=row.initial||0;if(state.eventDrawPools)state.eventDrawPools.scenario={};auto();restoreEventBgm(true);music.unlocked=true;const previousFade=music.fadeMs;music.fadeMs=0;musicSync();music.fadeMs=previousFade;renderAdventure();randomVoice('departure')};left.append(start);
  if(DIFFICULTIES.every(d=>progress[d]?.clears)){const badge=document.createElement('p');badge.className='book-allclear';badge.textContent='ALL CLEAR';left.append(badge)}
  const art=document.createElement('div');art.className='book-world-art';const image=c.worldImage||c.asset||`assets/backgrounds/world${String(c.id).replace(/\D/g,'').padStart(3,'0')}.png`;const im=document.createElement('img');im.src=image;im.alt=c.name||'';im.style.transform=`translate(${Number(c.illustrationX)||0}px,${Number(c.illustrationY)||0}px) scale(${Math.max(.3,Math.min(4,(Number(c.illustrationScale)||100)/100))})`;im.onerror=()=>{im.remove();art.textContent='挿絵未設定'};art.append(im);right.append(art);const title=document.createElement('h3');title.textContent=c.name||c.id;title.classList.add('book-centered-text');right.append(title);const desc=document.createElement('p');desc.className='book-centered-text book-world-description';desc.textContent=c.description||'';desc.style.whiteSpace='pre-wrap';desc.style.color='#17253c';desc.style.fontWeight='700';desc.style.webkitTextStroke='0.35px rgba(255,255,255,.95)';desc.style.textShadow='0 1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff, 0 2px 3px rgba(255,255,255,.85)';desc.style.background='none';desc.style.border='none';desc.style.borderRadius='0';desc.style.padding='4px 10px';desc.style.boxSizing='border-box';desc.style.maxWidth='calc(100% - 20px)';desc.style.margin='12px auto';desc.style.lineHeight='1.8';desc.style.fontSize='clamp(14px, 1.3vw, 17px)';desc.style.overflowWrap='anywhere';right.append(desc)
@@ -1536,7 +1569,7 @@ function treasureEvent(step,progress){
  const shade=document.createElement('div');shade.className='cq-treasure-overlay';
  const card=document.createElement('div');card.className='cq-treasure-card';shade.append(card);
  const heading=document.createElement('h3');heading.textContent=step.foundText||'宝箱を発見した！';card.append(heading);
- const src=commonAssets.images?.[artKey];if(src){const img=document.createElement('img');img.src='/'+src.replace(/^\//,'');img.alt='宝箱';img.className='cq-treasure-image';card.append(img)}
+ const src=commonAssets.images?.[artKey];if(src){const img=document.createElement('img');img.src=cqImageUrl(src);img.alt='宝箱';img.className='cq-treasure-image';card.append(img)}
  const info=document.createElement('p');info.textContent=rank&&!keys.length?'対応する鍵を持っていない。':'開けますか？';card.append(info);
  const buttons=document.createElement('div');buttons.className='cq-treasure-buttons';card.append(buttons);
  const button=(label,fn)=>{const b=document.createElement('button');b.type='button';b.className='btn';b.textContent=label;b.onclick=fn;buttons.append(b);return b};
@@ -1624,7 +1657,7 @@ function eventDrawBranch(step,progress){
  pool.remaining[selected]--;progress.index=valid[selected].next;auto();return true;
 }
 function highLowCardLabel(value){return ['','A','2','3','4','5','6','7','8','9','10','J','Q','K'][value]||'?'}
-function highLowCardImage(value){const key='highLowCard'+value;const path=commonAssets.images?.[key];return path?'/'+path.replace(/^\//,''):''}
+function highLowCardImage(value){const key='highLowCard'+value;const path=commonAssets.images?.[key];return path?cqImageUrl(path):''}
 function playHighLow(step,progress){
  const stepIndex=progress.index-1,key='highlow:'+progress.id+':'+stepIndex;
  progress.highLowPlayed??={};
@@ -1833,7 +1866,7 @@ let novelHistory=[],novelHistoryOpen=false,novelHistoryAudio=null,novelHistoryLa
 function novelStopHistoryAudio(){if(novelHistoryAudio){novelHistoryAudio.pause();novelHistoryAudio.currentTime=0;novelHistoryAudio=null}}
 function novelResetHistory(){novelStopHistoryAudio();novelHistory=[];novelHistoryLastKey='';novelToggleHistory(false)}
 function novelToggleHistory(open){novelHistoryOpen=!!open;const pane=$('novel-history');if(!pane)return;pane.hidden=!novelHistoryOpen;if(novelHistoryOpen){novelRenderHistory();pane.focus()}else novelStopHistoryAudio()}
-function novelRenderHistory(){const list=$('novel-history-list');if(!list)return;list.replaceChildren();for(const entry of novelHistory){const row=document.createElement('div');row.className='novel-history-entry';const speaker=document.createElement('strong');speaker.textContent=entry.speaker||' ';const body=document.createElement('span');body.textContent=entry.text;row.append(speaker,body);if(entry.voice&&/^assets\/voices\/[\w./-]+\.mp3$/i.test(entry.voice)){const play=document.createElement('button');play.type='button';play.className='novel-history-play';play.textContent='▶ 音声を再生';play.onclick=()=>{novelStopHistoryAudio();novelStopVoice();novelHistoryAudio=new Audio(entry.voice);novelHistoryAudio.volume=entry.volume;novelHistoryAudio.play().catch(()=>notice('音声ファイルを再生できませんでした。'))};row.append(play)}list.append(row)}list.scrollTop=list.scrollHeight}
+function novelRenderHistory(){const list=$('novel-history-list');if(!list)return;list.replaceChildren();for(const entry of novelHistory){const row=document.createElement('div');row.className='novel-history-entry';const speaker=document.createElement('strong');speaker.textContent=entry.speaker||' ';const body=document.createElement('span');body.textContent=entry.text;row.append(speaker,body);if(entry.voice&&/^assets\/voices\/[\w./-]+\.mp3$/i.test(entry.voice)){const play=document.createElement('button');play.type='button';play.className='novel-history-play';play.textContent='▶ 音声を再生';play.onclick=()=>{novelStopHistoryAudio();novelStopVoice();novelHistoryAudio=new Audio(entry.voice);cqPlayVoice(novelHistoryAudio,entry.volume)};row.append(play)}list.append(row)}list.scrollTop=list.scrollHeight}
 
 function novelArt(node,path,fallback){node.replaceChildren();if(!path){node.textContent=fallback||'';return}const img=document.createElement('img');img.alt='';img.src=path;img.onerror=()=>{node.replaceChildren();node.textContent=fallback||'NO IMAGE'};node.append(img)}
 // Crossfade expression changes without removing the standing portrait or its placement.
@@ -2016,7 +2049,7 @@ function novelRender(){
  novelApplySpeakerHighlight(step);
  const choices=$('novel-choices');choices.replaceChildren();const list=Array.isArray(step.choices)?step.choices:[];choices.hidden=!list.length;
  for(const choice of list){const b=document.createElement('button');b.textContent=choice.text||'選択';b.onclick=()=>{if(choice.cost&&!eventPayment(choice.cost)){notice('コイン・おくすり・アイテムが足りません。');return}if(choice.completeEvent&&state?.eventProgress)state.flags['event-complete:'+state.eventProgress.id]=true;if(Number.isInteger(choice.eventNext)&&state?.eventProgress&&choice.eventNext>=0&&choice.eventNext<(item('events',state.eventProgress.id)?.steps||[]).length){novelChoiceEventNext=choice.eventNext;novelEnd();return}if(typeof choice.next==='number'&&choice.next>=0&&choice.next<novelSteps.length){novelIndex=choice.next;novelRender()}else{novelIndex++;novelRender()}};choices.append(b)}
- const voicePath=shared?.voice||step.voice;if(voicePath&&typeof voicePath==='string'&&/^assets\/voices\/[\w./-]+\.mp3$/i.test(voicePath)){novelVoice=new Audio(voicePath);novelVoice.volume=Math.max(0,Math.min(1,Number(shared?.voiceVolume??step.voiceVolume??100)/100));novelVoice.play().catch(()=>{})}
+ const voicePath=shared?.voice||step.voice;if(voicePath&&typeof voicePath==='string'&&/^assets\/voices\/[\w./-]+\.mp3$/i.test(voicePath)){novelVoice=new Audio(voicePath);cqPlayVoice(novelVoice,Number(shared?.voiceVolume??step.voiceVolume??100)/100)}
 }
 function novelAdvance(){if(novelHistoryOpen||novelInputSuspended||!$('novel-choices').hidden||Date.now()-novelLastRenderedAt<NOVEL_MIN_READ_MS)return;novelIndex++;novelRender()}
 function clearNovelDialogueForTransition(){
