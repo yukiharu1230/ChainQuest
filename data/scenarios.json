@@ -380,7 +380,7 @@
     "chestEvents": []
   },
   {
-    "id": "C009",
+    "id": "C006",
     "name": "桜華咲き誇る神楽殿",
     "description": "散ることのない桜に囲まれた神社で、神々と人間が古い契約によって結ばれている。\nあなたは、神楽殿の異変を解決する救世主（奉納者）である。",
     "areaCount": 10,
@@ -470,8 +470,8 @@
     "illustrationScale": 100,
     "illustrationX": 0,
     "illustrationY": 0,
-    "adventureBackground": "",
-    "battleBackground": "",
+    "adventureBackground": "assets/backgrounds/C006_adventure.jpg",
+    "battleBackground": "assets/backgrounds/C006_battle.jpg",
     "bgm": "",
     "bgmVolume": 100,
     "unlock": {
@@ -2164,8 +2164,8 @@
   },
   {
     "id": "C005",
-    "name": "星なき夜の隠し書庫",
-    "description": "星の消えた世界で、禁じられた知識と消された歴史を封じ続ける巨大な図書館。\nあなたは、書庫の異変を解決する救世主（語り部）である。",
+    "name": "光なき夜の隠し書庫",
+    "description": "光の消えた世界で、禁じられた知識と消された歴史を封じ続ける巨大な図書館。\nあなたは、書庫の異変を解決する救世主（語り部）である。",
     "areaCount": 10,
     "unlock": {
       "type": "always"
@@ -2293,7 +2293,7 @@
         },
         {
           "mode": "EVENT",
-          "eventId": "V125"
+          "eventId": ""
         }
       ],
       "NORMAL": [
@@ -2364,7 +2364,7 @@
         },
         {
           "mode": "EVENT",
-          "eventId": "V126"
+          "eventId": ""
         }
       ],
       "HARD": [
@@ -2435,26 +2435,46 @@
         },
         {
           "mode": "EVENT",
-          "eventId": "V127"
+          "eventId": ""
         }
       ]
     },
     "chestEvents": [
       {
         "eventId": "V120",
-        "weight": 20
+        "weight": 20,
+        "difficulties": [
+          "EASY",
+          "NORMAL",
+          "HARD"
+        ]
       },
       {
         "eventId": "V121",
-        "weight": 25
+        "weight": 25,
+        "difficulties": [
+          "EASY",
+          "NORMAL",
+          "HARD"
+        ]
       },
       {
         "eventId": "V122",
-        "weight": 30
+        "weight": 30,
+        "difficulties": [
+          "EASY",
+          "NORMAL",
+          "HARD"
+        ]
       },
       {
         "eventId": "V123",
-        "weight": 35
+        "weight": 35,
+        "difficulties": [
+          "EASY",
+          "NORMAL",
+          "HARD"
+        ]
       }
     ],
     "difficultyStats": {
@@ -2529,7 +2549,7 @@
     "difficultyAreaOverrides": {}
   },
   {
-    "id": "C006",
+    "id": "C009",
     "name": "蒼憂惑う隔離病棟",
     "description": "青白い光に照らされた世界で、正体不明の病と患者たちの絶望が蔓延する閉鎖病棟。\nあなたは、病棟の異変を解決する救世主（レジデント）である。",
     "areaCount": 10,
@@ -2659,7 +2679,7 @@
         },
         {
           "mode": "EVENT",
-          "eventId": "V135"
+          "eventId": ""
         }
       ],
       "NORMAL": [
@@ -2730,7 +2750,7 @@
         },
         {
           "mode": "EVENT",
-          "eventId": "V136"
+          "eventId": ""
         }
       ],
       "HARD": [
@@ -2801,26 +2821,46 @@
         },
         {
           "mode": "EVENT",
-          "eventId": "V137"
+          "eventId": ""
         }
       ]
     },
     "chestEvents": [
       {
         "eventId": "V130",
-        "weight": 20
+        "weight": 20,
+        "difficulties": [
+          "EASY",
+          "NORMAL",
+          "HARD"
+        ]
       },
       {
         "eventId": "V131",
-        "weight": 25
+        "weight": 25,
+        "difficulties": [
+          "EASY",
+          "NORMAL",
+          "HARD"
+        ]
       },
       {
         "eventId": "V132",
-        "weight": 30
+        "weight": 30,
+        "difficulties": [
+          "EASY",
+          "NORMAL",
+          "HARD"
+        ]
       },
       {
         "eventId": "V133",
-        "weight": 35
+        "weight": 35,
+        "difficulties": [
+          "EASY",
+          "NORMAL",
+          "HARD"
+        ]
       }
     ],
     "difficultyStats": {
@@ -2860,12 +2900,12 @@
       "HARD": 12
     },
     "sample": true,
-    "worldImage": "assets/ui/C006.png",
+    "worldImage": "assets/ui/C009.png",
     "illustrationScale": 100,
     "illustrationX": 0,
     "illustrationY": 0,
-    "adventureBackground": "assets/backgrounds/C006_adventure.jpg",
-    "battleBackground": "assets/backgrounds/C006_battle.jpg",
+    "adventureBackground": "assets/backgrounds/C009_adventure.jpg",
+    "battleBackground": "assets/backgrounds/C009_battle.jpg",
     "bgm": "",
     "bgmVolume": 100,
     "adventurePrompts": {

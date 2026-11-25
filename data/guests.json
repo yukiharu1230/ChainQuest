@@ -2,7 +2,7 @@
   {
     "id": "G011",
     "name": "紫雲しあ（ギャゥ）",
-    "description": "行動前、時々攻撃無効化。",
+    "description": "行動前、時々攻撃無効化。\n沈黙耐性50％UP。",
     "supportMessage": "{guest}の支援！ {effects}",
     "activeSkill": {},
     "trapDisarm": 0,
@@ -34,27 +34,27 @@
       "paralysis": 0,
       "burn": 0,
       "blind": 0,
-      "silence": 0,
+      "silence": 50,
       "curse": 0,
       "sleep": 0
     },
     "effects": [
       {
+        "attackCount": 1,
+        "amountMode": "fixed",
+        "inflictChance": 100,
+        "immunityKind": "both",
+        "charges": 1,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "poison",
         "type": "action_immunity",
         "trigger": "turn_start",
         "target": "self",
         "stat": "atk",
         "amount": 1,
-        "attackCount": 1,
-        "amountMode": "fixed",
         "chance": 20,
-        "inflictChance": 100,
-        "duration": 1,
-        "immunityKind": "both",
-        "charges": 1,
-        "stealMode": "temporary",
-        "percent": 10,
-        "cleanseType": "poison"
+        "duration": 1
       }
     ],
     "levels": {
@@ -110,12 +110,20 @@
       }
     },
     "affectionVoice": {
-      "paths": [],
+      "paths": [
+        "assets/voices/voice_0061.mp3",
+        "assets/voices/voice_0062.mp3",
+        "assets/voices/voice_0055.mp3"
+      ],
       "chance": 100,
       "volume": 100
     },
     "autoSkillVoice": {
-      "paths": [],
+      "paths": [
+        "assets/voices/voice_0059.mp3",
+        "assets/voices/voice_0060.mp3",
+        "assets/voices/voice_0058.mp3"
+      ],
       "chance": 100,
       "volume": 100
     },
@@ -161,7 +169,7 @@
       "paralysis": 0,
       "burn": 0,
       "blind": 0,
-      "silence": 0,
+      "silence": 50,
       "curse": 0,
       "sleep": 0
     },
@@ -237,12 +245,20 @@
       }
     },
     "affectionVoice": {
-      "paths": [],
+      "paths": [
+        "assets/voices/voice_0055.mp3",
+        "assets/voices/voice_0056.mp3",
+        "assets/voices/voice_0057.mp3"
+      ],
       "chance": 100,
       "volume": 100
     },
     "autoSkillVoice": {
-      "paths": [],
+      "paths": [
+        "assets/voices/voice_0054.mp3",
+        "assets/voices/voice_0052.mp3",
+        "assets/voices/voice_0053.mp3"
+      ],
       "chance": 100,
       "volume": 100
     },
@@ -1093,6 +1109,7 @@
               "target": "self",
               "stat": "atk",
               "amount": 2,
+              "attackCount": 1,
               "chance": 100,
               "duration": 0,
               "trigger": "on_use"
@@ -1113,6 +1130,7 @@
               "target": "self",
               "stat": "atk",
               "amount": 3,
+              "attackCount": 1,
               "chance": 100,
               "duration": 0,
               "trigger": "on_use"
@@ -1135,6 +1153,7 @@
           "target": "self",
           "stat": "atk",
           "amount": 2,
+          "attackCount": 1,
           "chance": 100,
           "duration": 0,
           "trigger": "on_use"
@@ -1188,6 +1207,7 @@
         "target": "self",
         "stat": "atk",
         "amount": 1,
+        "attackCount": 1,
         "chance": 30,
         "duration": 0
       }
@@ -1207,6 +1227,7 @@
             "target": "self",
             "stat": "atk",
             "amount": 1,
+            "attackCount": 1,
             "chance": 35,
             "duration": 0,
             "trigger": "after_player_action"
@@ -1231,6 +1252,7 @@
             "target": "self",
             "stat": "atk",
             "amount": 1,
+            "attackCount": 1,
             "chance": 40,
             "duration": 0,
             "trigger": "after_player_action"

@@ -1537,5 +1537,436 @@
     },
     "effects": [],
     "image": "assets/items/I027.png"
+  },
+  {
+    "id": "I900",
+    "name": "月蝕の栞",
+    "description": "『月影に沈む漆黒の森』を解放する栞。\nアイテムとして使用しても効果がある。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "price": 0,
+    "usesPerAdventure": 1,
+    "autoRescue": "",
+    "rescueHp": 1,
+    "accuracyBonus": 0,
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "useContext": "battle",
+    "keyRank": 0,
+    "availability": {
+      "shop": {
+        "type": "always",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [
+      {
+        "type": "heal",
+        "trigger": "on_use",
+        "target": "self",
+        "stat": "atk",
+        "amount": 100,
+        "attackCount": 1,
+        "amountMode": "percent",
+        "chance": 100,
+        "inflictChance": 100,
+        "duration": 0,
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "poison"
+      }
+    ],
+    "image": "assets/items/I028.png"
+  },
+  {
+    "id": "I901",
+    "name": "虹律の栞",
+    "description": "『夢見る雲の旋律郷』を解放する栞。\nアイテムとして使用しても効果がある。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "price": 5,
+    "usesPerAdventure": 1,
+    "autoRescue": "",
+    "rescueHp": 1,
+    "accuracyBonus": 0,
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "useContext": "battle",
+    "keyRank": 0,
+    "availability": {
+      "shop": {
+        "type": "scenario_clear",
+        "eventId": "",
+        "scenarioId": "C001",
+        "difficulty": "NORMAL",
+        "itemId": ""
+      }
+    },
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [
+      {
+        "attackCount": 1,
+        "amountMode": "percent",
+        "inflictChance": 100,
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "poison",
+        "type": "damage_reduction",
+        "trigger": "on_use",
+        "target": "self",
+        "stat": "atk",
+        "amount": 100,
+        "chance": 100,
+        "duration": 1
+      }
+    ],
+    "image": "assets/items/I901.png"
+  },
+  {
+    "id": "I902",
+    "name": "甘夢の栞",
+    "description": "『溶け落ちる幸せの国』を解放する栞。\nアイテムとして使用しても効果がある。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "price": 5,
+    "usesPerAdventure": 1,
+    "autoRescue": "",
+    "rescueHp": 1,
+    "accuracyBonus": 0,
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "useContext": "battle",
+    "keyRank": 0,
+    "availability": {
+      "shop": {
+        "type": "scenario_clear",
+        "eventId": "",
+        "scenarioId": "C002",
+        "difficulty": "NORMAL",
+        "itemId": ""
+      }
+    },
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [
+      {
+        "attackCount": 1,
+        "amountMode": "percent",
+        "inflictChance": 100,
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "poison",
+        "type": "crit",
+        "trigger": "on_use",
+        "target": "self",
+        "stat": "atk",
+        "amount": 100,
+        "chance": 100,
+        "duration": 1
+      }
+    ],
+    "image": "assets/items/I902.png"
+  },
+  {
+    "id": "I903",
+    "name": "残響の栞",
+    "description": "『放課後の紫煙迷宮』を解放する栞。\nアイテムとして使用しても効果がある。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "price": 5,
+    "usesPerAdventure": 1,
+    "autoRescue": "",
+    "rescueHp": 1,
+    "accuracyBonus": 0,
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "useContext": "battle",
+    "keyRank": 0,
+    "availability": {
+      "shop": {
+        "type": "scenario_clear",
+        "eventId": "",
+        "scenarioId": "C003",
+        "difficulty": "NORMAL",
+        "itemId": ""
+      }
+    },
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [
+      {
+        "attackCount": 1,
+        "amountMode": "percent",
+        "inflictChance": 100,
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "poison",
+        "type": "blind",
+        "trigger": "on_use",
+        "target": "enemy",
+        "stat": "atk",
+        "amount": 100,
+        "chance": 100,
+        "duration": 2
+      }
+    ],
+    "image": "assets/items/I903.png"
+  },
+  {
+    "id": "I904",
+    "name": "禁書の栞",
+    "description": "『光なき夜の隠し書庫』を解放する栞。\nアイテムとして使用しても効果がある。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "price": 5,
+    "usesPerAdventure": 1,
+    "autoRescue": "",
+    "rescueHp": 1,
+    "accuracyBonus": 0,
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "useContext": "battle",
+    "keyRank": 0,
+    "availability": {
+      "shop": {
+        "type": "scenario_clear",
+        "eventId": "",
+        "scenarioId": "C004",
+        "difficulty": "NORMAL",
+        "itemId": ""
+      }
+    },
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [
+      {
+        "attackCount": 1,
+        "amountMode": "percent",
+        "inflictChance": 100,
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "poison",
+        "type": "silence",
+        "trigger": "on_use",
+        "target": "enemy",
+        "stat": "atk",
+        "amount": 100,
+        "chance": 100,
+        "duration": 2
+      }
+    ],
+    "image": "assets/items/I904.png"
+  },
+  {
+    "id": "I905",
+    "name": "桜祈の栞",
+    "description": "『桜華咲き誇る神楽殿』を解放する栞。\nアイテムとして使用しても効果がある。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "price": 5,
+    "usesPerAdventure": 1,
+    "autoRescue": "",
+    "rescueHp": 1,
+    "accuracyBonus": 0,
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "useContext": "battle",
+    "keyRank": 0,
+    "availability": {
+      "shop": {
+        "type": "scenario_clear",
+        "eventId": "",
+        "scenarioId": "C005",
+        "difficulty": "NORMAL",
+        "itemId": ""
+      }
+    },
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [
+      {
+        "attackCount": 1,
+        "amountMode": "percent",
+        "inflictChance": 100,
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "poison",
+        "type": "sleep",
+        "trigger": "on_use",
+        "target": "enemy",
+        "stat": "atk",
+        "amount": 100,
+        "chance": 100,
+        "duration": 2
+      }
+    ]
+  },
+  {
+    "id": "I906",
+    "name": "星詠の栞",
+    "description": "『星流る丘の大聖堂』を解放する栞。\nアイテムとして使用しても効果がある。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "price": 5,
+    "usesPerAdventure": 1,
+    "autoRescue": "",
+    "rescueHp": 1,
+    "accuracyBonus": 0,
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "useContext": "battle",
+    "keyRank": 0,
+    "availability": {
+      "shop": {
+        "type": "scenario_clear",
+        "eventId": "",
+        "scenarioId": "C006",
+        "difficulty": "NORMAL",
+        "itemId": ""
+      }
+    },
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [
+      {
+        "attackCount": 1,
+        "amountMode": "percent",
+        "inflictChance": 100,
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "poison",
+        "type": "action_immunity",
+        "trigger": "on_use",
+        "target": "enemy",
+        "stat": "atk",
+        "amount": 100,
+        "chance": 100,
+        "duration": 2
+      }
+    ],
+    "image": "assets/items/I906.png"
+  },
+  {
+    "id": "I907",
+    "name": "電脈の栞",
+    "description": "『電子芽吹く培養棟』を解放する栞。\nアイテムとして使用しても効果がある。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "price": 5,
+    "usesPerAdventure": 1,
+    "autoRescue": "",
+    "rescueHp": 1,
+    "accuracyBonus": 0,
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "useContext": "battle",
+    "keyRank": 0,
+    "availability": {
+      "shop": {
+        "type": "scenario_clear",
+        "eventId": "",
+        "scenarioId": "C007",
+        "difficulty": "NORMAL",
+        "itemId": ""
+      }
+    },
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [
+      {
+        "attackCount": 1,
+        "amountMode": "percent",
+        "inflictChance": 100,
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "poison",
+        "type": "damage_multiplier",
+        "trigger": "on_use",
+        "target": "enemy",
+        "stat": "atk",
+        "amount": 120,
+        "chance": 100,
+        "duration": 1
+      }
+    ],
+    "image": "assets/items/I028.png"
   }
 ]
