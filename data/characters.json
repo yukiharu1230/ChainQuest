@@ -1,0 +1,74 @@
+[
+  {
+    "id": "P001",
+    "name": "長老コロポックル",
+    "description": "森の長老なのじゃ。",
+    "cv": "根占幸治",
+    "image": "assets/characters/guest001_00.png",
+    "unlockMode": "event",
+    "eventId": "V002"
+  },
+  {
+    "id": "P002",
+    "name": "マゴポクル",
+    "description": "自らを選ばれた高貴な種族と信じる\nコロポックル。",
+    "cv": "まるるん",
+    "image": "assets/characters/guest002_00.png",
+    "unlockMode": "event",
+    "eventId": "V002"
+  },
+  {
+    "id": "P003",
+    "name": "ハラペーニョ・ビル",
+    "description": "世知辛い世の中を憂いている。",
+    "cv": "根占幸治",
+    "image": "assets/characters/biru_00.png",
+    "unlockMode": "event",
+    "eventId": "V009"
+  },
+  {
+    "id": "P004",
+    "name": "ジェネラル・ゼリー",
+    "description": "コインに目がないスライム。",
+    "cv": "砂糖ちか",
+    "image": "assets/characters/general_00.png",
+    "unlockMode": "initial",
+    "eventId": ""
+  },
+  {
+    "id": "P005",
+    "name": "レガリアント",
+    "description": "武者修行してるのかな？",
+    "cv": "根占幸治",
+    "image": "assets/characters/ant_00.png",
+    "unlockMode": "event",
+    "eventId": "V011"
+  },
+  {
+    "id": "P006",
+    "name": "強欲のバンクピギー",
+    "description": "欲深くて素早い貯金豚。",
+    "cv": "砂糖ちか",
+    "image": "assets/enemies/E017.png",
+    "unlockMode": "event",
+    "eventId": "V091"
+  },
+  {
+    "id": "P007",
+    "name": "メトラ",
+    "description": "旋律郷の空模様を司る見守り手。\n規則正しい一定のリズムを好み、不協和な乱れを嫌う。",
+    "cv": "賀村灯",
+    "image": "assets/characters/metora_00.png",
+    "unlockMode": "event",
+    "eventId": "V025"
+  },
+  {
+    "id": "P008",
+    "name": "にがぴよさん（41）",
+    "description": "推しへの愛が歪んだ方向に暴走している厄介リスナー。\n推しを神聖視するあまり、立派な角が生えている。",
+    "cv": "根占幸治",
+    "image": "assets/characters/nigapiyo_00.png",
+    "unlockMode": "event",
+    "eventId": "V027"
+  }
+]

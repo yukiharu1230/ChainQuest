@@ -1,0 +1,1519 @@
+[
+  {
+    "id": "G011",
+    "name": "紫雲しあ（ギャゥ）",
+    "description": "行動前、時々攻撃無効化。",
+    "supportMessage": "{guest}の支援！ {effects}",
+    "activeSkill": {},
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "rank": "A",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "hpBonus": 1,
+    "atkBonus": 0,
+    "defBonus": 1,
+    "spdBonus": 1,
+    "accuracyBonus": 10,
+    "affectionEventId": "",
+    "affectionBonus": {
+      "hpBonus": 5,
+      "accuracyBonus": 5
+    },
+    "availability": {
+      "gacha": {
+        "type": "",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "",
+        "itemId": ""
+      }
+    },
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [
+      {
+        "type": "action_immunity",
+        "trigger": "turn_start",
+        "target": "self",
+        "stat": "atk",
+        "amount": 1,
+        "attackCount": 1,
+        "amountMode": "fixed",
+        "chance": 20,
+        "inflictChance": 100,
+        "duration": 1,
+        "immunityKind": "both",
+        "charges": 1,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "poison"
+      }
+    ],
+    "levels": {
+      "2": {
+        "effects": [
+          {
+            "attackCount": 1,
+            "amountMode": "fixed",
+            "inflictChance": 100,
+            "immunityKind": "both",
+            "charges": 1,
+            "stealMode": "temporary",
+            "percent": 10,
+            "cleanseType": "poison",
+            "type": "action_immunity",
+            "target": "self",
+            "stat": "atk",
+            "amount": 1,
+            "chance": 25,
+            "duration": 1,
+            "trigger": "turn_start"
+          }
+        ],
+        "hpBonus": 2,
+        "atkBonus": 0,
+        "defBonus": 1,
+        "spdBonus": 1
+      },
+      "3": {
+        "effects": [
+          {
+            "attackCount": 1,
+            "amountMode": "fixed",
+            "inflictChance": 100,
+            "immunityKind": "both",
+            "charges": 1,
+            "stealMode": "temporary",
+            "percent": 10,
+            "cleanseType": "poison",
+            "type": "action_immunity",
+            "target": "self",
+            "stat": "atk",
+            "amount": 1,
+            "chance": 30,
+            "duration": 1,
+            "trigger": "turn_start"
+          }
+        ],
+        "hpBonus": 3,
+        "atkBonus": 0,
+        "defBonus": 1,
+        "spdBonus": 2
+      }
+    },
+    "affectionVoice": {
+      "paths": [],
+      "chance": 100,
+      "volume": 100
+    },
+    "autoSkillVoice": {
+      "paths": [],
+      "chance": 100,
+      "volume": 100
+    },
+    "manualSkillVoice": {
+      "paths": [],
+      "chance": 100,
+      "volume": 100
+    },
+    "image": "assets/guests/G011.png"
+  },
+  {
+    "id": "G010",
+    "name": "紫雲しあ",
+    "description": "行動後、時々沈黙を付与。\n沈黙耐性50％UP。",
+    "supportMessage": "{guest}の支援！ {effects}",
+    "activeSkill": {},
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "rank": "C",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "hpBonus": 2,
+    "atkBonus": 0,
+    "defBonus": 0,
+    "spdBonus": 0,
+    "accuracyBonus": 0,
+    "affectionEventId": "",
+    "affectionBonus": {
+      "hpBonus": 5,
+      "defBonus": 2
+    },
+    "availability": {
+      "gacha": {
+        "type": "",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "",
+        "itemId": ""
+      }
+    },
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [
+      {
+        "attackCount": 1,
+        "amountMode": "fixed",
+        "inflictChance": 70,
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "poison",
+        "type": "silence",
+        "trigger": "after_player_action",
+        "target": "enemy",
+        "stat": "atk",
+        "amount": 1,
+        "chance": 20,
+        "duration": 2
+      }
+    ],
+    "levels": {
+      "2": {
+        "effects": [
+          {
+            "attackCount": 1,
+            "amountMode": "fixed",
+            "inflictChance": 80,
+            "immunityKind": "both",
+            "charges": 0,
+            "stealMode": "temporary",
+            "percent": 10,
+            "cleanseType": "poison",
+            "type": "silence",
+            "target": "enemy",
+            "stat": "atk",
+            "amount": 1,
+            "chance": 25,
+            "duration": 2,
+            "trigger": "after_player_action"
+          }
+        ],
+        "hpBonus": 3,
+        "atkBonus": 0,
+        "defBonus": 0,
+        "spdBonus": 0
+      },
+      "3": {
+        "effects": [
+          {
+            "attackCount": 1,
+            "amountMode": "fixed",
+            "inflictChance": 90,
+            "immunityKind": "both",
+            "charges": 0,
+            "stealMode": "temporary",
+            "percent": 10,
+            "cleanseType": "poison",
+            "type": "silence",
+            "target": "enemy",
+            "stat": "atk",
+            "amount": 1,
+            "chance": 30,
+            "duration": 2,
+            "trigger": "after_player_action"
+          }
+        ],
+        "hpBonus": 4,
+        "atkBonus": 0,
+        "defBonus": 0,
+        "spdBonus": 0
+      }
+    },
+    "affectionVoice": {
+      "paths": [],
+      "chance": 100,
+      "volume": 100
+    },
+    "autoSkillVoice": {
+      "paths": [],
+      "chance": 100,
+      "volume": 100
+    },
+    "manualSkillVoice": {
+      "paths": [],
+      "chance": 100,
+      "volume": 100
+    },
+    "image": "assets/guests/G010.png"
+  },
+  {
+    "id": "G009",
+    "name": "星飴あゆき（白）",
+    "description": "行動後、時々HPを回復。",
+    "supportMessage": "{guest}の支援！ {effects}",
+    "activeSkill": {},
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "rank": "A",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "hpBonus": 2,
+    "atkBonus": 0,
+    "defBonus": 1,
+    "spdBonus": 0,
+    "accuracyBonus": 5,
+    "affectionEventId": "",
+    "affectionBonus": {
+      "hpBonus": 5,
+      "accuracyBonus": 10
+    },
+    "availability": {
+      "gacha": {
+        "type": "",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "",
+        "itemId": ""
+      }
+    },
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [
+      {
+        "attackCount": 1,
+        "amountMode": "percent",
+        "inflictChance": 100,
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "poison",
+        "type": "heal",
+        "trigger": "turn_start",
+        "target": "self",
+        "stat": "atk",
+        "amount": 10,
+        "chance": 30,
+        "duration": 0
+      }
+    ],
+    "levels": {
+      "2": {
+        "effects": [
+          {
+            "attackCount": 1,
+            "amountMode": "percent",
+            "inflictChance": 100,
+            "immunityKind": "both",
+            "charges": 0,
+            "stealMode": "temporary",
+            "percent": 10,
+            "cleanseType": "poison",
+            "type": "heal",
+            "target": "self",
+            "stat": "atk",
+            "amount": 20,
+            "chance": 40,
+            "duration": 0,
+            "trigger": "turn_start"
+          }
+        ],
+        "hpBonus": 3,
+        "atkBonus": 0,
+        "defBonus": 1,
+        "spdBonus": 0
+      },
+      "3": {
+        "effects": [
+          {
+            "attackCount": 1,
+            "amountMode": "percent",
+            "inflictChance": 100,
+            "immunityKind": "both",
+            "charges": 0,
+            "stealMode": "temporary",
+            "percent": 10,
+            "cleanseType": "poison",
+            "type": "heal",
+            "target": "self",
+            "stat": "atk",
+            "amount": 30,
+            "chance": 50,
+            "duration": 0,
+            "trigger": "turn_start"
+          }
+        ],
+        "hpBonus": 4,
+        "atkBonus": 0,
+        "defBonus": 2,
+        "spdBonus": 0
+      }
+    },
+    "affectionVoice": {
+      "paths": [],
+      "chance": 100,
+      "volume": 100
+    },
+    "autoSkillVoice": {
+      "paths": [],
+      "chance": 100,
+      "volume": 100
+    },
+    "manualSkillVoice": {
+      "paths": [],
+      "chance": 100,
+      "volume": 100
+    },
+    "image": "assets/guests/G009.png"
+  },
+  {
+    "id": "G008",
+    "name": "星飴あゆき（黒）",
+    "description": "攻撃時、時々追加攻撃。",
+    "supportMessage": "{guest}の支援！ {effects}",
+    "activeSkill": {},
+    "trapDisarm": 10,
+    "trapResist": 10,
+    "rank": "B",
+    "dropRateBonus": 0,
+    "chestRateBonus": 5,
+    "hpBonus": 0,
+    "atkBonus": 0,
+    "defBonus": 0,
+    "spdBonus": 1,
+    "accuracyBonus": 5,
+    "affectionEventId": "",
+    "affectionBonus": {
+      "hpBonus": 5,
+      "spdBonus": 2
+    },
+    "availability": {
+      "gacha": {
+        "type": "",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "",
+        "itemId": ""
+      }
+    },
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [
+      {
+        "amountMode": "fixed",
+        "inflictChance": 100,
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "poison",
+        "attackCount": 1,
+        "type": "extra_attack",
+        "trigger": "on_attack",
+        "target": "self",
+        "stat": "atk",
+        "amount": 50,
+        "chance": 20,
+        "duration": 0
+      }
+    ],
+    "levels": {
+      "2": {
+        "effects": [
+          {
+            "amountMode": "fixed",
+            "inflictChance": 100,
+            "immunityKind": "both",
+            "charges": 0,
+            "stealMode": "temporary",
+            "percent": 10,
+            "cleanseType": "poison",
+            "attackCount": 1,
+            "type": "extra_attack",
+            "target": "self",
+            "stat": "atk",
+            "amount": 50,
+            "chance": 25,
+            "duration": 0,
+            "trigger": "on_attack"
+          }
+        ],
+        "hpBonus": 0,
+        "atkBonus": 0,
+        "defBonus": 0,
+        "spdBonus": 2
+      },
+      "3": {
+        "effects": [
+          {
+            "amountMode": "fixed",
+            "inflictChance": 100,
+            "immunityKind": "both",
+            "charges": 0,
+            "stealMode": "temporary",
+            "percent": 10,
+            "cleanseType": "poison",
+            "attackCount": 2,
+            "type": "extra_attack",
+            "target": "self",
+            "stat": "atk",
+            "amount": 50,
+            "chance": 30,
+            "duration": 0,
+            "trigger": "on_attack"
+          }
+        ],
+        "hpBonus": 0,
+        "atkBonus": 0,
+        "defBonus": 0,
+        "spdBonus": 3
+      }
+    },
+    "affectionVoice": {
+      "paths": [],
+      "chance": 100,
+      "volume": 100
+    },
+    "autoSkillVoice": {
+      "paths": [],
+      "chance": 100,
+      "volume": 100
+    },
+    "manualSkillVoice": {
+      "paths": [],
+      "chance": 100,
+      "volume": 100
+    },
+    "image": "assets/guests/G008.png"
+  },
+  {
+    "id": "G007",
+    "name": "星飴あゆき（団子）",
+    "description": "行動後、時々毒を付与。\n毒耐性50％UP。",
+    "supportMessage": "{guest}の支援！ {effects}",
+    "activeSkill": {},
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "rank": "C",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "hpBonus": 0,
+    "atkBonus": 1,
+    "defBonus": 0,
+    "spdBonus": 0,
+    "accuracyBonus": 5,
+    "affectionEventId": "",
+    "affectionBonus": {
+      "hpBonus": 5,
+      "defBonus": 2
+    },
+    "availability": {
+      "gacha": {
+        "type": "",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "",
+        "itemId": ""
+      }
+    },
+    "statusResistances": {
+      "poison": 50,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [
+      {
+        "amountMode": "fixed",
+        "inflictChance": 60,
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "poison",
+        "attackCount": 1,
+        "type": "poison",
+        "trigger": "after_player_action",
+        "target": "enemy",
+        "stat": "atk",
+        "amount": 1,
+        "chance": 20,
+        "duration": 2
+      }
+    ],
+    "levels": {
+      "2": {
+        "effects": [
+          {
+            "amountMode": "fixed",
+            "inflictChance": 70,
+            "immunityKind": "both",
+            "charges": 0,
+            "stealMode": "temporary",
+            "percent": 10,
+            "cleanseType": "poison",
+            "attackCount": 1,
+            "type": "poison",
+            "target": "enemy",
+            "stat": "atk",
+            "amount": 2,
+            "chance": 25,
+            "duration": 2,
+            "trigger": "after_player_action"
+          }
+        ],
+        "hpBonus": 0,
+        "atkBonus": 2,
+        "defBonus": 0,
+        "spdBonus": 0
+      },
+      "3": {
+        "effects": [
+          {
+            "amountMode": "fixed",
+            "inflictChance": 80,
+            "immunityKind": "both",
+            "charges": 0,
+            "stealMode": "temporary",
+            "percent": 10,
+            "cleanseType": "poison",
+            "attackCount": 1,
+            "type": "poison",
+            "target": "enemy",
+            "stat": "atk",
+            "amount": 3,
+            "chance": 30,
+            "duration": 2,
+            "trigger": "after_player_action"
+          }
+        ],
+        "hpBonus": 0,
+        "atkBonus": 3,
+        "defBonus": 0,
+        "spdBonus": 0
+      }
+    },
+    "affectionVoice": {
+      "paths": [],
+      "chance": 100,
+      "volume": 100
+    },
+    "autoSkillVoice": {
+      "paths": [],
+      "chance": 100,
+      "volume": 100
+    },
+    "manualSkillVoice": {
+      "paths": [],
+      "chance": 100,
+      "volume": 100
+    },
+    "image": "assets/guests/G007.png"
+  },
+  {
+    "id": "G006",
+    "name": "星飴あゆき",
+    "description": "行動前、時々クリティカル率UP。",
+    "supportMessage": "{guest}の支援！ {effects}",
+    "activeSkill": {},
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "rank": "C",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "hpBonus": 0,
+    "atkBonus": 0,
+    "defBonus": 1,
+    "spdBonus": 0,
+    "accuracyBonus": 5,
+    "affectionEventId": "",
+    "affectionBonus": {
+      "hpBonus": 5,
+      "chestRateBonus": 5
+    },
+    "availability": {
+      "gacha": {
+        "type": "",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "",
+        "itemId": ""
+      }
+    },
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [
+      {
+        "amountMode": "fixed",
+        "inflictChance": 100,
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "poison",
+        "type": "crit",
+        "trigger": "turn_start",
+        "target": "self",
+        "stat": "atk",
+        "amount": 20,
+        "chance": 20,
+        "duration": 1
+      }
+    ],
+    "levels": {
+      "2": {
+        "effects": [
+          {
+            "amountMode": "fixed",
+            "inflictChance": 100,
+            "immunityKind": "both",
+            "charges": 0,
+            "stealMode": "temporary",
+            "percent": 10,
+            "cleanseType": "poison",
+            "type": "crit",
+            "target": "self",
+            "stat": "atk",
+            "amount": 25,
+            "chance": 25,
+            "duration": 1,
+            "trigger": "turn_start"
+          }
+        ],
+        "hpBonus": 0,
+        "atkBonus": 0,
+        "defBonus": 2,
+        "spdBonus": 0
+      },
+      "3": {
+        "effects": [
+          {
+            "amountMode": "fixed",
+            "inflictChance": 100,
+            "immunityKind": "both",
+            "charges": 0,
+            "stealMode": "temporary",
+            "percent": 10,
+            "cleanseType": "poison",
+            "type": "crit",
+            "target": "self",
+            "stat": "atk",
+            "amount": 30,
+            "chance": 30,
+            "duration": 1,
+            "trigger": "turn_start"
+          }
+        ],
+        "hpBonus": 1,
+        "atkBonus": 0,
+        "defBonus": 3,
+        "spdBonus": 0
+      }
+    },
+    "affectionVoice": {
+      "paths": [],
+      "chance": 100,
+      "volume": 100
+    },
+    "autoSkillVoice": {
+      "paths": [],
+      "chance": 100,
+      "volume": 100
+    },
+    "manualSkillVoice": {
+      "paths": [],
+      "chance": 100,
+      "volume": 100
+    },
+    "image": "assets/guests/G006.png"
+  },
+  {
+    "id": "G005",
+    "name": "ユウママ",
+    "description": "行動前、時々被ダメージ軽減付与。\n毎ターン、HP回復。",
+    "supportMessage": "{guest}の支援！ {effects}",
+    "activeSkill": {},
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "rank": "S",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "hpBonus": 2,
+    "atkBonus": 0,
+    "defBonus": 3,
+    "spdBonus": 0,
+    "accuracyBonus": 0,
+    "affectionEventId": "",
+    "affectionBonus": {
+      "hpBonus": 10,
+      "defBonus": 5
+    },
+    "availability": {
+      "gacha": {
+        "type": "",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "",
+        "itemId": ""
+      }
+    },
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [
+      {
+        "amountMode": "percent",
+        "inflictChance": 100,
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "poison",
+        "type": "heal",
+        "trigger": "turn_start",
+        "target": "self",
+        "stat": "atk",
+        "amount": 5,
+        "chance": 100,
+        "duration": 0
+      },
+      {
+        "amountMode": "fixed",
+        "inflictChance": 100,
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "poison",
+        "type": "damage_reduction",
+        "trigger": "turn_start",
+        "target": "self",
+        "stat": "atk",
+        "amount": 30,
+        "chance": 30,
+        "duration": 2
+      }
+    ],
+    "levels": {
+      "2": {
+        "effects": [
+          {
+            "amountMode": "percent",
+            "inflictChance": 100,
+            "immunityKind": "both",
+            "charges": 0,
+            "stealMode": "temporary",
+            "percent": 10,
+            "cleanseType": "poison",
+            "type": "heal",
+            "target": "self",
+            "stat": "atk",
+            "amount": 7,
+            "chance": 100,
+            "duration": 0,
+            "trigger": "turn_start"
+          },
+          {
+            "amountMode": "fixed",
+            "inflictChance": 100,
+            "immunityKind": "both",
+            "charges": 0,
+            "stealMode": "temporary",
+            "percent": 10,
+            "cleanseType": "poison",
+            "type": "damage_reduction",
+            "target": "self",
+            "stat": "atk",
+            "amount": 40,
+            "chance": 30,
+            "duration": 2,
+            "trigger": "turn_start"
+          }
+        ],
+        "hpBonus": 3,
+        "atkBonus": 0,
+        "defBonus": 4,
+        "spdBonus": 0
+      },
+      "3": {
+        "effects": [
+          {
+            "amountMode": "percent",
+            "inflictChance": 100,
+            "immunityKind": "both",
+            "charges": 0,
+            "stealMode": "temporary",
+            "percent": 10,
+            "cleanseType": "poison",
+            "type": "heal",
+            "target": "self",
+            "stat": "atk",
+            "amount": 10,
+            "chance": 100,
+            "duration": 0,
+            "trigger": "turn_start"
+          },
+          {
+            "amountMode": "fixed",
+            "inflictChance": 100,
+            "immunityKind": "both",
+            "charges": 0,
+            "stealMode": "temporary",
+            "percent": 10,
+            "cleanseType": "poison",
+            "type": "damage_reduction",
+            "target": "self",
+            "stat": "atk",
+            "amount": 50,
+            "chance": 40,
+            "duration": 2,
+            "trigger": "turn_start"
+          }
+        ],
+        "hpBonus": 5,
+        "atkBonus": 0,
+        "defBonus": 5,
+        "spdBonus": 0
+      }
+    },
+    "affectionVoice": {
+      "paths": [
+        "assets/voices/voice_0049.mp3",
+        "assets/voices/voice_0050.mp3",
+        "assets/voices/voice_0051.mp3"
+      ],
+      "chance": 100,
+      "volume": 100
+    },
+    "autoSkillVoice": {
+      "paths": [
+        "assets/voices/voice_0047.mp3",
+        "assets/voices/voice_0048.mp3"
+      ],
+      "chance": 100,
+      "volume": 100
+    },
+    "manualSkillVoice": {
+      "paths": [],
+      "chance": 100,
+      "volume": 100
+    },
+    "image": "assets/guests/G005.png"
+  },
+  {
+    "id": "G004",
+    "name": "綿飴ユウちゃん",
+    "description": "行動前、時々被ダメージ軽減付与。",
+    "supportMessage": "{guest}の支援！ {effects}",
+    "activeSkill": {},
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "rank": "C",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "hpBonus": 1,
+    "atkBonus": 0,
+    "defBonus": 1,
+    "spdBonus": 0,
+    "accuracyBonus": 0,
+    "affectionEventId": "",
+    "affectionBonus": {
+      "hpBonus": 5,
+      "defBonus": 3
+    },
+    "availability": {
+      "gacha": {
+        "type": "",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "",
+        "itemId": ""
+      }
+    },
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [
+      {
+        "amountMode": "percent",
+        "inflictChance": 100,
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "poison",
+        "type": "damage_reduction",
+        "trigger": "turn_start",
+        "target": "self",
+        "stat": "atk",
+        "amount": 30,
+        "chance": 20,
+        "duration": 2
+      }
+    ],
+    "levels": {
+      "2": {
+        "effects": [
+          {
+            "amountMode": "percent",
+            "inflictChance": 100,
+            "immunityKind": "both",
+            "charges": 0,
+            "stealMode": "temporary",
+            "percent": 10,
+            "cleanseType": "poison",
+            "type": "damage_reduction",
+            "target": "self",
+            "stat": "atk",
+            "amount": 40,
+            "chance": 25,
+            "duration": 2,
+            "trigger": "turn_start"
+          }
+        ],
+        "hpBonus": 1,
+        "atkBonus": 0,
+        "defBonus": 2,
+        "spdBonus": 0
+      },
+      "3": {
+        "effects": [
+          {
+            "amountMode": "percent",
+            "inflictChance": 100,
+            "immunityKind": "both",
+            "charges": 0,
+            "stealMode": "temporary",
+            "percent": 10,
+            "cleanseType": "poison",
+            "type": "damage_reduction",
+            "target": "self",
+            "stat": "atk",
+            "amount": 50,
+            "chance": 30,
+            "duration": 2,
+            "trigger": "turn_start"
+          }
+        ],
+        "hpBonus": 1,
+        "atkBonus": 0,
+        "defBonus": 3,
+        "spdBonus": 0
+      }
+    },
+    "affectionVoice": {
+      "paths": [
+        "assets/voices/voice_0042.mp3",
+        "assets/voices/voice_0043.mp3",
+        "assets/voices/voice_0044.mp3"
+      ],
+      "chance": 100,
+      "volume": 100
+    },
+    "autoSkillVoice": {
+      "paths": [
+        "assets/voices/voice_0045.mp3",
+        "assets/voices/voice_0046.mp3"
+      ],
+      "chance": 100,
+      "volume": 100
+    },
+    "manualSkillVoice": {
+      "paths": [],
+      "chance": 100,
+      "volume": 100
+    },
+    "image": "assets/guests/G004.png"
+  },
+  {
+    "id": "G003",
+    "name": "紅狼ユキハル",
+    "description": "相手が持っているアイテムを隙あらば盗む。",
+    "supportMessage": "{guest}の窃盗！ {effects}",
+    "activeSkill": {
+      "name": "瞬迅の獣性",
+      "usesPerAdventure": 3,
+      "successRate": 100,
+      "unlockLevel": 1,
+      "levels": {
+        "2": {
+          "effects": [
+            {
+              "amountMode": "fixed",
+              "inflictChance": 100,
+              "immunityKind": "both",
+              "charges": 0,
+              "stealMode": "temporary",
+              "percent": 10,
+              "cleanseType": "poison",
+              "type": "extra_turn",
+              "target": "self",
+              "stat": "atk",
+              "amount": 2,
+              "chance": 100,
+              "duration": 0,
+              "trigger": "on_use"
+            }
+          ]
+        },
+        "3": {
+          "effects": [
+            {
+              "amountMode": "fixed",
+              "inflictChance": 100,
+              "immunityKind": "both",
+              "charges": 0,
+              "stealMode": "temporary",
+              "percent": 10,
+              "cleanseType": "poison",
+              "type": "extra_turn",
+              "target": "self",
+              "stat": "atk",
+              "amount": 3,
+              "chance": 100,
+              "duration": 0,
+              "trigger": "on_use"
+            }
+          ]
+        }
+      },
+      "successMessage": "{guest}の{skill}が発動！ {effects}",
+      "failureMessage": "{skill}は失敗した！",
+      "effects": [
+        {
+          "amountMode": "fixed",
+          "inflictChance": 100,
+          "immunityKind": "both",
+          "charges": 0,
+          "stealMode": "temporary",
+          "percent": 10,
+          "cleanseType": "poison",
+          "type": "extra_turn",
+          "target": "self",
+          "stat": "atk",
+          "amount": 2,
+          "chance": 100,
+          "duration": 0,
+          "trigger": "on_use"
+        }
+      ]
+    },
+    "trapDisarm": 20,
+    "trapResist": 20,
+    "rank": "A",
+    "dropRateBonus": 10,
+    "chestRateBonus": 5,
+    "hpBonus": 0,
+    "atkBonus": 0,
+    "defBonus": 0,
+    "spdBonus": 3,
+    "accuracyBonus": 0,
+    "affectionEventId": "",
+    "affectionBonus": {
+      "hpBonus": 10,
+      "dropRateBonus": 10
+    },
+    "availability": {
+      "gacha": {
+        "type": "",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "",
+        "itemId": ""
+      }
+    },
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [
+      {
+        "amountMode": "fixed",
+        "inflictChance": 100,
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "poison",
+        "type": "steal_item",
+        "trigger": "after_player_action",
+        "target": "self",
+        "stat": "atk",
+        "amount": 1,
+        "chance": 30,
+        "duration": 0
+      }
+    ],
+    "levels": {
+      "2": {
+        "effects": [
+          {
+            "amountMode": "fixed",
+            "inflictChance": 100,
+            "immunityKind": "both",
+            "charges": 0,
+            "stealMode": "temporary",
+            "percent": 10,
+            "cleanseType": "poison",
+            "type": "steal_item",
+            "target": "self",
+            "stat": "atk",
+            "amount": 1,
+            "chance": 35,
+            "duration": 0,
+            "trigger": "after_player_action"
+          }
+        ],
+        "hpBonus": 0,
+        "atkBonus": 1,
+        "defBonus": 0,
+        "spdBonus": 4
+      },
+      "3": {
+        "effects": [
+          {
+            "amountMode": "fixed",
+            "inflictChance": 100,
+            "immunityKind": "both",
+            "charges": 0,
+            "stealMode": "temporary",
+            "percent": 10,
+            "cleanseType": "poison",
+            "type": "steal_item",
+            "target": "self",
+            "stat": "atk",
+            "amount": 1,
+            "chance": 40,
+            "duration": 0,
+            "trigger": "after_player_action"
+          }
+        ],
+        "hpBonus": 0,
+        "atkBonus": 2,
+        "defBonus": 0,
+        "spdBonus": 5
+      }
+    },
+    "affectionVoice": {
+      "paths": [],
+      "chance": 100,
+      "volume": 100
+    },
+    "autoSkillVoice": {
+      "paths": [],
+      "chance": 100,
+      "volume": 100
+    },
+    "manualSkillVoice": {
+      "paths": [],
+      "chance": 100,
+      "volume": 100
+    },
+    "image": "assets/guests/G003.png"
+  },
+  {
+    "id": "G002",
+    "name": "根占幸治",
+    "description": "相手が持っているアイテムを隙あらば盗む。",
+    "supportMessage": "{guest}の窃盗！ {effects}",
+    "activeSkill": {},
+    "trapDisarm": 20,
+    "trapResist": 20,
+    "rank": "C",
+    "dropRateBonus": 10,
+    "chestRateBonus": 5,
+    "hpBonus": 0,
+    "atkBonus": 0,
+    "defBonus": 0,
+    "spdBonus": 1,
+    "accuracyBonus": 0,
+    "affectionEventId": "",
+    "affectionBonus": {
+      "hpBonus": 5,
+      "dropRateBonus": 5
+    },
+    "availability": {
+      "gacha": {
+        "type": "",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "",
+        "itemId": ""
+      }
+    },
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [
+      {
+        "amountMode": "fixed",
+        "inflictChance": 100,
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "poison",
+        "type": "steal_item",
+        "trigger": "after_player_action",
+        "target": "self",
+        "stat": "atk",
+        "amount": 1,
+        "chance": 20,
+        "duration": 0
+      }
+    ],
+    "levels": {
+      "2": {
+        "effects": [
+          {
+            "amountMode": "fixed",
+            "inflictChance": 100,
+            "immunityKind": "both",
+            "charges": 0,
+            "stealMode": "temporary",
+            "percent": 10,
+            "cleanseType": "poison",
+            "type": "steal_item",
+            "target": "self",
+            "stat": "atk",
+            "amount": 1,
+            "chance": 25,
+            "duration": 0,
+            "trigger": "after_player_action"
+          }
+        ],
+        "hpBonus": 0,
+        "atkBonus": 0,
+        "defBonus": 0,
+        "spdBonus": 2
+      },
+      "3": {
+        "effects": [
+          {
+            "amountMode": "fixed",
+            "inflictChance": 100,
+            "immunityKind": "both",
+            "charges": 0,
+            "stealMode": "temporary",
+            "percent": 10,
+            "cleanseType": "poison",
+            "type": "steal_item",
+            "target": "self",
+            "stat": "atk",
+            "amount": 1,
+            "chance": 30,
+            "duration": 0,
+            "trigger": "after_player_action"
+          }
+        ],
+        "hpBonus": 0,
+        "atkBonus": 1,
+        "defBonus": 0,
+        "spdBonus": 3
+      }
+    },
+    "affectionVoice": {
+      "paths": [
+        "assets/voices/voice_0024.mp3",
+        "assets/voices/voice_0025.mp3",
+        "assets/voices/voice_0026.mp3"
+      ],
+      "chance": 100,
+      "volume": 100
+    },
+    "autoSkillVoice": {
+      "paths": [
+        "assets/voices/voice_0027.mp3",
+        "assets/voices/voice_0028.mp3",
+        "assets/voices/voice_0029.mp3"
+      ],
+      "chance": 100,
+      "volume": 100
+    },
+    "manualSkillVoice": {
+      "paths": [],
+      "chance": 100,
+      "volume": 100
+    },
+    "image": "assets/guests/G002.png"
+  },
+  {
+    "id": "G001",
+    "name": "メディ",
+    "description": "行動後、時々HPを回復。",
+    "price": 0,
+    "hpBonus": 1,
+    "atkBonus": 0,
+    "defBonus": 1,
+    "spdBonus": 0,
+    "effects": [
+      {
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "poison",
+        "amountMode": "percent",
+        "inflictChance": 100,
+        "type": "heal",
+        "trigger": "after_player_action",
+        "target": "self",
+        "stat": "atk",
+        "amount": 10,
+        "attackCount": 1,
+        "chance": 20,
+        "duration": 0
+      }
+    ],
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "rank": "C",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "accuracyBonus": 0,
+    "affectionEventId": "",
+    "affectionBonus": {
+      "hpBonus": 3,
+      "defBonus": 2
+    },
+    "availability": {
+      "gacha": {
+        "type": "",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "",
+        "itemId": ""
+      }
+    },
+    "activeSkill": {},
+    "supportMessage": "{guest}の支援！ {effects}",
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "levels": {
+      "2": {
+        "effects": [
+          {
+            "immunityKind": "both",
+            "charges": 0,
+            "stealMode": "temporary",
+            "percent": 10,
+            "cleanseType": "poison",
+            "amountMode": "percent",
+            "inflictChance": 100,
+            "type": "heal",
+            "target": "self",
+            "stat": "atk",
+            "amount": 10,
+            "attackCount": 1,
+            "chance": 25,
+            "duration": 0,
+            "trigger": "after_player_action"
+          }
+        ],
+        "hpBonus": 2,
+        "defBonus": 1,
+        "atkBonus": 0,
+        "spdBonus": 0
+      },
+      "3": {
+        "effects": [
+          {
+            "immunityKind": "both",
+            "charges": 0,
+            "stealMode": "temporary",
+            "percent": 10,
+            "cleanseType": "poison",
+            "amountMode": "percent",
+            "inflictChance": 100,
+            "type": "heal",
+            "target": "self",
+            "stat": "atk",
+            "amount": 15,
+            "attackCount": 1,
+            "chance": 30,
+            "duration": 0,
+            "trigger": "after_player_action"
+          }
+        ],
+        "hpBonus": 3
+      }
+    },
+    "image": "assets/guests/G001.png",
+    "affectionVoice": {
+      "paths": [],
+      "chance": 100,
+      "volume": 100
+    },
+    "autoSkillVoice": {
+      "paths": [],
+      "chance": 100,
+      "volume": 100
+    },
+    "manualSkillVoice": {
+      "paths": [],
+      "chance": 100,
+      "volume": 100
+    }
+  }
+]

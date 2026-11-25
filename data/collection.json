@@ -1,0 +1,343 @@
+{
+  "portrait": "assets/common/common_images_collectionPortrait.png",
+  "background": "assets/common/common_images_collectionBackground.jpg",
+  "portraitHeight": 100,
+  "portraitX": -5,
+  "portraitBottom": 0,
+  "shopExpressions": {
+    "shopEnter": "assets/common/common_images_shopExpression_shopEnter.png",
+    "purchase": "assets/common/common_images_shopExpression_purchase.png",
+    "gacha": "assets/common/common_images_shopExpression_gacha.png"
+  },
+  "shopPortraitSettings": {
+    "A": {
+      "scale": 120,
+      "x": -41
+    },
+    "B": {
+      "scale": 150,
+      "x": -13
+    }
+  },
+  "expressions": {
+    "collectionEnter": "assets/common/common_images_collectionExpression_collectionEnter.png",
+    "report": "assets/common/common_images_collectionExpression_report.png"
+  },
+  "requests": [
+    {
+      "id": "Q001",
+      "title": "世界に愛されている証",
+      "description": "深い森の奥に出没する、運試しガンマンを知ってるか？\n彼との「運試し」に見事勝利し、その度胸を認められた者だけが\n手にできるという幻の品、気になるよな。",
+      "equipmentId": "S017",
+      "equipmentIds": [
+        "S017"
+      ],
+      "hideItemName": true,
+      "rewardCoins": 5,
+      "unlockScenario": "C001",
+      "order": 1,
+      "enabled": true
+    },
+    {
+      "id": "Q002",
+      "title": "カエルが愛でるお気に入りの鞄",
+      "description": "ぽってりとしたフォルムと絶妙に気の抜けた表情がたまらない\nカエル型のポシェット。\n一部の熱狂的な愛好家が血眼になって探し回っているらしいが\n手に入るか？",
+      "equipmentId": "S018",
+      "equipmentIds": [
+        "S018"
+      ],
+      "hideItemName": true,
+      "rewardCoins": 5,
+      "unlockScenario": "C001",
+      "order": 2,
+      "enabled": true
+    },
+    {
+      "id": "Q003",
+      "title": "紫紺の槍と盾",
+      "description": "森にいるアリの騎士、奴は見た目通りの誇り高き戦士だ。\n見事打ち負かした者には、ごく稀にその手にした「紫と金の槍と盾」を遺していくらしい。\nコレクターとしては、あの美しい意匠の武具をどうしても拝みたいものだ。",
+      "equipmentId": "S019",
+      "equipmentIds": [
+        "S019",
+        "S020"
+      ],
+      "hideItemName": true,
+      "rewardCoins": 5,
+      "unlockScenario": "C001",
+      "order": 3,
+      "enabled": true
+    },
+    {
+      "id": "Q004",
+      "title": "化け狸の黄金鈴",
+      "description": "やんちゃなタヌキの魔物、あの子を懲らしめて追い払うと\n稀に自分の顔にそっくりな「鈴のお守り」を落としていくことがあるそうだ。\n見た目もご利益も抜群の逸品だから、是非ともコレクションに加えたいものだな。",
+      "equipmentId": "S024",
+      "equipmentIds": [
+        "S024"
+      ],
+      "hideItemName": true,
+      "rewardCoins": 5,
+      "unlockScenario": "C001",
+      "order": 4,
+      "enabled": true
+    },
+    {
+      "id": "Q005",
+      "title": "翼のハンドベル",
+      "description": "一部の楽器愛好家の間で「天上の音色を奏でる幻のベル」と\n密かに語り継がれている、翼の生えたハンドベルが今回のターゲットだ。\n音の良し悪しはわかんないけど、一回くらいは聴いてみたいな。",
+      "equipmentId": "S026",
+      "equipmentIds": [
+        "S026"
+      ],
+      "hideItemName": true,
+      "rewardCoins": 5,
+      "unlockScenario": "C001",
+      "order": 5,
+      "enabled": true
+    },
+    {
+      "id": "Q006",
+      "title": "天使の聖管",
+      "description": "大盾と共に巨大な管楽器を構える奇妙な天使騎士を見たことある？\n音楽と骨董の収集家として、ぜひあの天上の音色をこの手で確かめたい\nって依頼が来てたぜ。",
+      "equipmentId": "S029",
+      "equipmentIds": [
+        "S029"
+      ],
+      "hideItemName": true,
+      "rewardCoins": 5,
+      "unlockScenario": "C001",
+      "order": 6,
+      "enabled": true
+    },
+    {
+      "id": "Q007",
+      "title": "蒼穹の弦楽盾",
+      "description": "弓のような細剣とバイオリン型の盾を操る気高い女騎士を倒すと\n稀にその美しい盾を遺していくことがあるらしい。ロマンがあるぜ。\nまあ、生半可な腕じゃ返り討ちに遭うだろうけどな。",
+      "equipmentId": "S032",
+      "equipmentIds": [
+        "S032"
+      ],
+      "hideItemName": true,
+      "rewardCoins": 5,
+      "unlockScenario": "C001",
+      "order": 7,
+      "enabled": true
+    },
+    {
+      "id": "Q008",
+      "title": "黄金の竪琴",
+      "description": "冗談みたいな話だが、竪琴がプカプカ飛んでるんだとよ。\n一部のマニアが血眼になって探しているらしいんだが\nそれを俺たちで先に見つけちまわないか？",
+      "equipmentId": "S030",
+      "equipmentIds": [
+        "S030"
+      ],
+      "hideItemName": true,
+      "rewardCoins": 5,
+      "unlockScenario": "C001",
+      "order": 8,
+      "enabled": true
+    },
+    {
+      "id": "Q009",
+      "title": "ケロっと晴れやかレインローブ",
+      "description": "雲の上で水しぶきを上げて踊ってる青いカエルから\n稀に手に入るらしいぜ。雨の日でも気分が上がりそうな代物だよな。",
+      "equipmentId": "S034",
+      "equipmentIds": [
+        "S034"
+      ],
+      "hideItemName": true,
+      "rewardCoins": 8,
+      "unlockScenario": "C001",
+      "order": 9,
+      "enabled": true
+    },
+    {
+      "id": "Q010",
+      "title": "萎えた聖角",
+      "description": "一部の珍品マニアの間で『純愛の聖角』なんて皮肉られてる\n物があるんだけど、まあ興味があれば探してみてもいいかもな。",
+      "equipmentId": "S027",
+      "equipmentIds": [
+        "S027"
+      ],
+      "hideItemName": true,
+      "rewardCoins": 5,
+      "unlockScenario": "C001",
+      "order": 10,
+      "enabled": true
+    },
+    {
+      "id": "Q011",
+      "title": "稲妻の巻角飾り",
+      "description": "暗雲と稲妻を纏って、黄金のトロンボーンをブイブイ吹いてる荒々しい羊がいるらしいぜ。\nそいつを黙らせると、稀に『カチューシャ』を落とすみたいだ。\n手に入れたら、ぜひ付けた姿を見せてくれよ。",
+      "equipmentId": "S036",
+      "equipmentIds": [
+        "S036"
+      ],
+      "hideItemName": true,
+      "rewardCoins": 5,
+      "unlockScenario": "C001",
+      "order": 11,
+      "enabled": true
+    },
+    {
+      "id": "Q012",
+      "title": "お菓子の騎士帽",
+      "description": "星型クッキーと羽根飾りがついた『軍帽』を\n軍服姿のクッキー騎士が被ってるらしい。\nどっちが似合うか試してみなよ。",
+      "equipmentId": "S042",
+      "equipmentIds": [
+        "S042"
+      ],
+      "hideItemName": true,
+      "rewardCoins": 5,
+      "unlockScenario": "C002",
+      "order": 12,
+      "enabled": true
+    },
+    {
+      "id": "Q013",
+      "title": "純潔信仰の聖角",
+      "description": "推しへの純潔信仰をこじらせて生えた幻獣のツノだ。\n虹色のオーラを放ち、妄執だけで形を保ってる代物らしい。",
+      "equipmentId": "",
+      "equipmentIds": [],
+      "hideItemName": true,
+      "rewardCoins": 10,
+      "unlockScenario": "C002",
+      "order": 13,
+      "enabled": true
+    },
+    {
+      "id": "Q014",
+      "title": "お菓子の杖",
+      "description": "甘党のセプターなんて呼ばれてる杖があるんだけど\n持ち主は威厳たっぷりのクッキーだって話だ。\nどうだ？　手に入りそうか？",
+      "equipmentId": "",
+      "equipmentIds": [],
+      "hideItemName": true,
+      "rewardCoins": 5,
+      "unlockScenario": "C002",
+      "order": 14,
+      "enabled": true
+    },
+    {
+      "id": "Q015",
+      "title": "シュガーな屠殺刀",
+      "description": "ゴツいクッキーの巨体でチョコと真っ赤なシロップが滴る\nどデカい菓子包丁を振り回してるヤバい奴がいるらしいぜ。\nいくら菓子だからって、そのレベルじゃちゃんと凶器だよな。",
+      "equipmentId": "S046",
+      "equipmentIds": [
+        "S046"
+      ],
+      "hideItemName": true,
+      "rewardCoins": 5,
+      "unlockScenario": "C002",
+      "order": 15,
+      "enabled": true
+    },
+    {
+      "id": "Q016",
+      "title": "甘味王のカラメル戦斧",
+      "description": "カラメルソースを浴びたプリンがデカい斧を振り回してるらしい。\n甘党の夢を豪快に満たしてくれそうな斧だよな。",
+      "equipmentId": "",
+      "equipmentIds": [],
+      "hideItemName": true,
+      "rewardCoins": 5,
+      "unlockScenario": "C002",
+      "order": 16,
+      "enabled": true
+    },
+    {
+      "id": "Q017",
+      "title": "甘美なる女王のベリーワンド",
+      "description": "苺とクリームのドレスを纏った、お菓子の国の女王が持ってる杖があるらしいぜ。\n紅い宝石と甘いソースが絡みついてて、相当な代物だ。\nまあ、女王様の持ち物だし、そう簡単には手に入らないだろうけどな。",
+      "equipmentId": "S047",
+      "equipmentIds": [
+        "S047"
+      ],
+      "hideItemName": true,
+      "rewardCoins": 10,
+      "unlockScenario": "C003",
+      "order": 17,
+      "enabled": true
+    },
+    {
+      "id": "Q018",
+      "title": "小悪魔犬の餌入れ",
+      "description": "ファンシーでやたら派手なエサ皿があるらしいんだ。\n中身がどんな味なのかまでは試す必要はないぜ？",
+      "equipmentId": "S053",
+      "equipmentIds": [
+        "S053"
+      ],
+      "hideItemName": true,
+      "rewardCoins": 5,
+      "unlockScenario": "C003",
+      "order": 18,
+      "enabled": true
+    },
+    {
+      "id": "Q019",
+      "title": "幽世を招く晴天頭巾",
+      "description": "ボタン目と縫い目がついた、てるてる坊主みたいな幽霊がいるって噂だ。\nあいつに関わる代物、どうやら市場じゃかなり高値がつくらしいぜ。\n妙に値が張る理由が何なのかはわかんねえんだけどな。",
+      "equipmentId": "S054",
+      "equipmentIds": [
+        "S054"
+      ],
+      "hideItemName": true,
+      "rewardCoins": 5,
+      "unlockScenario": "C003",
+      "order": 19,
+      "enabled": true
+    },
+    {
+      "id": "Q020",
+      "title": "紫炎揺らめく怨念",
+      "description": "冥界の武具、普通の鉄や鋼とはまるで違う手触りらしいぜ。\nまあ、冥府の使者から剥ぎ取るってんなら腕に覚えがあっても\n骨が折れるだろうな。",
+      "equipmentId": "S055",
+      "equipmentIds": [
+        "S055",
+        "S056",
+        "S059"
+      ],
+      "hideItemName": true,
+      "rewardCoins": 10,
+      "unlockScenario": "C003",
+      "order": 20,
+      "enabled": true
+    }
+  ],
+  "voices": {
+    "shopEnter": [
+      "assets/audio/se/common_se_voice_shopEnter_1795098898470.mp3",
+      "assets/audio/se/common_se_voice_shopEnter_1795098948239.mp3"
+    ],
+    "collectionEnter": [
+      "assets/audio/se/common_se_voice_collectionEnter_1792416717539.mp3",
+      "assets/audio/se/common_se_voice_collectionEnter_1792416725658.mp3",
+      "assets/audio/se/common_se_voice_collectionEnter_1792416729282.mp3"
+    ],
+    "purchase": [
+      "assets/audio/se/common_se_voice_purchase_1792418429206.mp3"
+    ],
+    "gacha": [
+      "assets/audio/se/common_se_voice_gacha_1792418231690.mp3"
+    ],
+    "report": [
+      "assets/audio/se/common_se_voice_report_1792416754130.mp3",
+      "assets/audio/se/common_se_voice_report_1792416756914.mp3",
+      "assets/audio/se/common_se_voice_report_1792416759150.mp3"
+    ]
+  },
+  "shopSE": {
+    "purchase": "assets/audio/se/common_se_shopSE_purchase.mp3",
+    "gacha": "assets/audio/se/common_se_shopSE_gacha.mp3"
+  },
+  "shopRandomVoices": {
+    "purchase": [
+      "assets/audio/se/common_se_shopVoice_purchase_1795098912665.mp3",
+      "assets/audio/se/common_se_shopVoice_purchase_1795098916582.mp3",
+      "assets/audio/se/common_se_shopVoice_purchase_1795098971303.mp3"
+    ],
+    "gacha": [
+      "assets/audio/se/common_se_shopVoice_gacha_1795098977390.mp3",
+      "assets/audio/se/common_se_shopVoice_gacha_1795098982203.mp3",
+      "assets/audio/se/common_se_shopVoice_gacha_1795098986085.mp3"
+    ]
+  }
+}

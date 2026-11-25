@@ -1,0 +1,3336 @@
+[
+  {
+    "id": "S064",
+    "name": "ブラックポップチュッパ",
+    "description": "口に含めば脳まで痺れるほど甘酸っぱい味が広がり\n咥えているだけで不思議と強気な気分になれるギャゥ御用達の一品。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "rank": "C",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "gachaWeight": 60,
+    "cvEnabled": false,
+    "cvText": "",
+    "hpBonus": 0,
+    "atkBonus": 0,
+    "defBonus": 0,
+    "spdBonus": 0,
+    "accuracyBonus": 0,
+    "criticalRateBonus": 0,
+    "level3EventId": "",
+    "availability": {
+      "gacha": {
+        "type": "none",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "weaponSkills": [],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [],
+    "levels": {
+      "2": {},
+      "3": {}
+    },
+    "image": "assets/items/S064.png"
+  },
+  {
+    "id": "S063",
+    "name": "ギャゥバトルバニティ",
+    "description": "リップやブラシ、コンパクトが顔を覗かせており\nどんな戦場でも一瞬で完璧な顔面へ仕上げてくれる。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "rank": "C",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "gachaWeight": 60,
+    "cvEnabled": false,
+    "cvText": "",
+    "hpBonus": 0,
+    "atkBonus": 0,
+    "defBonus": 0,
+    "spdBonus": 0,
+    "accuracyBonus": 0,
+    "criticalRateBonus": 0,
+    "level3EventId": "",
+    "availability": {
+      "gacha": {
+        "type": "none",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "weaponSkills": [],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [],
+    "levels": {
+      "2": {},
+      "3": {}
+    },
+    "image": "assets/items/S063.png"
+  },
+  {
+    "id": "S062",
+    "name": "泡沫の寝香水",
+    "description": "ひと吹きすれば夜露のように儚く甘やかな香りが広がり\n宵闇に溶けるナイトフレグランス。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "rank": "C",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "gachaWeight": 60,
+    "cvEnabled": false,
+    "cvText": "",
+    "hpBonus": 0,
+    "atkBonus": 0,
+    "defBonus": 0,
+    "spdBonus": 0,
+    "accuracyBonus": 0,
+    "criticalRateBonus": 0,
+    "level3EventId": "",
+    "availability": {
+      "gacha": {
+        "type": "none",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "weaponSkills": [],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [],
+    "levels": {
+      "2": {},
+      "3": {}
+    },
+    "image": "assets/items/S062.png"
+  },
+  {
+    "id": "S061",
+    "name": "世紀末ギャルのピンク端末",
+    "description": "ピンクのラインストーンで隙間なくデコレーションされた二つ折り携帯電話。\n圏外でも怪しく光り続ける。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "rank": "C",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "gachaWeight": 60,
+    "cvEnabled": false,
+    "cvText": "",
+    "hpBonus": 0,
+    "atkBonus": 0,
+    "defBonus": 0,
+    "spdBonus": 0,
+    "accuracyBonus": 0,
+    "criticalRateBonus": 0,
+    "level3EventId": "",
+    "availability": {
+      "gacha": {
+        "type": "scenario_clear",
+        "eventId": "",
+        "scenarioId": "C004",
+        "difficulty": "NORMAL",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "weaponSkills": [],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [],
+    "levels": {
+      "2": {},
+      "3": {}
+    },
+    "image": "assets/items/S061.png"
+  },
+  {
+    "id": "S060",
+    "name": "激盛れ♡プリティクラッシャー",
+    "description": "「可愛いは正義、可愛さは時に暴力」を体現する、気合の入った乙女の護身用アイテム。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "rank": "C",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "gachaWeight": 60,
+    "cvEnabled": false,
+    "cvText": "",
+    "hpBonus": 0,
+    "atkBonus": 0,
+    "defBonus": 0,
+    "spdBonus": 0,
+    "accuracyBonus": 0,
+    "criticalRateBonus": 0,
+    "level3EventId": "",
+    "availability": {
+      "gacha": {
+        "type": "scenario_clear",
+        "eventId": "",
+        "scenarioId": "C004",
+        "difficulty": "NORMAL",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "weaponSkills": [],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [],
+    "levels": {
+      "2": {},
+      "3": {}
+    },
+    "image": "assets/items/S060.png"
+  },
+  {
+    "id": "S059",
+    "name": "骸骨の魂魄結晶",
+    "description": "禍々しくも美しい大粒の紫水晶。\n結晶の奥底では霊魂が揺らめき続けている。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "rank": "A",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "gachaWeight": 10,
+    "cvEnabled": false,
+    "cvText": "",
+    "hpBonus": 0,
+    "atkBonus": 0,
+    "defBonus": 0,
+    "spdBonus": 0,
+    "accuracyBonus": 0,
+    "criticalRateBonus": 0,
+    "level3EventId": "",
+    "availability": {
+      "gacha": {
+        "type": "none",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "weaponSkills": [],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [],
+    "levels": {
+      "2": {},
+      "3": {}
+    },
+    "image": "assets/items/S059.png"
+  },
+  {
+    "id": "S058",
+    "name": "丑三つドール",
+    "description": "不気味な紫のオーラを放つ手作りの藁人形。\n突き刺さった針の奥には、誰かの並々ならぬ執着と呪いの念が込められている。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "rank": "C",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "gachaWeight": 60,
+    "cvEnabled": false,
+    "cvText": "",
+    "hpBonus": 0,
+    "atkBonus": 0,
+    "defBonus": 0,
+    "spdBonus": 0,
+    "accuracyBonus": 0,
+    "criticalRateBonus": 0,
+    "level3EventId": "",
+    "availability": {
+      "gacha": {
+        "type": "scenario_clear",
+        "eventId": "",
+        "scenarioId": "C004",
+        "difficulty": "NORMAL",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "weaponSkills": [],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [],
+    "levels": {
+      "2": {},
+      "3": {}
+    },
+    "image": "assets/items/S058.png"
+  },
+  {
+    "id": "S057",
+    "name": "キュン死確定♡スタッズダガー",
+    "description": "見た目は最高にキュートだが、切れ味は容赦なくエグいというギャップが自慢の一振り。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "rank": "C",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "gachaWeight": 60,
+    "cvEnabled": false,
+    "cvText": "",
+    "hpBonus": 0,
+    "atkBonus": 0,
+    "defBonus": 0,
+    "spdBonus": 0,
+    "accuracyBonus": 0,
+    "criticalRateBonus": 0,
+    "level3EventId": "",
+    "availability": {
+      "gacha": {
+        "type": "scenario_clear",
+        "eventId": "",
+        "scenarioId": "C004",
+        "difficulty": "NORMAL",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "weaponSkills": [],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [],
+    "levels": {
+      "2": {},
+      "3": {}
+    },
+    "image": "assets/items/S057.png"
+  },
+  {
+    "id": "S056",
+    "name": "冥府の骸骨重鎧",
+    "description": "肋骨を模したフレームと禍々しい髑髏の肩当てが特徴の、冥界の使者が纏う重厚な鎧。\n裾から立ち昇る紫の霊気が、あらゆる現世の刃を拒む冷徹な結界を織りなす。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "rank": "B",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "gachaWeight": 25,
+    "cvEnabled": false,
+    "cvText": "",
+    "hpBonus": 0,
+    "atkBonus": 0,
+    "defBonus": 0,
+    "spdBonus": 0,
+    "accuracyBonus": 0,
+    "criticalRateBonus": 0,
+    "level3EventId": "",
+    "availability": {
+      "gacha": {
+        "type": "none",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "weaponSkills": [],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [],
+    "levels": {
+      "2": {},
+      "3": {}
+    },
+    "image": "assets/items/S056.png"
+  },
+  {
+    "id": "S055",
+    "name": "冥府の断罪剣",
+    "description": "髑髏の意匠が刻まれた柄から、冷たく燃え盛る紫の瘴気が溢れ出す異界の大剣。\n斬りつけた者の生気だけでなく、その魂までも容赦なく刈り取ると恐れられている。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "rank": "B",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "gachaWeight": 25,
+    "cvEnabled": false,
+    "cvText": "",
+    "hpBonus": 0,
+    "atkBonus": 0,
+    "defBonus": 0,
+    "spdBonus": 0,
+    "accuracyBonus": 0,
+    "criticalRateBonus": 0,
+    "level3EventId": "",
+    "availability": {
+      "gacha": {
+        "type": "none",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "weaponSkills": [],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [],
+    "levels": {
+      "2": {},
+      "3": {}
+    },
+    "image": "assets/items/S055.png"
+  },
+  {
+    "id": "S054",
+    "name": "鈴鳴りの晴天頭巾",
+    "description": "揺れるたびに小さな金の鈴がチリンと鳴り\n被った者の気配を霧のように曖昧にする。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "rank": "B",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "gachaWeight": 25,
+    "cvEnabled": false,
+    "cvText": "",
+    "hpBonus": 0,
+    "atkBonus": 0,
+    "defBonus": 0,
+    "spdBonus": 0,
+    "accuracyBonus": 0,
+    "criticalRateBonus": 0,
+    "level3EventId": "",
+    "availability": {
+      "gacha": {
+        "type": "none",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "weaponSkills": [],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [],
+    "levels": {
+      "2": {},
+      "3": {}
+    },
+    "image": "assets/items/S054.png"
+  },
+  {
+    "id": "S053",
+    "name": "猟犬のやみかわディナー",
+    "description": "甘い香りの中にわずかな鉄分の匂いが混じり\nアンデット感強めな犬ほど夢中で平らげるという。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "rank": "C",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "gachaWeight": 10,
+    "cvEnabled": false,
+    "cvText": "",
+    "hpBonus": 0,
+    "atkBonus": 0,
+    "defBonus": 0,
+    "spdBonus": 0,
+    "accuracyBonus": 0,
+    "criticalRateBonus": 0,
+    "level3EventId": "",
+    "availability": {
+      "gacha": {
+        "type": "none",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "weaponSkills": [],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [],
+    "levels": {
+      "2": {},
+      "3": {}
+    },
+    "image": "assets/items/S053.png"
+  },
+  {
+    "id": "S052",
+    "name": "星飴製菓のうちわ",
+    "description": "捕捉された時には既に手遅れ。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "rank": "A",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "gachaWeight": 10,
+    "cvEnabled": false,
+    "cvText": "",
+    "hpBonus": 0,
+    "atkBonus": 0,
+    "defBonus": 0,
+    "spdBonus": 0,
+    "accuracyBonus": 0,
+    "criticalRateBonus": 0,
+    "level3EventId": "",
+    "availability": {
+      "gacha": {
+        "type": "none",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "weaponSkills": [],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [],
+    "levels": {
+      "2": {},
+      "3": {}
+    },
+    "image": "assets/items/S052.png"
+  },
+  {
+    "id": "S051",
+    "name": "檻ゴ糖",
+    "description": "腸内の善玉菌を増やして腸内環境がイイ感じになる成分が含まれている。\n積極的に取り入れよう！",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "rank": "B",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "gachaWeight": 25,
+    "cvEnabled": false,
+    "cvText": "",
+    "hpBonus": 0,
+    "atkBonus": 0,
+    "defBonus": 0,
+    "spdBonus": 0,
+    "accuracyBonus": 0,
+    "criticalRateBonus": 0,
+    "level3EventId": "",
+    "availability": {
+      "gacha": {
+        "type": "none",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "weaponSkills": [],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [],
+    "levels": {
+      "2": {},
+      "3": {}
+    },
+    "image": "assets/items/S051.png"
+  },
+  {
+    "id": "S050",
+    "name": "QトキャンD",
+    "description": "大男のこぶし一つ分くらいの大きさ。\nグアムに売ってるチュッパチャップくらいデカイ。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "rank": "C",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "gachaWeight": 10,
+    "cvEnabled": false,
+    "cvText": "",
+    "hpBonus": 0,
+    "atkBonus": 0,
+    "defBonus": 0,
+    "spdBonus": 0,
+    "accuracyBonus": 0,
+    "criticalRateBonus": 0,
+    "level3EventId": "",
+    "availability": {
+      "gacha": {
+        "type": "none",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "weaponSkills": [],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [],
+    "levels": {
+      "2": {},
+      "3": {}
+    },
+    "image": "assets/items/S050.png"
+  },
+  {
+    "id": "S049",
+    "name": "ほしおシール",
+    "description": "肩の上あたりに貼ると、あゆきちゃんから\nほしお取らないで！　と言ってもらえます。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "rank": "C",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "gachaWeight": 10,
+    "cvEnabled": false,
+    "cvText": "",
+    "hpBonus": 0,
+    "atkBonus": 0,
+    "defBonus": 0,
+    "spdBonus": 0,
+    "accuracyBonus": 0,
+    "criticalRateBonus": 0,
+    "level3EventId": "",
+    "availability": {
+      "gacha": {
+        "type": "none",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "weaponSkills": [],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [],
+    "levels": {
+      "2": {},
+      "3": {}
+    },
+    "image": "assets/items/S049.png"
+  },
+  {
+    "id": "S048",
+    "name": "カラメル・ド・アックス",
+    "description": "黄金色の巨大プリンとビターなカラメルが絡み合う贅沢な大斧。\n重量感のある一撃が決まれば、あたり一面にとろける衝撃が弾け飛ぶ。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "rank": "C",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "gachaWeight": 10,
+    "cvEnabled": false,
+    "cvText": "",
+    "hpBonus": 0,
+    "atkBonus": 0,
+    "defBonus": 0,
+    "spdBonus": 0,
+    "accuracyBonus": 0,
+    "criticalRateBonus": 0,
+    "level3EventId": "",
+    "availability": {
+      "gacha": {
+        "type": "none",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "weaponSkills": [],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [],
+    "levels": {
+      "2": {},
+      "3": {}
+    },
+    "image": "assets/items/S048.png"
+  },
+  {
+    "id": "S047",
+    "name": "苺聖の極彩杖",
+    "description": "極上の輝きを放つ大粒ルビーと泡立つホイップに彩られた魔導杖。\n麗しい装飾の奥底から、濃厚で過激な魔力の奔流がとめどなく溢れ出す。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "rank": "C",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "gachaWeight": 10,
+    "cvEnabled": false,
+    "cvText": "",
+    "hpBonus": 0,
+    "atkBonus": 0,
+    "defBonus": 0,
+    "spdBonus": 0,
+    "accuracyBonus": 0,
+    "criticalRateBonus": 0,
+    "level3EventId": "",
+    "availability": {
+      "gacha": {
+        "type": "none",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "weaponSkills": [],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [],
+    "levels": {
+      "2": {},
+      "3": {}
+    },
+    "image": "assets/items/S047.png"
+  },
+  {
+    "id": "S046",
+    "name": "断罪のクッキーブッチャー",
+    "description": "濃厚なチョコレート生地にドロドロの血苺ソースが滴る禍々しい大刀。\n不気味な甘味を纏った切っ先は、触れるものすべてを容赦なく叩き斬る。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "rank": "C",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "gachaWeight": 10,
+    "cvEnabled": false,
+    "cvText": "",
+    "hpBonus": 0,
+    "atkBonus": 0,
+    "defBonus": 0,
+    "spdBonus": 0,
+    "accuracyBonus": 0,
+    "criticalRateBonus": 0,
+    "level3EventId": "",
+    "availability": {
+      "gacha": {
+        "type": "none",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "weaponSkills": [],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [],
+    "levels": {
+      "2": {},
+      "3": {}
+    },
+    "image": "assets/items/S046.png"
+  },
+  {
+    "id": "S045",
+    "name": "チェッカーステッキ",
+    "description": "市松模様の香ばしいクッキーで作られた気品ある杖。\n振るうたびに焼き立ての甘い香りが立ち込め、統率者の威厳を際立たせる？",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "rank": "C",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "gachaWeight": 10,
+    "cvEnabled": false,
+    "cvText": "",
+    "hpBonus": 0,
+    "atkBonus": 0,
+    "defBonus": 0,
+    "spdBonus": 0,
+    "accuracyBonus": 0,
+    "criticalRateBonus": 0,
+    "level3EventId": "",
+    "availability": {
+      "gacha": {
+        "type": "none",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "weaponSkills": [],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [],
+    "levels": {
+      "2": {},
+      "3": {}
+    },
+    "image": "assets/items/S045.png"
+  },
+  {
+    "id": "S044",
+    "name": "アイシングソード",
+    "description": "クッキー戦士の儀礼用短剣。お菓子のようにポップな見た目とは裏腹に\n鋭い切っ先が敵の急所を狙う。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "rank": "C",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "gachaWeight": 10,
+    "cvEnabled": false,
+    "cvText": "",
+    "hpBonus": 0,
+    "atkBonus": 0,
+    "defBonus": 0,
+    "spdBonus": 0,
+    "accuracyBonus": 0,
+    "criticalRateBonus": 0,
+    "level3EventId": "",
+    "availability": {
+      "gacha": {
+        "type": "none",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "weaponSkills": [],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [],
+    "levels": {
+      "2": {},
+      "3": {}
+    },
+    "image": "assets/items/S044.png"
+  },
+  {
+    "id": "S043",
+    "name": "苺聖の心盾",
+    "description": "濃厚なホイップと真っ赤な苺ソースが幾重にも滴るハート型の聖盾。\n甘美な誘惑を放つその装飾の裏には、冷徹なまでの強固な守りが潜む。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "rank": "C",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "gachaWeight": 10,
+    "cvEnabled": false,
+    "cvText": "",
+    "hpBonus": 0,
+    "atkBonus": 0,
+    "defBonus": 0,
+    "spdBonus": 0,
+    "accuracyBonus": 0,
+    "criticalRateBonus": 0,
+    "level3EventId": "",
+    "availability": {
+      "gacha": {
+        "type": "none",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "weaponSkills": [],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [],
+    "levels": {
+      "2": {},
+      "3": {}
+    },
+    "image": "assets/items/S043.png"
+  },
+  {
+    "id": "S042",
+    "name": "将軍のフェザーハット",
+    "description": "上質な赤ビロードと真っ白な大羽飾りが気高さを物語る軍帽。\n歴戦の誇りを胸に、かぶる者の頭上で厳かに揺らめき続ける。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "rank": "C",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "gachaWeight": 10,
+    "cvEnabled": false,
+    "cvText": "",
+    "hpBonus": 0,
+    "atkBonus": 0,
+    "defBonus": 0,
+    "spdBonus": 0,
+    "accuracyBonus": 0,
+    "criticalRateBonus": 0,
+    "level3EventId": "",
+    "availability": {
+      "gacha": {
+        "type": "none",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "weaponSkills": [],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [],
+    "levels": {
+      "2": {},
+      "3": {}
+    },
+    "image": "assets/items/S042.png"
+  },
+  {
+    "id": "S041",
+    "name": "甘味卿クラウン・キャンディ",
+    "description": "",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "rank": "C",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "gachaWeight": 10,
+    "cvEnabled": false,
+    "cvText": "",
+    "hpBonus": 0,
+    "atkBonus": 0,
+    "defBonus": 0,
+    "spdBonus": 0,
+    "accuracyBonus": 0,
+    "criticalRateBonus": 0,
+    "level3EventId": "",
+    "availability": {
+      "gacha": {
+        "type": "none",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "weaponSkills": [],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [],
+    "levels": {
+      "2": {},
+      "3": {}
+    },
+    "image": "assets/items/S041.png"
+  },
+  {
+    "id": "S040",
+    "name": "ストップちゃん",
+    "description": "",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "rank": "C",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "gachaWeight": 10,
+    "cvEnabled": false,
+    "cvText": "",
+    "hpBonus": 0,
+    "atkBonus": 0,
+    "defBonus": 0,
+    "spdBonus": 0,
+    "accuracyBonus": 0,
+    "criticalRateBonus": 0,
+    "level3EventId": "",
+    "availability": {
+      "gacha": {
+        "type": "none",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "weaponSkills": [],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [],
+    "levels": {
+      "2": {},
+      "3": {}
+    },
+    "image": "assets/items/S040.png"
+  },
+  {
+    "id": "S039",
+    "name": "ユウちゃんのギター",
+    "description": "",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "rank": "C",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "gachaWeight": 10,
+    "cvEnabled": false,
+    "cvText": "",
+    "hpBonus": 0,
+    "atkBonus": 0,
+    "defBonus": 0,
+    "spdBonus": 0,
+    "accuracyBonus": 0,
+    "criticalRateBonus": 0,
+    "level3EventId": "",
+    "availability": {
+      "gacha": {
+        "type": "none",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "weaponSkills": [],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [],
+    "levels": {
+      "2": {},
+      "3": {}
+    },
+    "image": "assets/items/S039.png"
+  },
+  {
+    "id": "S038",
+    "name": "雲小鳥コットンキャンディ",
+    "description": "",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "rank": "C",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "gachaWeight": 10,
+    "cvEnabled": false,
+    "cvText": "",
+    "hpBonus": 0,
+    "atkBonus": 0,
+    "defBonus": 0,
+    "spdBonus": 0,
+    "accuracyBonus": 0,
+    "criticalRateBonus": 0,
+    "level3EventId": "",
+    "availability": {
+      "gacha": {
+        "type": "none",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "weaponSkills": [],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [],
+    "levels": {
+      "2": {},
+      "3": {}
+    },
+    "image": "assets/items/S038.png"
+  },
+  {
+    "id": "S037",
+    "name": "あまぴよ（サンタ）",
+    "description": "",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "rank": "C",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "gachaWeight": 10,
+    "cvEnabled": false,
+    "cvText": "",
+    "hpBonus": 0,
+    "atkBonus": 0,
+    "defBonus": 0,
+    "spdBonus": 0,
+    "accuracyBonus": 0,
+    "criticalRateBonus": 0,
+    "level3EventId": "",
+    "availability": {
+      "gacha": {
+        "type": "none",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "weaponSkills": [],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [],
+    "levels": {
+      "2": {},
+      "3": {}
+    },
+    "image": "assets/items/S037.png"
+  },
+  {
+    "id": "S036",
+    "name": "雷雲羊の角冠",
+    "description": "激しい電撃と羊雲を纏った黄金に輝く羊角のカチューシャ。\n荒々しい雷雲の怒りを頭頂に宿し、周囲にバチバチと火花を撒き散らす。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "rank": "C",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "gachaWeight": 10,
+    "cvEnabled": false,
+    "cvText": "",
+    "hpBonus": 0,
+    "atkBonus": 0,
+    "defBonus": 0,
+    "spdBonus": 0,
+    "accuracyBonus": 0,
+    "criticalRateBonus": 0,
+    "level3EventId": "",
+    "availability": {
+      "gacha": {
+        "type": "none",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "weaponSkills": [],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [],
+    "levels": {
+      "2": {},
+      "3": {}
+    },
+    "image": "assets/items/S036.png"
+  },
+  {
+    "id": "S035",
+    "name": "ファンタンバリン",
+    "description": "夢色のイラストとキラキラしたリボンが目を引くキュートな打楽器。\nしゃんしゃんと打ち鳴らせば、周りの空気が一瞬で賑やかなお祭り騒ぎに変わる。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "rank": "C",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "gachaWeight": 10,
+    "cvEnabled": false,
+    "cvText": "",
+    "hpBonus": 0,
+    "atkBonus": 0,
+    "defBonus": 0,
+    "spdBonus": 0,
+    "accuracyBonus": 0,
+    "criticalRateBonus": 0,
+    "level3EventId": "",
+    "availability": {
+      "gacha": {
+        "type": "scenario_clear",
+        "eventId": "",
+        "scenarioId": "C002",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "weaponSkills": [],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [],
+    "levels": {
+      "2": {},
+      "3": {}
+    },
+    "image": "assets/items/S035.png"
+  },
+  {
+    "id": "S034",
+    "name": "レインポンチョ",
+    "description": "雨雲や小さな傘のモチーフがちりばめられたポップな防水防寒具。\nどんな激しいドシャ降りも、ご機嫌にはじき返してしまう。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "rank": "C",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "gachaWeight": 10,
+    "cvEnabled": false,
+    "cvText": "",
+    "hpBonus": 0,
+    "atkBonus": 0,
+    "defBonus": 0,
+    "spdBonus": 0,
+    "accuracyBonus": 0,
+    "criticalRateBonus": 0,
+    "level3EventId": "",
+    "availability": {
+      "gacha": {
+        "type": "none",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "weaponSkills": [],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [],
+    "levels": {
+      "2": {},
+      "3": {}
+    },
+    "image": "assets/items/S034.png"
+  },
+  {
+    "id": "S033",
+    "name": "銀鱗のサバーニ",
+    "description": "",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "rank": "C",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "gachaWeight": 10,
+    "cvEnabled": false,
+    "cvText": "",
+    "hpBonus": 0,
+    "atkBonus": 0,
+    "defBonus": 0,
+    "spdBonus": 0,
+    "accuracyBonus": 0,
+    "criticalRateBonus": 0,
+    "level3EventId": "",
+    "availability": {
+      "gacha": {
+        "type": "none",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "weaponSkills": [],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [],
+    "levels": {
+      "2": {},
+      "3": {}
+    },
+    "image": "assets/items/S033.png"
+  },
+  {
+    "id": "S032",
+    "name": "藍盾ヴィオラ",
+    "description": "ヴァイオリンの意匠があしらわれた重厚な大盾。\n襲い来る刃を退けるたび、澄んだ弦の音色が戦場に気高く響き渡る。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "rank": "C",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "gachaWeight": 10,
+    "cvEnabled": false,
+    "cvText": "",
+    "hpBonus": 0,
+    "atkBonus": 0,
+    "defBonus": 0,
+    "spdBonus": 0,
+    "accuracyBonus": 0,
+    "criticalRateBonus": 0,
+    "level3EventId": "",
+    "availability": {
+      "gacha": {
+        "type": "none",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "weaponSkills": [],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [],
+    "levels": {
+      "2": {},
+      "3": {}
+    },
+    "image": "assets/items/S032.png"
+  },
+  {
+    "id": "S031",
+    "name": "クリスタルローラー",
+    "description": "クリスタルの輝きと羽飾りが施された幻想的なローラーシューズ。\n夜空を切り裂く星のように、履く者をしなやかで目にも留まらぬスピードへ導く。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "rank": "C",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "gachaWeight": 10,
+    "cvEnabled": false,
+    "cvText": "",
+    "hpBonus": 0,
+    "atkBonus": 0,
+    "defBonus": 0,
+    "spdBonus": 0,
+    "accuracyBonus": 0,
+    "criticalRateBonus": 0,
+    "level3EventId": "",
+    "availability": {
+      "gacha": {
+        "type": "scenario_clear",
+        "eventId": "",
+        "scenarioId": "C002",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "weaponSkills": [],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [],
+    "levels": {
+      "2": {},
+      "3": {}
+    },
+    "image": "assets/items/S031.png"
+  },
+  {
+    "id": "S030",
+    "name": "虹詠みの天琴",
+    "description": "天使の羽と黄金のフレームが眩しい、幻想的な光を放つ古竪琴。\n指先で紡がれる神聖な旋律は奇跡の盾となり、死の運命すらそっと遠ざける。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "rank": "C",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "gachaWeight": 10,
+    "cvEnabled": false,
+    "cvText": "",
+    "hpBonus": 0,
+    "atkBonus": 0,
+    "defBonus": 0,
+    "spdBonus": 0,
+    "accuracyBonus": 0,
+    "criticalRateBonus": 0,
+    "level3EventId": "",
+    "availability": {
+      "gacha": {
+        "type": "none",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "weaponSkills": [],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [],
+    "levels": {
+      "2": {},
+      "3": {}
+    },
+    "image": "assets/items/S030.png"
+  },
+  {
+    "id": "S029",
+    "name": "聖雲の奏管",
+    "description": "紫紺の金属と雲の装飾が美しい、深い低音を奏でる管楽器。\n吹き鳴らされた重厚な音波は波紋となって広がり、聴く者の精神を優しく狂わせる。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "rank": "C",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "gachaWeight": 10,
+    "cvEnabled": false,
+    "cvText": "",
+    "hpBonus": 0,
+    "atkBonus": 0,
+    "defBonus": 0,
+    "spdBonus": 0,
+    "accuracyBonus": 0,
+    "criticalRateBonus": 0,
+    "level3EventId": "",
+    "availability": {
+      "gacha": {
+        "type": "none",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "weaponSkills": [],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [],
+    "levels": {
+      "2": {},
+      "3": {}
+    },
+    "image": "assets/items/S029.png"
+  },
+  {
+    "id": "S028",
+    "name": "ヴィンヴィンコーン",
+    "description": "未だ萎えさすこと能わず！",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "rank": "B",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "gachaWeight": 25,
+    "cvEnabled": false,
+    "cvText": "",
+    "hpBonus": 0,
+    "atkBonus": 0,
+    "defBonus": 0,
+    "spdBonus": 0,
+    "accuracyBonus": 0,
+    "criticalRateBonus": 0,
+    "level3EventId": "",
+    "availability": {
+      "gacha": {
+        "type": "none",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "weaponSkills": [],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [],
+    "levels": {
+      "2": {},
+      "3": {}
+    },
+    "image": "assets/items/S028.png"
+  },
+  {
+    "id": "S027",
+    "name": "ふにゃふにゃこ～ん",
+    "description": "あの日、ワタシのモノは折れてしまったのです。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "rank": "C",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "gachaWeight": 10,
+    "cvEnabled": false,
+    "cvText": "",
+    "hpBonus": 0,
+    "atkBonus": 0,
+    "defBonus": 0,
+    "spdBonus": 0,
+    "accuracyBonus": 0,
+    "criticalRateBonus": 0,
+    "level3EventId": "",
+    "availability": {
+      "gacha": {
+        "type": "none",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "weaponSkills": [],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [],
+    "levels": {
+      "2": {},
+      "3": {}
+    },
+    "image": "assets/items/S027.png"
+  },
+  {
+    "id": "S026",
+    "name": "羽ばたく祝福のハンドベル",
+    "description": "天上の羽とリボンが飾られた、聖なる祈りを捧げるための金鈴。\n振れば天空から降り注ぐ光とともに、清らかな音色が傷ついた心を包み込む。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "rank": "C",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "gachaWeight": 10,
+    "cvEnabled": false,
+    "cvText": "",
+    "hpBonus": 0,
+    "atkBonus": 0,
+    "defBonus": 0,
+    "spdBonus": 0,
+    "accuracyBonus": 0,
+    "criticalRateBonus": 0,
+    "level3EventId": "",
+    "availability": {
+      "gacha": {
+        "type": "none",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "weaponSkills": [],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [],
+    "levels": {
+      "2": {},
+      "3": {}
+    },
+    "image": "assets/items/S026.png"
+  },
+  {
+    "id": "S025",
+    "name": "ジェネラル・ゼリー",
+    "description": "スライムでありながら高い知性と威厳を持ち\n勲章を誇らしげにつけた小柄な総督。\nコインに目がない。戦闘勝利後に\n確率で追加コインを拾ってくる。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "rank": "A",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "gachaWeight": 10,
+    "cvEnabled": false,
+    "cvText": "砂糖ちか",
+    "hpBonus": 5,
+    "atkBonus": 1,
+    "defBonus": 1,
+    "spdBonus": 0,
+    "accuracyBonus": 0,
+    "criticalRateBonus": 0,
+    "level3EventId": "V500",
+    "availability": {
+      "gacha": {
+        "type": "none",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "weaponSkills": [],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [
+      {
+        "amountMode": "fixed",
+        "inflictChance": 100,
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "poison",
+        "type": "bonus_coins",
+        "trigger": "passive",
+        "target": "self",
+        "stat": "atk",
+        "amount": 1,
+        "chance": 30,
+        "duration": 0
+      }
+    ],
+    "levels": {
+      "2": {
+        "effects": [
+          {
+            "amountMode": "fixed",
+            "inflictChance": 100,
+            "immunityKind": "both",
+            "charges": 0,
+            "stealMode": "temporary",
+            "percent": 10,
+            "cleanseType": "poison",
+            "type": "bonus_coins",
+            "target": "self",
+            "stat": "atk",
+            "amount": 1,
+            "chance": 35,
+            "duration": 0,
+            "trigger": "passive"
+          }
+        ],
+        "hpBonus": 5,
+        "atkBonus": 1,
+        "defBonus": 1,
+        "spdBonus": 1,
+        "accuracyBonus": 0,
+        "criticalRateBonus": 0
+      },
+      "3": {
+        "hpBonus": 5,
+        "atkBonus": 1,
+        "defBonus": 1,
+        "spdBonus": 1,
+        "accuracyBonus": 0,
+        "criticalRateBonus": 10,
+        "effects": [
+          {
+            "amountMode": "fixed",
+            "inflictChance": 100,
+            "immunityKind": "both",
+            "charges": 0,
+            "stealMode": "temporary",
+            "percent": 10,
+            "cleanseType": "poison",
+            "type": "bonus_coins",
+            "target": "self",
+            "stat": "atk",
+            "amount": 1,
+            "chance": 40,
+            "duration": 0,
+            "trigger": "passive"
+          }
+        ]
+      }
+    },
+    "image": "assets/items/S025.png"
+  },
+  {
+    "id": "S024",
+    "name": "化け狸の福鈴",
+    "description": "愛嬌のあるタヌキの顔が大きくデザインされた\n縁起の良い黄金の巨大鈴。\n鳴らすと不思議な福を呼び込む。\nん？　いま、喋った？　まさかね～。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "rank": "B",
+    "dropRateBonus": 15,
+    "chestRateBonus": 20,
+    "gachaWeight": 25,
+    "cvEnabled": false,
+    "cvText": "",
+    "hpBonus": 0,
+    "atkBonus": 0,
+    "defBonus": 0,
+    "spdBonus": 0,
+    "accuracyBonus": 0,
+    "criticalRateBonus": 0,
+    "level3EventId": "",
+    "availability": {
+      "gacha": {
+        "type": "none",
+        "eventId": "",
+        "scenarioId": "C002",
+        "difficulty": "NORMAL",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "weaponSkills": [],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [],
+    "levels": {
+      "2": {
+        "hpBonus": 0,
+        "atkBonus": 0,
+        "defBonus": 0,
+        "spdBonus": 0,
+        "accuracyBonus": 0,
+        "criticalRateBonus": 5
+      },
+      "3": {
+        "hpBonus": 0,
+        "atkBonus": 0,
+        "defBonus": 0,
+        "spdBonus": 0,
+        "accuracyBonus": 5,
+        "criticalRateBonus": 10
+      }
+    },
+    "image": "assets/items/S024.png"
+  },
+  {
+    "id": "S023",
+    "name": "ライアームーン",
+    "description": "悪魔の翼や狼を思わせる鋭利で\n退廃的なデザインの黄金製ペンダント。",
+    "trapDisarm": 10,
+    "trapResist": 10,
+    "rank": "C",
+    "dropRateBonus": 10,
+    "chestRateBonus": 10,
+    "gachaWeight": 60,
+    "cvEnabled": false,
+    "cvText": "",
+    "hpBonus": 0,
+    "atkBonus": 0,
+    "defBonus": 0,
+    "spdBonus": 2,
+    "accuracyBonus": 0,
+    "criticalRateBonus": 0,
+    "level3EventId": "",
+    "availability": {
+      "gacha": {
+        "type": "none",
+        "eventId": "",
+        "scenarioId": "C002",
+        "difficulty": "NORMAL",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "weaponSkills": [
+      {
+        "skillId": "K105",
+        "skillLevels": {
+          "1": 1,
+          "2": 2,
+          "3": 3
+        }
+      }
+    ],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [],
+    "levels": {
+      "2": {
+        "hpBonus": 0,
+        "atkBonus": 0,
+        "defBonus": 0,
+        "spdBonus": 2,
+        "accuracyBonus": 0,
+        "criticalRateBonus": 0
+      },
+      "3": {
+        "hpBonus": 0,
+        "atkBonus": 0,
+        "defBonus": 0,
+        "spdBonus": 2,
+        "accuracyBonus": 0,
+        "criticalRateBonus": 0
+      }
+    },
+    "image": "assets/items/S023.png"
+  },
+  {
+    "id": "S022",
+    "name": "シルバーファング",
+    "description": "青く輝く美しい純銀のボディに、凛々しい狼の姿が\n刻み込まれた特製の銃弾。\nあらゆる不純物を祓う牙は異能に連なる\n概念の悉くを嚙み砕く。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "rank": "B",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "gachaWeight": 25,
+    "cvEnabled": false,
+    "cvText": "",
+    "hpBonus": 0,
+    "atkBonus": 0,
+    "defBonus": 0,
+    "spdBonus": 0,
+    "accuracyBonus": 0,
+    "criticalRateBonus": 15,
+    "level3EventId": "",
+    "availability": {
+      "gacha": {
+        "type": "none",
+        "eventId": "",
+        "scenarioId": "C002",
+        "difficulty": "NORMAL",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "weaponSkills": [],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [],
+    "levels": {
+      "2": {
+        "hpBonus": 0,
+        "atkBonus": 0,
+        "defBonus": 0,
+        "spdBonus": 0,
+        "accuracyBonus": 0,
+        "criticalRateBonus": 25
+      },
+      "3": {
+        "hpBonus": 0,
+        "atkBonus": 0,
+        "defBonus": 0,
+        "spdBonus": 0,
+        "accuracyBonus": 0,
+        "criticalRateBonus": 35
+      }
+    },
+    "image": "assets/items/S022.png"
+  },
+  {
+    "id": "S021",
+    "name": "ルナ・ブラッドムーン",
+    "description": "深紅の宝石と繊細な狼の彫刻が蓋に刻まれた\n神秘的な懐中時計。\n文字盤には三日月と星空が広がり\n時間を操るかのような妖しげな光を放つ。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "rank": "A",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "gachaWeight": 10,
+    "cvEnabled": false,
+    "cvText": "",
+    "hpBonus": 0,
+    "atkBonus": 0,
+    "defBonus": 0,
+    "spdBonus": 2,
+    "accuracyBonus": 0,
+    "criticalRateBonus": 5,
+    "level3EventId": "",
+    "availability": {
+      "gacha": {
+        "type": "none",
+        "eventId": "",
+        "scenarioId": "C002",
+        "difficulty": "NORMAL",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "weaponSkills": [],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [],
+    "levels": {
+      "2": {
+        "hpBonus": 0,
+        "atkBonus": 0,
+        "defBonus": 1,
+        "spdBonus": 3,
+        "accuracyBonus": 0,
+        "criticalRateBonus": 5
+      },
+      "3": {
+        "hpBonus": 5,
+        "atkBonus": 1,
+        "defBonus": 1,
+        "spdBonus": 4,
+        "accuracyBonus": 10,
+        "criticalRateBonus": 10
+      }
+    },
+    "image": "assets/items/S021.png"
+  },
+  {
+    "id": "S020",
+    "name": "ノーブル・バリアント",
+    "description": "深紫色の宝石と黄金の月桂樹に囲まれ\n中央に女王蟻の紋章が刻まれた神聖な盾。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "rank": "A",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "gachaWeight": 10,
+    "cvEnabled": false,
+    "cvText": "",
+    "hpBonus": 0,
+    "atkBonus": 0,
+    "defBonus": 2,
+    "spdBonus": 1,
+    "accuracyBonus": 5,
+    "criticalRateBonus": 5,
+    "level3EventId": "",
+    "availability": {
+      "gacha": {
+        "type": "none",
+        "eventId": "",
+        "scenarioId": "C002",
+        "difficulty": "NORMAL",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "weaponSkills": [],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [],
+    "levels": {
+      "2": {
+        "hpBonus": 0,
+        "atkBonus": 0,
+        "defBonus": 3,
+        "spdBonus": 1,
+        "accuracyBonus": 5,
+        "criticalRateBonus": 5
+      },
+      "3": {
+        "hpBonus": 0,
+        "atkBonus": 0,
+        "defBonus": 3,
+        "spdBonus": 1,
+        "accuracyBonus": 10,
+        "criticalRateBonus": 10
+      }
+    },
+    "image": "assets/items/S020.png"
+  },
+  {
+    "id": "S019",
+    "name": "ノーブル・スピアント",
+    "description": "高貴な輝きを放つアメジストが装飾された\n美しくも鋭い蟻長槍。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "rank": "A",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "gachaWeight": 10,
+    "cvEnabled": false,
+    "cvText": "",
+    "hpBonus": 0,
+    "atkBonus": 2,
+    "defBonus": 0,
+    "spdBonus": 1,
+    "accuracyBonus": 5,
+    "criticalRateBonus": 5,
+    "level3EventId": "",
+    "availability": {
+      "gacha": {
+        "type": "none",
+        "eventId": "",
+        "scenarioId": "C002",
+        "difficulty": "NORMAL",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "weaponSkills": [],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [],
+    "levels": {
+      "2": {
+        "hpBonus": 0,
+        "atkBonus": 3,
+        "defBonus": 0,
+        "spdBonus": 2,
+        "accuracyBonus": 5,
+        "criticalRateBonus": 5
+      },
+      "3": {
+        "hpBonus": 0,
+        "atkBonus": 3,
+        "defBonus": 0,
+        "spdBonus": 2,
+        "accuracyBonus": 10,
+        "criticalRateBonus": 10
+      }
+    },
+    "image": "assets/items/S019.png"
+  },
+  {
+    "id": "S018",
+    "name": "フロッグポシェット",
+    "description": "チャームにも小さなカエルとハートがあしらわれた\n細部までこだわり抜かれたデザイン。\nおしゃれキッズやファンシー好きに大人気のアイテム。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "rank": "C",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "gachaWeight": 60,
+    "cvEnabled": false,
+    "cvText": "",
+    "hpBonus": 5,
+    "atkBonus": 0,
+    "defBonus": 1,
+    "spdBonus": 0,
+    "accuracyBonus": 0,
+    "criticalRateBonus": 0,
+    "level3EventId": "",
+    "availability": {
+      "gacha": {
+        "type": "none",
+        "eventId": "",
+        "scenarioId": "C002",
+        "difficulty": "NORMAL",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "weaponSkills": [],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [],
+    "levels": {
+      "2": {
+        "hpBonus": 5,
+        "atkBonus": 0,
+        "defBonus": 2,
+        "spdBonus": 0,
+        "accuracyBonus": 0,
+        "criticalRateBonus": 0
+      },
+      "3": {
+        "hpBonus": 10,
+        "atkBonus": 0,
+        "defBonus": 2,
+        "spdBonus": 0,
+        "accuracyBonus": 0,
+        "criticalRateBonus": 0
+      }
+    },
+    "image": "assets/items/S018.png"
+  },
+  {
+    "id": "S017",
+    "name": "スイートグリーン",
+    "description": "銃身が獅子唐を模した、一定の確率で\n強烈なスパイスを放つ一丁。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "rank": "B",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "gachaWeight": 25,
+    "cvEnabled": false,
+    "cvText": "",
+    "hpBonus": 0,
+    "atkBonus": 1,
+    "defBonus": 0,
+    "spdBonus": 0,
+    "accuracyBonus": 0,
+    "criticalRateBonus": 15,
+    "level3EventId": "",
+    "availability": {
+      "gacha": {
+        "type": "none",
+        "eventId": "",
+        "scenarioId": "C002",
+        "difficulty": "NORMAL",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "weaponSkills": [
+      {
+        "skillId": "K106",
+        "skillLevels": {
+          "1": 1,
+          "2": 2,
+          "3": 3
+        }
+      }
+    ],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [],
+    "levels": {
+      "2": {
+        "hpBonus": 0,
+        "atkBonus": 2,
+        "defBonus": 0,
+        "spdBonus": 0,
+        "accuracyBonus": 0,
+        "criticalRateBonus": 15
+      },
+      "3": {
+        "hpBonus": 0,
+        "atkBonus": 2,
+        "defBonus": 0,
+        "spdBonus": 0,
+        "accuracyBonus": 0,
+        "criticalRateBonus": 20
+      }
+    },
+    "image": "assets/items/S017.png"
+  },
+  {
+    "id": "S016",
+    "name": "ラブコンクエ",
+    "description": "「Yes」しか許さない甘く切ない\n拘束用マスク。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "rank": "C",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "gachaWeight": 60,
+    "cvEnabled": false,
+    "cvText": "",
+    "hpBonus": 0,
+    "atkBonus": 0,
+    "defBonus": 0,
+    "spdBonus": 0,
+    "accuracyBonus": 5,
+    "criticalRateBonus": 0,
+    "level3EventId": "",
+    "availability": {
+      "gacha": {
+        "type": "scenario_clear",
+        "eventId": "",
+        "scenarioId": "C002",
+        "difficulty": "NORMAL",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "weaponSkills": [],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [],
+    "levels": {
+      "2": {
+        "hpBonus": 0,
+        "atkBonus": 0,
+        "defBonus": 0,
+        "spdBonus": 0,
+        "accuracyBonus": 10,
+        "criticalRateBonus": 0
+      },
+      "3": {
+        "accuracyBonus": 15,
+        "criticalRateBonus": 5
+      }
+    },
+    "image": "assets/items/S016.png"
+  },
+  {
+    "id": "S015",
+    "name": "ミルキーボトル",
+    "description": "甘いミルクを蓄え、飲む者の精神を\n幼児退行させる魔道具。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "rank": "B",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "gachaWeight": 25,
+    "cvEnabled": false,
+    "cvText": "",
+    "hpBonus": 0,
+    "atkBonus": 0,
+    "defBonus": 0,
+    "spdBonus": 0,
+    "accuracyBonus": 0,
+    "criticalRateBonus": 0,
+    "level3EventId": "",
+    "availability": {
+      "gacha": {
+        "type": "scenario_clear",
+        "eventId": "",
+        "scenarioId": "C002",
+        "difficulty": "NORMAL",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "weaponSkills": [
+      {
+        "skillId": "K104",
+        "skillLevels": {
+          "1": 1,
+          "2": 2,
+          "3": 3
+        }
+      }
+    ],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [],
+    "levels": {
+      "2": {},
+      "3": {}
+    },
+    "image": "assets/items/S015.png"
+  },
+  {
+    "id": "S014",
+    "name": "ラビメット",
+    "description": "愛らしいうさ耳と偏光シールドで安全と\n目立ち度を完璧に両立したヘルメット。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "rank": "B",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "gachaWeight": 25,
+    "cvEnabled": false,
+    "cvText": "",
+    "hpBonus": 0,
+    "atkBonus": 0,
+    "defBonus": 0,
+    "spdBonus": 3,
+    "accuracyBonus": 1,
+    "criticalRateBonus": 0,
+    "level3EventId": "",
+    "availability": {
+      "gacha": {
+        "type": "scenario_clear",
+        "eventId": "",
+        "scenarioId": "C002",
+        "difficulty": "NORMAL",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "weaponSkills": [],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [],
+    "levels": {
+      "2": {
+        "hpBonus": 0,
+        "atkBonus": 0,
+        "defBonus": 1,
+        "spdBonus": 3,
+        "accuracyBonus": 1,
+        "criticalRateBonus": 0
+      },
+      "3": {
+        "hpBonus": 0,
+        "atkBonus": 0,
+        "defBonus": 1,
+        "spdBonus": 4,
+        "accuracyBonus": 1,
+        "criticalRateBonus": 0
+      }
+    },
+    "image": "assets/items/S014.png"
+  },
+  {
+    "id": "S013",
+    "name": "メルティローズメイデン",
+    "description": "眩い宝石のトゲと甘い薔薇に彩られた、究極にファンシーなインテリア。",
+    "trapDisarm": 0,
+    "trapResist": 20,
+    "rank": "S",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "gachaWeight": 5,
+    "cvEnabled": false,
+    "cvText": "",
+    "hpBonus": 0,
+    "atkBonus": 1,
+    "defBonus": 4,
+    "spdBonus": 0,
+    "accuracyBonus": 0,
+    "criticalRateBonus": 0,
+    "level3EventId": "",
+    "availability": {
+      "gacha": {
+        "type": "scenario_clear",
+        "eventId": "",
+        "scenarioId": "C002",
+        "difficulty": "NORMAL",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "weaponSkills": [],
+    "statusResistances": {
+      "poison": 30,
+      "paralysis": 30,
+      "burn": 30,
+      "blind": 30,
+      "silence": 30,
+      "curse": 30,
+      "sleep": 30
+    },
+    "effects": [],
+    "levels": {
+      "2": {
+        "hpBonus": 0,
+        "atkBonus": 1,
+        "defBonus": 5,
+        "spdBonus": 0,
+        "accuracyBonus": 0,
+        "criticalRateBonus": 0
+      },
+      "3": {
+        "hpBonus": 10,
+        "atkBonus": 1,
+        "defBonus": 6,
+        "spdBonus": 0,
+        "accuracyBonus": 0,
+        "criticalRateBonus": 0
+      }
+    },
+    "image": "assets/items/S013.png"
+  },
+  {
+    "id": "S012",
+    "name": "ニャントレット",
+    "description": "ぷにぷにした肉球の愛玩手甲。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "rank": "C",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "gachaWeight": 60,
+    "cvEnabled": false,
+    "cvText": "",
+    "hpBonus": 0,
+    "atkBonus": 2,
+    "defBonus": 0,
+    "spdBonus": 0,
+    "accuracyBonus": 0,
+    "criticalRateBonus": 5,
+    "level3EventId": "",
+    "availability": {
+      "gacha": {
+        "type": "scenario_clear",
+        "eventId": "",
+        "scenarioId": "C002",
+        "difficulty": "NORMAL",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "weaponSkills": [],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [],
+    "levels": {
+      "2": {
+        "hpBonus": 0,
+        "atkBonus": 2,
+        "defBonus": 0,
+        "spdBonus": 0,
+        "accuracyBonus": 0,
+        "criticalRateBonus": 10
+      },
+      "3": {
+        "hpBonus": 0,
+        "atkBonus": 3,
+        "defBonus": 0,
+        "spdBonus": 0,
+        "accuracyBonus": 0,
+        "criticalRateBonus": 15
+      }
+    },
+    "image": "assets/items/S012.png"
+  },
+  {
+    "id": "S011",
+    "name": "レインボーピロー",
+    "description": "虹の架け橋とふわふわの雲に包まれ\n極上の安らぎをもたらす夢心地の枕。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "rank": "B",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "gachaWeight": 25,
+    "cvEnabled": false,
+    "cvText": "",
+    "hpBonus": 0,
+    "atkBonus": 0,
+    "defBonus": 0,
+    "spdBonus": 0,
+    "accuracyBonus": 0,
+    "criticalRateBonus": 0,
+    "level3EventId": "",
+    "availability": {
+      "gacha": {
+        "type": "scenario_clear",
+        "eventId": "",
+        "scenarioId": "C002",
+        "difficulty": "NORMAL",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "weaponSkills": [
+      {
+        "skillId": "K103",
+        "skillLevels": {
+          "1": 1,
+          "2": 2,
+          "3": 3
+        }
+      }
+    ],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [],
+    "levels": {
+      "2": {},
+      "3": {}
+    },
+    "image": "assets/items/S011.png"
+  },
+  {
+    "id": "S010",
+    "name": "お手をどうぞ",
+    "description": "美しい悪魔の翼があしらわれた、逃れられぬ友情の鉄枷。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "rank": "B",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "gachaWeight": 25,
+    "cvEnabled": false,
+    "cvText": "",
+    "hpBonus": 0,
+    "atkBonus": 0,
+    "defBonus": 0,
+    "spdBonus": 0,
+    "accuracyBonus": 0,
+    "criticalRateBonus": 0,
+    "level3EventId": "",
+    "availability": {
+      "gacha": {
+        "type": "scenario_clear",
+        "eventId": "",
+        "scenarioId": "C001",
+        "difficulty": "NORMAL",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "weaponSkills": [
+      {
+        "skillId": "K102",
+        "skillLevels": {
+          "1": 1,
+          "2": 2,
+          "3": 3
+        }
+      }
+    ],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [],
+    "levels": {
+      "2": {},
+      "3": {}
+    },
+    "image": "assets/items/S010.png"
+  },
+  {
+    "id": "S009",
+    "name": "ラブリーチョンパー",
+    "description": "星々のきらめきを刃に宿した、最高にファンシーなインテリア。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "rank": "B",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "gachaWeight": 25,
+    "cvEnabled": false,
+    "cvText": "",
+    "hpBonus": 0,
+    "atkBonus": 0,
+    "defBonus": 0,
+    "spdBonus": 0,
+    "accuracyBonus": 0,
+    "criticalRateBonus": 10,
+    "level3EventId": "",
+    "availability": {
+      "gacha": {
+        "type": "scenario_clear",
+        "eventId": "",
+        "scenarioId": "C001",
+        "difficulty": "NORMAL",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "weaponSkills": [],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 10,
+      "burn": 10,
+      "blind": 0,
+      "silence": 10,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [],
+    "levels": {
+      "2": {
+        "hpBonus": 0,
+        "atkBonus": 0,
+        "defBonus": 0,
+        "spdBonus": 0,
+        "accuracyBonus": 0,
+        "criticalRateBonus": 15
+      },
+      "3": {
+        "criticalRateBonus": 20
+      }
+    },
+    "image": "assets/items/S009.png"
+  },
+  {
+    "id": "S008",
+    "name": "地雷系マインちゃん",
+    "description": "踏み心地にヤミツキ☆",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "rank": "S",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "gachaWeight": 5,
+    "cvEnabled": false,
+    "cvText": "",
+    "hpBonus": 0,
+    "atkBonus": 0,
+    "defBonus": 0,
+    "spdBonus": 0,
+    "accuracyBonus": 0,
+    "criticalRateBonus": 0,
+    "level3EventId": "",
+    "availability": {
+      "gacha": {
+        "type": "none",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "weaponSkills": [
+      {
+        "skillId": "K101",
+        "skillLevels": {
+          "1": 1,
+          "2": 2,
+          "3": 3
+        }
+      }
+    ],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [],
+    "levels": {
+      "2": {},
+      "3": {}
+    },
+    "image": "assets/items/S008.png"
+  },
+  {
+    "id": "S007",
+    "name": "イエローサマー",
+    "description": "漆黒のソールにまばゆい黄金が光る\n軽やかでリッチなビーチサンダル。",
+    "trapDisarm": 0,
+    "trapResist": 10,
+    "rank": "C",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "gachaWeight": 60,
+    "cvEnabled": false,
+    "cvText": "",
+    "hpBonus": 0,
+    "atkBonus": 0,
+    "defBonus": 0,
+    "spdBonus": 2,
+    "accuracyBonus": 0,
+    "criticalRateBonus": 0,
+    "level3EventId": "",
+    "availability": {
+      "gacha": {
+        "type": "always",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "weaponSkills": [],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [],
+    "levels": {
+      "2": {
+        "hpBonus": 0,
+        "atkBonus": 0,
+        "defBonus": 0,
+        "spdBonus": 3,
+        "accuracyBonus": 0,
+        "criticalRateBonus": 0
+      },
+      "3": {
+        "hpBonus": 0,
+        "atkBonus": 0,
+        "defBonus": 0,
+        "spdBonus": 4,
+        "accuracyBonus": 0,
+        "criticalRateBonus": 0
+      }
+    },
+    "image": "assets/items/S007.png"
+  },
+  {
+    "id": "S006",
+    "name": "星天回方陣",
+    "description": "時空の歪みから莫大な魔力を引き出す\n神秘の星図。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "rank": "C",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "gachaWeight": 60,
+    "cvEnabled": false,
+    "cvText": "",
+    "hpBonus": 0,
+    "atkBonus": 2,
+    "defBonus": 0,
+    "spdBonus": 0,
+    "accuracyBonus": 5,
+    "criticalRateBonus": 0,
+    "level3EventId": "",
+    "availability": {
+      "gacha": {
+        "type": "always",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "weaponSkills": [],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [],
+    "levels": {
+      "2": {
+        "hpBonus": 0,
+        "atkBonus": 2,
+        "defBonus": 0,
+        "spdBonus": 0,
+        "accuracyBonus": 10,
+        "criticalRateBonus": 0
+      },
+      "3": {
+        "hpBonus": 0,
+        "atkBonus": 2,
+        "defBonus": 0,
+        "spdBonus": 0,
+        "accuracyBonus": 15,
+        "criticalRateBonus": 0
+      }
+    },
+    "image": "assets/items/S006.png"
+  },
+  {
+    "id": "S005",
+    "name": "たいさ～ん♡",
+    "description": "あらゆる悪霊をキュートに浄化するお札。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "rank": "C",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "gachaWeight": 60,
+    "cvEnabled": false,
+    "cvText": "",
+    "hpBonus": 0,
+    "atkBonus": 0,
+    "defBonus": 1,
+    "spdBonus": 0,
+    "accuracyBonus": 0,
+    "criticalRateBonus": 0,
+    "level3EventId": "",
+    "availability": {
+      "gacha": {
+        "type": "always",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "weaponSkills": [],
+    "statusResistances": {
+      "poison": 15,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [],
+    "levels": {
+      "2": {
+        "hpBonus": 0,
+        "atkBonus": 0,
+        "defBonus": 1,
+        "spdBonus": 0,
+        "accuracyBonus": 1,
+        "criticalRateBonus": 0
+      },
+      "3": {
+        "hpBonus": 0,
+        "atkBonus": 0,
+        "defBonus": 2,
+        "spdBonus": 0,
+        "accuracyBonus": 1,
+        "criticalRateBonus": 0
+      }
+    },
+    "image": "assets/items/S005.png"
+  },
+  {
+    "id": "S004",
+    "name": "女王様の口付け",
+    "description": "芳醇な薔薇の香りの裏に隠された運命。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "rank": "A",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "gachaWeight": 10,
+    "cvEnabled": false,
+    "cvText": "",
+    "hpBonus": 0,
+    "atkBonus": 0,
+    "defBonus": 0,
+    "spdBonus": 0,
+    "accuracyBonus": 0,
+    "criticalRateBonus": 0,
+    "level3EventId": "",
+    "availability": {
+      "gacha": {
+        "type": "always",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "weaponSkills": [
+      {
+        "skillId": "K100",
+        "skillLevels": {
+          "1": 1,
+          "2": 2,
+          "3": 3
+        }
+      }
+    ],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [],
+    "levels": {
+      "2": {
+        "usesPerAdventure": 0
+      },
+      "3": {
+        "usesPerAdventure": 3
+      }
+    },
+    "image": "assets/items/S004.png"
+  },
+  {
+    "id": "S003",
+    "name": "夜闇のルージュコーム",
+    "description": "★☆☆☆☆\n髪にひっかかって使いづらいです。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "rank": "C",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "gachaWeight": 60,
+    "cvEnabled": false,
+    "cvText": "",
+    "hpBonus": 0,
+    "atkBonus": 1,
+    "defBonus": 0,
+    "spdBonus": 0,
+    "accuracyBonus": 0,
+    "criticalRateBonus": 5,
+    "level3EventId": "",
+    "availability": {
+      "gacha": {
+        "type": "always",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "weaponSkills": [],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [],
+    "levels": {
+      "2": {
+        "hpBonus": 0,
+        "atkBonus": 2,
+        "defBonus": 0,
+        "spdBonus": 0,
+        "accuracyBonus": 0,
+        "criticalRateBonus": 5
+      },
+      "3": {
+        "hpBonus": 0,
+        "atkBonus": 2,
+        "defBonus": 0,
+        "spdBonus": 0,
+        "accuracyBonus": 0,
+        "criticalRateBonus": 10
+      }
+    },
+    "image": "assets/items/S003.png"
+  },
+  {
+    "id": "S002",
+    "name": "うさぴょんファン",
+    "description": "涼やかな風で快適だぴょん",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "rank": "C",
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "gachaWeight": 60,
+    "cvEnabled": false,
+    "cvText": "",
+    "hpBonus": 0,
+    "atkBonus": 0,
+    "defBonus": 0,
+    "spdBonus": 2,
+    "accuracyBonus": 5,
+    "criticalRateBonus": 0,
+    "level3EventId": "",
+    "availability": {
+      "gacha": {
+        "type": "always",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "weaponSkills": [],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [],
+    "levels": {
+      "2": {
+        "hpBonus": 0,
+        "atkBonus": 0,
+        "defBonus": 0,
+        "spdBonus": 2,
+        "accuracyBonus": 5,
+        "criticalRateBonus": 0
+      },
+      "3": {
+        "hpBonus": 0,
+        "atkBonus": 0,
+        "defBonus": 0,
+        "spdBonus": 3,
+        "accuracyBonus": 5,
+        "criticalRateBonus": 0
+      }
+    },
+    "se": "assets/se/S002.mp3",
+    "image": "assets/items/S002.png"
+  },
+  {
+    "id": "S001",
+    "name": "歓迎ピコハン",
+    "description": "出迎えの挨拶がてら。",
+    "price": 0,
+    "gachaWeight": 60,
+    "hpBonus": 0,
+    "atkBonus": 1,
+    "defBonus": 0,
+    "spdBonus": 0,
+    "effects": [],
+    "rank": "C",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "cvEnabled": false,
+    "cvText": "",
+    "accuracyBonus": 0,
+    "level3EventId": "",
+    "availability": {
+      "gacha": {
+        "type": "always",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "weaponSkills": [],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "levels": {
+      "2": {
+        "hpBonus": 0,
+        "atkBonus": 1,
+        "defBonus": 0,
+        "spdBonus": 1
+      },
+      "3": {
+        "hpBonus": 0,
+        "atkBonus": 2,
+        "defBonus": 0,
+        "spdBonus": 1
+      }
+    },
+    "image": "assets/items/S001.png",
+    "criticalRateBonus": 0,
+    "se": "assets/se/S001.mp3"
+  }
+]

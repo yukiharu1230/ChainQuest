@@ -1,0 +1,31 @@
+[
+  {
+    "id": "gift_welcome",
+    "keyword": "良い子は寝ます",
+    "enabled": true,
+    "rewards": {
+      "coins": 3,
+      "medicine": 3,
+      "items": [],
+      "equipment": [],
+      "guests": [
+        "G001"
+      ],
+      "skills": []
+    }
+  },
+  {
+    "id": "gift_moon",
+    "keyword": "MOONLIGHT",
+    "enabled": false,
+    "rewards": {
+      "coins": 5,
+      "items": [
+        "I100"
+      ],
+      "equipment": [],
+      "guests": [],
+      "skills": []
+    }
+  }
+]

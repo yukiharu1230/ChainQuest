@@ -1,0 +1,25 @@
+{
+  "dialogues": [
+    {
+      "id": "H001",
+      "text": "今日も冒険する？",
+      "voice": null,
+      "type": "NORMAL",
+      "weight": 10
+    },
+    {
+      "id": "H002",
+      "text": "準備はできてるよ。",
+      "voice": null,
+      "type": "NORMAL",
+      "weight": 10
+    },
+    {
+      "id": "H003",
+      "text": "何か用？",
+      "voice": null,
+      "type": "NORMAL",
+      "weight": 10
+    }
+  ]
+}

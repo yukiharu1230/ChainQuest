@@ -1,0 +1,860 @@
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;background:#080b15;color:#f5f0df;font-family:"Yu Gothic",Meiryo,sans-serif;overflow:hidden}button{font:inherit;cursor:pointer}button:disabled{opacity:.45;cursor:not-allowed}#viewport{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}#stage{position:relative;width:1920px;height:1080px;flex:none;transform-origin:center center;overflow:hidden;background:radial-gradient(ellipse at 50% 35%,#31435b,#151a2b 64%,#0b0d16);border:1px solid #6a5a3d}#stage::before{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(120deg,transparent 30%,#ffffff07 50%,transparent 70%)}.screen{position:absolute;inset:0;display:none}.screen.active{display:block}.heading{position:absolute;top:100px;width:100%;text-align:center;font-size:100px;letter-spacing:12px;text-shadow:0 6px 20px #000}.subtitle{font-size:27px;letter-spacing:6px;color:#e3cfa1}.stack{position:absolute;top:450px;left:50%;transform:translateX(-50%);display:grid;gap:26px;width:450px}.btn{padding:23px 30px;background:#1b263a;border:2px solid #c8aa6b;color:#f7e9c5;border-radius:12px;font-size:33px;box-shadow:0 8px 18px #0006}.btn:hover:not(:disabled){background:#354562}.coin{position:absolute;right:64px;top:45px;font-size:36px}.hero{position:absolute;top:205px;left:50%;transform:translateX(-50%);height:610px;width:450px;border:2px dashed #a28d6777;border-radius:45% 45% 12% 12%;display:flex;align-items:center;justify-content:center;text-align:center;font-size:34px;color:#e6d9b1;background:#ffffff0b}.hero:focus-visible{outline:6px solid #fff}.bubble{position:absolute;top:130px;left:53%;padding:24px 35px;border-radius:22px;background:#faf5e8;color:#252436;font-size:32px;max-width:630px;box-shadow:0 8px 20px #0007}.menu{position:absolute;bottom:75px;left:50%;transform:translateX(-50%);display:flex;gap:32px}.menu button{min-width:235px;min-height:105px}.save{position:absolute;bottom:75px;left:65px}.back{position:absolute;bottom:75px;left:65px}.panel{position:absolute;top:260px;left:250px;width:1420px;min-height:470px;padding:55px;background:#111a2be8;border:2px solid #baa16e;border-radius:24px;text-align:center;font-size:34px}.muted{color:#c7c0ae;font-size:28px}.save-list{display:grid;gap:24px;margin-top:28px}.save-entry{text-align:left;font-size:27px;padding:28px}.modal{position:absolute;inset:0;background:#03050bbd;display:none;align-items:center;justify-content:center;z-index:20}.modal.open{display:flex}.dialog{width:870px;padding:65px;background:#172236;border:2px solid #c8aa6b;border-radius:22px;text-align:center;font-size:34px}.dialog-actions{display:flex;gap:30px;justify-content:center;margin-top:55px}.fade{position:absolute;inset:0;background:#05070e;opacity:0;pointer-events:none;z-index:10;transition:opacity .24s}.fade.on{opacity:1}@media(prefers-reduced-motion:reduce){.fade{transition:none}}/* Stage 4: data-driven shop and status */
+.shop-coins{position:absolute;right:65px;top:55px;font-size:35px}.shop-npc,.status-art{position:absolute;left:100px;top:270px;width:620px;height:550px;border:2px dashed #8c826b;border-radius:30px;display:grid;place-content:center;text-align:center;font-size:34px;color:#d1c6a8}.shop-frame,.status-frame{position:absolute;left:760px;top:245px;width:1070px;height:680px;background:#10192bea;border:2px solid #c8aa6b;border-radius:24px;padding:25px}.tabs{display:flex;gap:12px;margin-bottom:20px}.tab{flex:1;background:#25334a;color:#f7e9c5;border:1px solid #aa925e;border-radius:8px;padding:17px;font-size:29px}.tab.selected{background:#675433}.shop-list{height:545px;overflow-y:auto;scrollbar-width:thin;padding-right:14px}.shop-row{display:flex;align-items:center;gap:22px;min-height:175px;border-bottom:1px solid #766b56;padding:12px 6px}.product-art{width:135px;height:135px;flex:none;border:1px solid #756c5a;border-radius:10px;display:grid;place-items:center;overflow:hidden}.product-art img,.slot-image img{width:100%;height:100%;object-fit:contain}.no-image{font-size:17px;color:#a7a6a2}.product-detail{flex:1;min-width:0;display:grid;gap:9px}.product-detail strong{font-size:30px}.product-detail small{font-size:21px;color:#bfbcb3;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.product-detail span{font-size:26px;color:#e9ca83}.small-btn{background:#344664;color:#fff0cc;border:1px solid #d0ae70;border-radius:8px;font-size:25px;padding:14px 20px;min-width:82px}.small-btn:disabled{opacity:.42}.empty{text-align:center;font-size:27px;padding-top:140px}.status-frame{top:205px;height:740px;overflow-y:auto}.status-level{font-size:34px;margin-bottom:20px}.stat-row{display:grid;grid-template-columns:160px 1fr 145px 80px;gap:10px;align-items:center;border-bottom:1px solid #54556a;min-height:76px;font-size:27px}.stat-row strong{font-size:29px}.cost{font-size:21px;color:#d8c7a6}.status-frame h3{font-size:28px;margin:26px 0 14px}.slots{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.slot{min-height:135px;border:2px solid #9f8859;border-radius:12px;background:#1c2940;color:#f6e9c9;padding:12px;display:flex;flex-direction:column;gap:8px;align-items:center;justify-content:center}.slot span{font-size:22px}.slot strong{font-size:25px}.slot-image{height:70px;width:70px}.picker-dialog{width:820px;max-height:850px;display:flex;flex-direction:column;gap:25px}.picker-dialog h2{margin:0}.picker-list{overflow-y:auto;display:grid;gap:12px;min-height:80px}.pick-entry{padding:19px;border:1px solid #b99a61;border-radius:9px;background:#263750;color:#fff;font-size:28px;text-align:left}.picker-dialog .btn{align-self:center}.modal#picker{z-index:25}
+
+/* Stage 5 layout refinements */
+.menu{gap:16px}.menu button{min-width:195px;min-height:95px;font-size:28px}
+.shop-caption{font-size:32px;font-weight:bold;padding:5px 10px 17px;border-bottom:1px solid #88724d}
+.shop-list{height:570px}.product-detail{gap:12px}.product-heading{display:flex;align-items:baseline;gap:28px;flex-wrap:wrap}.product-price{font-size:25px;color:#e9ca83}.product-description{font-size:23px;color:#cfcac0;line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;white-space:pre-wrap;overflow-wrap:anywhere;min-height:62px;margin:0}
+.status-frame{top:145px;height:835px;overflow:hidden}.status-frame .slots{margin-top:27px}.slot{min-height:154px}.slot-image{width:110px;height:110px}.slot:has(.slot-image){padding:8px}.slot:has(.slot-image) .slot-image{width:120px;height:120px}
+.small-btn.unaffordable{opacity:.3;cursor:pointer}.stat-row .small-btn:disabled{cursor:pointer}
+.gacha-panels{position:absolute;left:250px;right:250px;top:300px;display:grid;grid-template-columns:1fr 1fr;gap:45px}.gacha-panel{min-height:485px;background:#10192bea;border:2px solid #c8aa6b;border-radius:24px;text-align:center;padding:40px}.gacha-panel h3{font-size:48px;margin:10px}.gacha-panel p{font-size:28px;min-height:85px}.gacha-panel .gacha-cost{font-size:36px;color:#e9ca83;min-height:60px}.gacha-panel .btn{font-size:30px}.gacha-panel .btn:disabled{opacity:.4}
+
+/* Stage 6: compact consumables list above two in-shop gachas */
+.shop-frame{top:130px;height:490px}.shop-caption{padding:3px 10px 12px}.shop-list{height:408px}.shop-row{min-height:133px;padding:7px 6px}.product-art{width:108px;height:108px}.product-detail strong{font-size:27px}.product-description{font-size:20px;line-height:1.25;min-height:50px}.product-price{font-size:23px}.shop-gacha{position:absolute;left:760px;top:638px;width:1070px;height:290px;display:grid;grid-template-columns:1fr 1fr;gap:16px}.shop-gacha-card{background:#10192bea;border:2px solid #c8aa6b;border-radius:18px;text-align:center;padding:12px 20px;display:flex;flex-direction:column;align-items:center;justify-content:space-around}.shop-gacha-card h3{font-size:27px;margin:0}.gacha-mini-art{height:72px;width:170px;border:1px solid #756c5a;border-radius:8px;display:grid;place-items:center;font-size:22px;color:#d4c6a4;background:#19253b}.gacha-mini-art img{width:100%;height:100%;object-fit:contain}.gacha-mini-status{font-size:18px;min-height:23px;margin:0}.gacha-roll{font-size:23px;padding:9px 26px}.gacha-roll:disabled{opacity:.35}.shop-coins{z-index:2}.shop-frame .shop-list{scrollbar-width:thin}
+.battle-test-menu{top:255px;height:580px;overflow:auto}.battle-test-menu p{margin:0 0 18px}.enemy-picker{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.enemy-picker .btn{font-size:26px;padding:15px}.battle-enemy{position:absolute;top:70px;left:420px;width:1080px;text-align:center;font-size:30px}.battle-enemy-art{height:385px;display:grid;place-items:center;font-size:32px}.battle-enemy-art img{height:100%;max-width:100%;object-fit:contain}.battle-enemy h2{font-size:42px;margin:10px}.battle-bottom{position:absolute;left:160px;right:160px;bottom:45px;height:440px;background:#10192bf0;border:2px solid #c8aa6b;border-radius:22px;padding:25px;font-size:30px}.battle-log{height:195px;overflow:auto;font-size:26px;line-height:1.5;white-space:pre-line}.battle-actions{display:flex;gap:18px}.battle-actions .btn{flex:1;font-size:28px;padding:15px}.battle-return{position:absolute;bottom:20px;right:25px;font-size:25px;padding:15px 30px}
+
+/* Stage 7: fixed single-line battle feedback, HP gauges, no log scroller */
+.battle-enemy{top:55px}.battle-enemy-art{height:355px}.battle-enemy h2{margin:5px 0 8px}.battle-enemy .battle-hp{width:660px;margin:0 auto}.battle-bottom{height:270px;bottom:55px;left:220px;right:220px;display:flex;flex-direction:column;justify-content:space-between;gap:12px}.battle-bottom>.battle-hp{position:absolute;top:-116px;left:0;width:520px;background:#10192bf2;border:2px solid #c8aa6b;border-radius:16px;padding:15px 24px}.battle-log{height:auto;min-height:62px;max-height:75px;overflow:hidden;white-space:normal;display:flex;align-items:center;font-size:29px;line-height:1.3}.battle-actions{margin-top:auto}.battle-return{position:static;align-self:flex-end;font-size:22px;padding:9px 18px}.hp-caption{display:flex;justify-content:space-between;align-items:center;font-size:28px;gap:20px}.hp-track{height:22px;margin-top:10px;background:#303746;border:1px solid #a5a0a0;border-radius:15px;overflow:hidden}.hp-fill{height:100%;background:linear-gradient(90deg,#bf3939,#ec7462);transition:width .18s ease}.battle-bottom .hp-fill{background:linear-gradient(90deg,#3b9b5c,#80d99a)}
+
+/* Stage 8: HP labels hidden, action feedback and input locking */
+.hp-caption{justify-content:flex-end}.hp-caption strong{display:none}.battle-actions .btn:disabled{opacity:.48;cursor:default}.modal#combat-choice{z-index:28}
+
+/* Stage 9: protagonist label, shorter pacing, developer test panel */
+.battle-bottom .hp-caption{justify-content:space-between}.battle-bottom .hp-caption strong{display:inline;font-size:27px}.test-tools{margin-top:25px;padding:16px;border:1px solid #bca26b;border-radius:12px}.test-tools h3{font-size:28px;margin:0 0 12px}.test-tools .btn{font-size:23px;padding:13px;margin:4px}.test-tools p{font-size:21px;margin:8px 0}.test-banner{position:absolute;top:8px;left:18px;color:#e9cf85;font-size:20px;z-index:5;pointer-events:none}.battle-test-menu{top:230px;height:635px}
+
+/* Stage 10 adventure UI */
+.run-panel{position:absolute;left:300px;top:170px;width:1320px;height:730px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:30px}.run-panel[hidden],#scenario-panel[hidden],#adventure-back[hidden],#enemy-test[hidden]{display:none!important}.run-area{position:absolute;right:45px;top:28px;font-size:30px}.run-panel h3{font-size:44px}.run-panel #run-coins{position:absolute;left:35px;bottom:30px;font-size:28px}.run-panel #run-return{position:absolute;right:35px;bottom:30px}.run-panel #run-next{font-size:32px;padding:24px 100px}.dev-enemy-picker{margin-top:20px;border-top:1px solid #777;padding-top:20px}
+
+/* Stage 11: in-game reward and notification windows */
+.reward-dialog{width:760px;padding:45px 55px}.reward-dialog h2{font-size:42px;margin:0 0 20px;color:#f4d38b}.reward-art{width:230px;height:230px;margin:12px auto 22px;border:2px solid #bba06a;border-radius:14px;background:#0d1626;display:flex;align-items:center;justify-content:center;font-size:23px;color:#aaa}.reward-art[hidden]{display:none}.reward-art img{max-width:100%;max-height:100%;object-fit:contain}.reward-name{font-size:42px;font-weight:bold;margin:20px auto 36px;overflow-wrap:anywhere}.notice{display:none;position:absolute;z-index:35;top:45%;left:50%;transform:translate(-50%,-50%);max-width:900px;padding:28px 55px;background:#10192bf5;border:2px solid #c8aa6b;border-radius:15px;font-size:31px;text-align:center;box-shadow:0 8px 35px #000a;pointer-events:none}.notice.open{display:block}
+
+/* Stage 12: shared currency display and status slots */
+.currency-entry{display:inline-flex;align-items:center;gap:7px;margin-left:22px;white-space:nowrap}.currency-entry img{width:42px;height:42px;object-fit:contain}.status-frame .slots{gap:8px;grid-template-columns:repeat(3,minmax(0,1fr))}.status-frame .slot{padding:6px;min-width:0}.status-frame{padding:18px}
+
+/* Stage 12 feedback adjustments */
+.shop-frame{box-sizing:border-box;overflow:hidden}
+.shop-frame .shop-list{height:calc(100% - 60px);max-height:calc(100% - 60px);overflow-y:auto;overflow-x:hidden;box-sizing:border-box;padding-bottom:8px}
+.shop-row{box-sizing:border-box}
+.status-frame{height:735px;top:185px;display:flex;flex-direction:column;justify-content:flex-start}
+.status-frame .slots{margin-top:18px;gap:10px}
+.status-frame .slot{min-height:130px}
+.status-frame .slot-image{max-height:95px}
+.inline-coin{display:inline-flex;align-items:center;gap:8px;white-space:nowrap;vertical-align:middle}
+.inline-coin img{width:30px;height:30px;object-fit:contain}
+.status-level .inline-coin img{width:36px;height:36px}
+.stat-row .cost{display:flex;align-items:center}
+
+/* Stage 13 item management */
+.item-management{position:absolute;left:170px;top:180px;width:1580px;height:740px;display:grid;grid-template-columns:550px 1fr;gap:24px}.item-left,#item-detail{background:#111c30;border:2px solid #bda164;border-radius:16px;padding:25px;overflow:auto}#item-tabs{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:20px}#item-owned-list{display:flex;flex-direction:column;gap:9px}#item-detail{text-align:center}#item-detail .btn{margin:14px}#item-detail h3{font-size:34px}.item-detail-art{height:245px;display:flex;justify-content:center;align-items:center}.item-detail-art img{max-width:240px;max-height:230px;object-fit:contain}.selected{border-color:#ffe5a3!important;background:#3c4158!important}
+
+/* Stage 14: adventure book (replaceable art asset) */
+#scenario-panel{top:155px;left:105px;width:1710px;height:765px;min-height:0;padding:20px 26px;text-align:left;overflow:hidden}#scenario-panel>h3{margin:0 0 12px;font-size:34px}#scenario-list{display:flex;gap:20px;height:650px;max-height:none;overflow:visible} .book-world-list{width:245px;flex-shrink:0;display:flex;flex-direction:column;gap:12px;overflow-y:auto;padding:8px}.book-world{border:1px solid #bca472;border-radius:8px;background:#202c40;color:#f6e7c4;padding:16px;font-size:24px;text-align:left}.book-world.selected{background:#4c4352;border:2px solid #f1d28b}.adventure-book{background:#e3d5b3 url('../assets/ui/adventure_book.png') center/100% 100% no-repeat;color:#332c29;flex:1;display:flex;border-radius:16px;box-shadow:inset 0 0 32px #48351b88;min-width:0;padding:35px 45px}.book-left-page,.book-right-page{width:50%;padding:15px 34px;overflow:auto}.book-left-page{border-right:2px solid #927d6077}.book-left-page h3,.book-right-page h3{font-size:32px;margin:5px 0 28px}.book-difficulty{display:block;width:100%;margin:20px 0;padding:20px;border:2px solid #7c6047;border-radius:9px;background:#fff7dfc9;color:#3b302b;font-size:31px}.book-difficulty:disabled{opacity:.4}.book-world-art{height:260px;display:flex;align-items:center;justify-content:center;background:#a6987c44;border:1px dashed #806a4c;color:#76634d;font-size:24px}.book-world-art img{max-width:100%;max-height:100%;object-fit:contain}.book-right-page p{font-size:25px;line-height:1.7}.book-allclear{font-size:32px;color:#8b5b13;text-align:center}.slot-level{font-size:19px;color:#f0d89d}#scenario-panel #test-tools:not([hidden]){position:absolute;right:28px;bottom:8px;z-index:3;background:#111b2de8;padding:8px;border-radius:10px;display:flex;align-items:center;gap:10px}#scenario-panel #test-tools h3{font-size:16px;margin:0}#scenario-panel #test-tools .btn{font-size:15px;padding:8px}#scenario-panel #test-tools p{font-size:14px}#scenario-panel #enemy-test:not([hidden]){position:absolute;left:10px;bottom:0;z-index:4;background:#111b2d;padding:10px;max-height:180px;overflow:auto}
+
+/* Stage 15: give the return controls their own clear footer; expand content vertically. */
+#items-page .item-management{top:112px;height:812px;left:170px;width:1580px}
+#adventure #scenario-panel{top:90px;height:834px;padding:15px 24px}
+#adventure #scenario-panel>h3{margin-bottom:8px}
+#adventure #scenario-list{height:742px}
+#items-page>.back,#adventure>.back{bottom:24px;left:65px;z-index:5;padding:12px 24px;font-size:26px;min-height:66px}
+#items-page .heading,#adventure .heading{top:20px;font-size:65px;pointer-events:none}
+#adventure #scenario-panel #test-tools:not([hidden]){bottom:12px}
+
+/* Stage 16: maximize book canvas without overlapping the top title. */
+#adventure .heading{display:none}
+#adventure #scenario-panel{top:28px;height:895px;padding:12px 24px}
+#adventure #scenario-panel>h3{margin-bottom:8px}
+#adventure #scenario-list{height:825px}
+.affection-hearts{display:flex;align-items:center;gap:9px;font-size:22px;margin:12px 0;color:#f6d48b}
+.heart-image{display:inline-flex;position:relative;width:35px;height:35px;align-items:center;justify-content:center;color:#ef8da7;font-size:30px}
+.heart-image img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#111b2d}
+
+/* Stage 17: restore previous outer book position; use title-row space for the book. */
+#adventure #scenario-panel{top:90px;height:834px;padding:12px 24px}
+#adventure #scenario-panel>h3{position:absolute;top:10px;left:24px;margin:0;font-size:34px;line-height:52px;z-index:2}
+#adventure #scenario-list{height:796px;gap:14px}
+#adventure .book-world-list{padding-top:58px;width:245px}
+#adventure .adventure-book{margin-top:0;padding-top:25px}
+/* Guest details: heart row belongs between the description and actions. */
+#item-detail .affection-hearts{justify-content:center;gap:12px;margin:24px auto 28px;min-height:48px}
+#item-detail:has(.affection-hearts) .btn{margin-top:24px}
+/* Novel player, including a replaceable portrait and background. */
+#novel{background:#10192b url('../assets/backgrounds/novel.png') center/cover no-repeat}
+.novel-stage-art{position:absolute;inset:0;pointer-events:none;display:flex;align-items:flex-end;justify-content:center;padding-bottom:290px}
+.novel-stage-art img{max-height:790px;max-width:70%;object-fit:contain}
+.novel-bottom{position:absolute;bottom:60px;left:80px;right:80px;height:260px;display:flex;gap:18px;align-items:stretch}
+.novel-face{width:260px;min-width:260px;aspect-ratio:1;background:#19253b;border:2px solid #c8aa6b;border-radius:12px;display:grid;place-items:center;overflow:hidden;font-size:25px;color:#b6a890}
+.novel-face img{width:100%;height:100%;object-fit:contain}
+.novel-dialogue{flex:1;background:#10192be8;border:2px solid #c8aa6b;border-radius:16px;padding:20px 34px;cursor:pointer;position:relative}
+.novel-speaker{font-size:29px;color:#efd28c;margin-bottom:12px}
+.novel-text{font-size:32px;line-height:1.5;white-space:pre-wrap}
+.novel-next{position:absolute;right:24px;bottom:14px;font-size:22px;color:#dfc88f}
+.novel-close{position:absolute;top:36px;right:55px;z-index:3}
+.novel-choices{position:absolute;right:100px;bottom:350px;width:900px;display:flex;flex-direction:column;gap:12px}
+.novel-choices button{font-size:26px;padding:14px;background:#17263cf0;color:#f7e6c4;border:2px solid #c8aa6b;border-radius:10px}
+
+/* Stage 18: guest affinity below bonuses, with action buttons further down. */
+#item-detail .affection-hearts{justify-content:center;margin:20px auto 36px;min-height:52px}
+#item-detail:has(.affection-hearts) .btn{margin-top:34px}
+
+/* Stage 21: predictable wrapping for game-native messages. */
+.reward-dialog{width:min(900px,calc(100% - 90px));box-sizing:border-box;padding:40px 58px;text-align:center}
+.reward-dialog h2{line-height:1.35;overflow-wrap:normal;word-break:keep-all}
+.reward-name{font-size:34px;line-height:1.55;max-width:100%;margin:20px auto 32px;overflow-wrap:break-word;word-break:normal;line-break:strict;text-wrap:pretty}
+.notice{width:max-content;max-width:880px;box-sizing:border-box;line-height:1.5;overflow-wrap:break-word;word-break:normal;line-break:strict;text-wrap:pretty}
+#modal-text{line-height:1.6;overflow-wrap:break-word;word-break:normal;line-break:strict;text-wrap:pretty}
+
+/* Stage 22: preserve guest/item descriptions as entered, up to three lines. */
+#item-detail .item-description{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.5;max-height:4.5em;overflow-y:auto;margin:12px auto;max-width:96%;text-align:center;}
+
+/* Stage 23: full-bleed equipment and guest icons, no level labels on status slots. */
+.status-frame .slot:has(.slot-image){padding:0;overflow:hidden;min-height:154px}
+.status-frame .slot:has(.slot-image) .slot-image{width:100%;height:100%;max-height:none;flex:1;display:flex;align-items:stretch;justify-content:stretch}
+.status-frame .slot:has(.slot-image) .slot-image img{width:100%;height:100%;object-fit:contain}
+.status-frame .slot:has(.slot-image) .slot-image .no-image{margin:auto}
+.status-art{overflow:hidden;display:flex;align-items:center;justify-content:center}
+.status-art img{width:100%;height:100%;object-fit:contain}
+.status-art-placeholder{display:none}
+.status-art.missing-art .status-art-placeholder{display:block}
+
+/* Stage 24: keep the original slot geometry while fitting art inside it. */
+.status-frame .slot:has(.slot-image){height:130px;min-height:130px;max-height:130px;padding:0;overflow:hidden;flex:0 0 auto}
+.status-frame .slot:has(.slot-image) .slot-image{width:100%;height:100%;min-height:0;max-height:100%;flex:0 0 auto;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.status-frame .slot:has(.slot-image) .slot-image img{display:block;width:100%;height:100%;max-width:100%;max-height:100%;object-fit:contain}
+/* The Noka portrait is free-standing: no box, dashed outline or fill. */
+#status .status-art{left:95px;top:165px;width:635px;height:760px;border:0;border-radius:0;background:transparent;overflow:visible;display:flex;align-items:flex-end;justify-content:center}
+#status .status-art img{display:block;width:100%;height:100%;object-fit:contain;object-position:center bottom}
+#status .status-art img[hidden]{display:none}
+#status .status-art.missing-art{color:#d1c6a8}
+
+
+/* Stage 25: full-height Noka portrait, aligned to the bottom of the game screen. */
+#status .status-art{top:145px;bottom:0;height:auto;left:45px;width:700px;max-height:none;align-items:flex-end;overflow:hidden}
+#status .status-art img{width:100%;height:100%;object-fit:contain;object-position:center bottom}
+/* Keep the existing status layout; the first three slots become square icon tiles. */
+#status .slots .slot:nth-child(-n+3){width:148px;height:148px;min-height:148px;max-height:148px;justify-self:center;box-sizing:border-box}
+#status .slots .slot:nth-child(-n+3):has(.slot-image){height:148px;min-height:148px;max-height:148px}
+#status .slots .slot:nth-child(-n+3) .slot-image{width:100%;height:100%}
+#status .slots .slot:nth-child(-n+3) .slot-image img{object-fit:contain}
+
+/* Stage 26: larger full-height Noka artwork, keeping bottom aligned to screen. */
+#status .status-art{left:0;top:115px;width:755px;bottom:0;height:auto;overflow:visible}
+#status .status-art img{object-fit:contain;object-position:center bottom}
+/* Coin balance stays at the far right of the status header. */
+#status .status-level{display:flex;align-items:center;justify-content:space-between;gap:24px}
+#status .status-level .status-coin-balance{display:inline-flex;align-items:center;justify-content:flex-end;white-space:nowrap}
+/* Multiple optional event stands (left / center / right). */
+.novel-stage-art{justify-content:initial;display:block;padding:0;pointer-events:none}
+.novel-stage-art .novel-stand{position:absolute;bottom:290px;height:730px;width:33%;display:flex;align-items:flex-end;justify-content:center}
+.novel-stage-art .novel-stand[data-position="left"]{left:1%}
+.novel-stage-art .novel-stand[data-position="center"]{left:33.5%}
+.novel-stage-art .novel-stand[data-position="right"]{right:1%}
+.novel-stage-art .novel-stand img{max-height:100%;max-width:100%;width:auto;height:auto;object-fit:contain;object-position:center bottom}
+
+/* Stage 27: expanded Noka portrait. */
+#status .status-art{width:886px}
+
+/* Stage 29: Noka artwork at 1.15x, with its display width scaled accordingly.
+   The artwork remains bottom-anchored and its aspect ratio is preserved. */
+#status .status-art img{
+  transform:scale(1.15);
+  transform-origin:center bottom;
+}
+
+/* Stage 28: a subtle entrance for event stand portraits and expression swaps. */
+@keyframes cq-stand-appear{
+  from{opacity:0;transform:translateY(12px)}
+  to{opacity:1;transform:translateY(0)}
+}
+#novel .novel-stage-art .novel-stand{
+  animation:cq-stand-appear .22s ease-out both;
+}
+@media (prefers-reduced-motion:reduce){
+  #novel .novel-stage-art .novel-stand{animation:none}
+}
+
+/* Stage 30: shift Noka portrait 30px left, preserving scale and size. */
+#status .status-art{left:-30px}
+/* Optional event stand exit transition. */
+#novel .novel-stage-art .novel-stand.stand-exiting{opacity:0;transform:translateY(12px);transition:opacity .18s ease,transform .18s ease;animation:none}
+@media(prefers-reduced-motion:reduce){#novel .novel-stage-art .novel-stand.stand-exiting{transition:none}}
+
+/* Stage 31: optional instant stand transitions. */
+#novel .novel-stage-art .novel-stand.stand-instant{animation:none}
+
+/* Stage 42: save slot currencies */
+.save-entry-line{display:flex;align-items:center;gap:30px;flex-wrap:wrap}.save-entry-currency{display:inline-flex;align-items:center;gap:7px;white-space:nowrap}.save-entry-currency img{width:35px;height:35px;object-fit:contain}.save-entry-info{display:block;font-size:21px;color:#d3c8af;margin-top:9px}
+
+/* Stage 44: portable save backups and multiline rewards */
+.save-transfer{display:flex;justify-content:center;gap:22px;margin-top:30px}.save-transfer .btn{font-size:26px;padding:15px 22px}.reward-name{white-space:pre-line}
+
+/* Stage 45: stand portraits start at the very bottom, with status-art-like scale. */
+#novel .novel-stage-art .novel-stand{bottom:0;height:100%;width:40%;overflow:visible}
+#novel .novel-stage-art .novel-stand[data-position="left"]{left:0}
+#novel .novel-stage-art .novel-stand[data-position="center"]{left:30%}
+#novel .novel-stage-art .novel-stand[data-position="right"]{right:0}
+#novel .novel-stage-art .novel-stand img{height:100%;width:100%;max-height:none;max-width:none;object-fit:contain;object-position:center bottom;transform:scale(1.15);transform-origin:center bottom}
+/* Stage 45: three rows of equipment/item/guest + skill slots. */
+#status .status-frame{overflow-y:auto;scrollbar-width:thin}
+#status .slots .slot:nth-child(-n+6){width:148px;height:148px;min-height:148px;max-height:148px;justify-self:center}
+#status .slots .slot:nth-child(-n+6):has(.slot-image){height:148px;min-height:148px;max-height:148px}
+#status .slots .slot:nth-child(-n+6) .slot-image{width:100%;height:100%}
+
+/* Stage 46: six equipment slots in two horizontal rows, no status scrolling. */
+#status .status-frame{overflow:hidden}
+#status .status-frame .slots{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:7px;margin-top:12px}
+#status .slots .slot:nth-child(-n+6),#status .slots .slot:nth-child(-n+6):has(.slot-image){width:100%;height:132px;min-height:132px;max-height:132px;padding:4px}
+#status .slots .slot:nth-child(-n+6) .slot-image{width:100%;height:100%}
+#status .slots .slot:nth-child(n+7){min-height:95px;padding:5px;font-size:19px}
+#status .slots .slot strong{font-size:19px}
+#status .slots .slot span{font-size:18px}
+
+
+/* Stage 47: bottom-anchored event art with a smaller character scale. */
+#novel .novel-stage-art .novel-stand{bottom:0;height:76%;width:33.333%;overflow:visible}
+#novel .novel-stage-art .novel-stand[data-position="left"]{left:0}
+#novel .novel-stage-art .novel-stand[data-position="center"]{left:33.333%}
+#novel .novel-stage-art .novel-stand[data-position="right"]{right:0}
+#novel .novel-stage-art .novel-stand img{height:100%;width:100%;max-height:100%;max-width:100%;object-fit:contain;object-position:center bottom;transform:none}
+/* Noka dialogue portrait: show a close-up of the face instead of the full body. */
+#novel .novel-face{position:relative;overflow:hidden}
+#novel .novel-face img{width:200%;height:200%;max-width:none;max-height:none;object-fit:cover;object-position:center 23%;transform:translate(-25%,-10%)}
+/* Each skill occupies the same width as its two slots above it. */
+#status .status-frame{overflow:hidden}
+#status .status-frame .slots{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));grid-template-rows:112px 98px;gap:7px;margin-top:9px;align-content:start}
+#status .slots .slot{width:100%!important;height:100%!important;min-height:0!important;max-height:none!important;min-width:0;box-sizing:border-box;padding:4px;overflow:hidden}
+#status .slots .slot:nth-child(n+7){grid-column:span 2;font-size:20px}
+#status .slots .slot:nth-child(n+7) span{font-size:20px}
+#status .slots .slot:nth-child(n+7) strong{font-size:21px;overflow-wrap:anywhere}
+#status .slots .slot:nth-child(-n+6) span{font-size:16px}
+#status .slots .slot:nth-child(-n+6) strong{font-size:16px;overflow-wrap:anywhere}
+#status .slots .slot:has(.slot-image) .slot-image{width:100%;height:100%;max-height:100%;min-height:0;flex:1;display:flex;align-items:center;justify-content:center}
+#status .slots .slot .slot-image img{width:100%;height:100%;object-fit:contain}
+
+
+/* Stage 48: six truly square upper slots and taller skills using available panel height. */
+#status .status-frame .slots{
+  grid-template-columns:repeat(6,minmax(0,1fr));
+  grid-template-rows:auto 155px;
+  gap:7px;
+  margin-top:9px;
+  align-content:start;
+}
+#status .status-frame .slots .slot:nth-child(-n+6){
+  aspect-ratio:1 / 1;
+  height:auto!important;
+  min-height:0!important;
+  max-height:none!important;
+  width:100%!important;
+}
+#status .status-frame .slots .slot:nth-child(n+7){
+  height:155px!important;
+  min-height:155px!important;
+  max-height:155px!important;
+  justify-content:center;
+}
+/* Portrait close-up: center the face, but avoid cropping to one eye. */
+#novel .novel-face img{
+  display:block;
+  width:100%;height:100%;
+  max-width:100%;max-height:100%;
+  object-fit:cover;
+  object-position:center 20%;
+  transform:scale(1.25);
+  transform-origin:center 24%;
+}
+
+/* Stage 49: requested portrait and battle composition refinements. */
+#novel .novel-face img{transform:translateY(-30px) scale(1.4);transform-origin:center 24%;}
+/* Shift enemy name and HP down together by 170px while anchoring the image's feet above them. */
+#battle .battle-enemy-art{height:525px;display:flex;align-items:flex-end;justify-content:center;overflow:visible;}
+#battle .battle-enemy-art img{display:block;height:100%;max-height:100%;max-width:100%;width:auto;object-fit:contain;object-position:center bottom;}
+/* A small visual breathing space between skill slots and status frame bottom. */
+#status .status-frame .slots{grid-template-rows:auto 153px;}
+#status .status-frame .slots .slot:nth-child(n+7){height:153px!important;min-height:153px!important;max-height:153px!important;}
+
+/* Stage 50: leave the same visual gap below skills as between slot rows. */
+#status .status-frame .slots{grid-template-rows:auto 145px!important;}
+#status .status-frame .slots .slot:nth-child(n+7){height:145px!important;min-height:145px!important;max-height:145px!important;}
+/* Align the enemy HP bar five pixels above the top of Noka's HP panel.
+   The enemy number is hidden; name and HP bar remain vertically grouped. */
+#battle .battle-enemy{top:55px;}
+#battle .battle-enemy-art{position:absolute;top:-55px;left:0;right:0;height:525px;}
+#battle .battle-enemy h2{position:absolute;top:475px;left:0;right:0;margin:0;line-height:1.25;}
+#battle .battle-enemy .battle-hp{position:absolute;top:557px;left:50%;transform:translateX(-50%);width:660px;margin:0;}
+#battle #battle-enemy-hp .hp-caption{display:none;}
+#battle #battle-enemy-hp .hp-track{margin-top:0;}
+
+/* Stage 51: reduce the name-to-bar gap by roughly half. */
+#battle .battle-enemy h2{top:516px;}
+
+/* Stage 52: tighten enemy label-to-bar gap and blink on impact. */
+#battle .battle-enemy h2{top:536px;}
+#battle .battle-enemy-art.enemy-hit-flash img{animation:cq-enemy-hit .44s steps(1,end) 1;}
+@keyframes cq-enemy-hit{0%,24%,50%,74%{opacity:1}12%,37%,62%,87%{opacity:.14}100%{opacity:1}}
+@media(prefers-reduced-motion:reduce){#battle .battle-enemy-art.enemy-hit-flash img{animation:none;filter:brightness(1.5)}}
+
+/* Stage 53: exactly 5px between the enemy name line (42px * 1.25 = 52.5px) and HP bar at top:557px. */
+#battle .battle-enemy h2{top:499.5px;}
+
+/* Stage 55: status colors follow live enemy debuffs; mask respects transparent PNG shape. */
+#battle .battle-enemy-art{isolation:isolate;}
+#battle .battle-enemy-art::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .18s ease;background:rgba(164,105,215,.37);-webkit-mask-image:var(--enemy-status-mask);mask-image:var(--enemy-status-mask);-webkit-mask-size:contain;mask-size:contain;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-position:center bottom;mask-position:center bottom;}
+#battle .battle-enemy-art.enemy-poisoned::after{opacity:1;background:rgba(164,105,215,.37);}
+#battle .battle-enemy-art.enemy-paralyzed::after{opacity:1;background:rgba(245,224,75,.36);}
+#battle .battle-enemy-art.enemy-poisoned.enemy-paralyzed::after{background:rgba(207,166,151,.42);}
+
+/* Stage 56: status picker with hover preview and explicit confirmation */
+#picker .picker-dialog{width:min(820px,94vw);max-width:94vw;}
+#picker .picker-expanded{display:grid;grid-template-columns:45% 55%;gap:12px;max-height:390px;min-height:260px;}
+#picker .picker-list{overflow-y:auto;max-height:390px;}
+#picker .picker-detail{overflow-y:auto;max-height:390px;padding:12px;background:rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.25);font-size:15px;}
+#picker .picker-detail p{margin:7px 0;white-space:pre-wrap;}
+#picker .picker-art{height:110px;display:flex;justify-content:center;align-items:center;}
+#picker .picker-art img{max-width:100%;max-height:100%;object-fit:contain;}
+#picker .pick-entry.selected{outline:2px solid #f6dc91;}
+
+/* Stage 58: BGM settings */
+.bgm-settings-open{position:absolute;right:24px;top:20px;z-index:95;width:52px;height:52px;border:2px solid #fff9;border-radius:50%;background:#28233ce8;color:white;font-size:27px;cursor:pointer}
+.bgm-settings{position:absolute;right:24px;top:80px;z-index:96;background:#29253bf5;color:white;padding:22px;border:2px solid #ddd9;border-radius:12px;width:290px;box-shadow:0 8px 24px #0007}
+.bgm-settings[hidden]{display:none!important}.bgm-settings label{display:block;margin:16px 0;font-size:20px}.bgm-settings input[type=range]{width:100%}
+
+/* Stage 59: compact coin / medicine icons in event reward dialogs. */
+.reward-art.reward-small-icon{width:auto;height:38px;min-height:38px;border:0;background:transparent;margin:8px auto 0;display:flex;align-items:center;justify-content:center;}
+.reward-art.reward-small-icon img{width:32px;height:32px;object-fit:contain;}
+.reward-art.reward-small-icon + .reward-name{margin:4px auto 30px;}
+
+/* Stage 62: additional status tints (enemy sprites only). */
+#battle .battle-enemy-art.enemy-burn::after{opacity:1;background:rgba(255,95,75,.32)}
+#battle .battle-enemy-art.enemy-blind::after{opacity:1;background:rgba(95,100,110,.38)}
+#battle .battle-enemy-art.enemy-silence::after{opacity:1;background:rgba(75,145,255,.32)}
+#battle .battle-enemy-art.enemy-curse::after{opacity:1;background:rgba(65,190,105,.34)}
+
+/* Stage 65: custom home navigation button artwork. */
+#home .home-image-button.has-button-image{background-image:var(--home-button-image)!important;background-size:100% 100%!important;background-position:center!important;background-repeat:no-repeat!important;color:transparent!important;text-shadow:none!important;overflow:hidden}#home .home-image-button.has-button-image:focus-visible{outline:3px solid #fff;outline-offset:3px}
+
+/* Stage 67: shared artwork, illustrated adventure book, home-only sound control */
+#home .home-image-button.has-button-image{color:transparent!important;background-image:none!important;position:relative;padding:0!important;border:0!important;box-shadow:none!important;background-color:transparent!important}
+#home .home-image-button .custom-button-art{display:none;position:absolute;inset:0;width:100%;height:100%;object-fit:fill;pointer-events:none}
+#home .home-image-button.has-button-image .custom-button-art{display:block}
+#home .hero.mini-noka{width:300px;height:300px;top:330px;border:0;background:transparent;font-size:0;border-radius:0}
+#home .hero.mini-noka img{width:300px;height:300px;object-fit:contain;pointer-events:none}
+.shop-npc.custom-art-ready{border:0;font-size:0;background:transparent}
+.shop-npc .common-custom-art{display:none;width:100%;height:100%;object-fit:contain}
+.shop-npc.custom-art-ready .common-custom-art{display:block}
+.gacha-mini-art.custom-art-ready{font-size:0}
+.gacha-mini-art .common-custom-art{display:none;width:100%;height:100%;object-fit:contain}
+.gacha-mini-art.custom-art-ready .common-custom-art{display:block}
+#bgm-settings-open{top:auto!important;right:32px!important;bottom:25px!important;display:none}
+#home.active~#bgm-settings-open{display:block}
+#bgm-settings{top:auto!important;bottom:90px!important;right:25px!important}
+#adventure #scenario-panel{top:0;left:0;width:100%;height:100%;padding:0;border:0;border-radius:0;background:transparent;box-shadow:none}
+#adventure #scenario-panel>h3{display:none}
+#adventure #scenario-list{height:100%;width:100%;gap:0;position:relative;display:block}
+#adventure .adventure-book{position:absolute;inset:0;width:100%;height:100%;border-radius:0;padding:0;box-shadow:none;display:block;background:#e7d5c3 url('../assets/ui/adventure_book.png') center/100% 100% no-repeat}
+#adventure .book-world-list{position:absolute;z-index:2;top:7%;left:2.5%;width:21%;height:85%;padding:7% 12px 20px;display:flex;flex-direction:column;overflow-y:auto;gap:12px;background:transparent}
+#adventure .book-world{font-size:26px;background:transparent;color:#35203d;border:0;border-bottom:1px solid #5b375d70;border-radius:0;padding:12px 7px}
+#adventure .book-world.selected{border:0;border-bottom:2px solid #7026a0;color:#6b2392;background:#ffffff55;font-weight:bold}
+#adventure .book-left-page{position:absolute;left:27%;top:14%;width:21%;height:68%;padding:0;border:0;overflow:visible;text-align:center}
+#adventure .book-left-page h3{font-size:30px;margin:8px 0 40px;color:#4d3041}
+#adventure .book-difficulty{font-size:36px;margin:25px auto;padding:15px 8px;border:0;background:transparent;color:#31283c}
+#adventure .book-difficulty.selected{color:#713e9e;text-shadow:0 0 12px #a46fc1;font-weight:bold;text-decoration:underline;text-underline-offset:9px}
+#adventure .book-start{font-size:30px;border:2px solid #ad83a3;background:#f7e4e3d9;border-radius:10px;padding:14px 35px;color:#50355a;margin-top:28px;cursor:pointer}
+#adventure .book-right-page{position:absolute;left:53%;top:5%;width:42%;height:84%;padding:0;overflow:visible;text-align:center}
+#adventure .book-world-art{height:620px;width:100%;border:0;background:transparent;overflow:visible;display:flex;align-items:center;justify-content:center}
+#adventure .book-world-art img{width:630px;height:630px;max-width:100%;max-height:100%;object-fit:contain}
+#adventure .book-right-page h3{font-size:39px;margin:0 0 10px;color:#342636}
+#adventure .book-right-page p{font-size:23px;line-height:1.4;margin:0 auto;max-width:90%;color:#4c3841}
+#adventure #adventure-back{z-index:5;left:3%;bottom:3%;font-size:22px}
+#adventure #scenario-panel #test-tools:not([hidden]){z-index:6;bottom:0;right:0}
+
+/* Stage 68: image buttons preserve square artwork, save stays visible. */
+#home .home-image-button.has-button-image{color:transparent!important;overflow:visible!important}
+#home .home-image-button.has-button-image .custom-button-art{display:block!important;width:100%;height:100%;object-fit:contain!important;inset:0}
+#home .menu{gap:12px;bottom:74px}
+#home .menu .home-image-button{width:172px;height:172px;min-width:172px;min-height:172px;flex:0 0 172px}
+#home #save.home-image-button{width:172px;height:172px;min-width:172px;min-height:172px;bottom:74px;left:66px;z-index:3}
+#home .home-image-button.has-button-image:hover{filter:brightness(1.12)}
+/* Screen background is applied to the screen itself; avoid visual fallback hiding it. */
+.screen[style*="background-image"]{background-repeat:no-repeat;background-size:cover;background-position:center}
+/* Remove old oversized white section headings where art already supplies the identity. */
+#shop>.heading,#status>.heading,#items-page>.heading{display:none!important}
+/* Shop portrait is anchored to the screen bottom. */
+#shop .shop-npc{left:35px;top:auto;bottom:0;width:710px;height:850px;display:flex;align-items:flex-end;justify-content:center;overflow:hidden}
+#shop .shop-npc.custom-art-ready{border:0;background:transparent}
+#shop .shop-npc .common-custom-art{width:100%;height:100%;object-fit:contain;object-position:center bottom}
+/* Gacha cards: larger illustration space and independent status/button rows. */
+#shop .shop-frame{top:115px;height:510px}
+#shop .shop-list{height:425px}
+#shop .shop-gacha{top:640px;height:350px;gap:18px}
+#shop .shop-gacha-card{padding:12px 16px;display:grid;grid-template-rows:36px minmax(135px,1fr) 26px 60px;align-items:center;justify-items:center;gap:3px}
+#shop .shop-gacha-card h3{font-size:28px;line-height:36px}
+#shop .gacha-mini-art{width:230px;height:145px;max-width:100%;border:0;background:transparent;overflow:hidden}
+#shop .gacha-mini-art img{width:100%;height:100%;object-fit:contain}
+#shop .gacha-mini-status{font-size:18px;min-height:24px;line-height:24px;white-space:nowrap}
+#shop .gacha-roll{font-size:23px;min-height:55px}
+/* Book: bigger art and higher contrast selections. */
+#adventure .book-world.selected{background:#322343e8!important;color:#fff3d5!important;border:2px solid #d6b46d!important;border-radius:8px;text-shadow:none}
+#adventure .book-difficulty.selected{background:#4a3556e8!important;color:#fff6d8!important;text-shadow:none!important;border-radius:10px;box-shadow:0 0 0 2px #d5b479 inset;text-decoration:none}
+#adventure .book-right-page{top:3%;height:90%}
+#adventure .book-world-art{height:710px}
+#adventure .book-world-art img{width:710px;height:710px;max-width:none;max-height:none}
+#adventure .book-right-page h3{font-size:37px;margin:0 0 5px}
+#adventure .book-right-page p{font-size:21px}
+
+/* Stage 70: artwork-first layout refinements */
+/* The title artwork already includes its own logotype. */
+#title[style*="background-image"]>.heading{display:none!important}
+/* Save must stay absolutely positioned even when it has a custom image. */
+#home #save.home-image-button,#home #save.home-image-button.has-button-image{position:absolute!important;left:170px!important;top:auto!important;bottom:93px!important;width:224px!important;height:224px!important;min-width:224px!important;min-height:224px!important;transform:none!important;z-index:4}
+#home .menu{bottom:93px!important;gap:22px!important}
+#home .menu .home-image-button{width:224px!important;height:224px!important;min-width:224px!important;min-height:224px!important;flex:0 0 224px!important}
+#home .hero.mini-noka{top:550px!important}
+/* A square gacha illustration gets a square dedicated space, separate from labels. */
+#shop .shop-gacha{top:620px!important;height:400px!important}
+#shop .shop-gacha-card{grid-template-rows:36px 245px 26px 52px!important;gap:3px!important;padding:10px 16px!important;overflow:hidden}
+#shop .gacha-mini-art{width:235px!important;height:235px!important;max-width:235px!important;max-height:235px!important;min-width:235px!important;min-height:235px!important;overflow:visible!important}
+#shop .gacha-mini-art img{width:100%!important;height:100%!important;object-fit:contain!important}
+#shop .gacha-mini-status{position:relative;z-index:2;line-height:26px!important;background:#10192bba;border-radius:5px;padding:0 9px}
+#shop .gacha-roll{position:relative;z-index:2;min-height:49px!important;padding:6px 22px!important}
+/* Let scenery show through the inventory panels. */
+#items-page .item-management,#items-page .item-management>div{background-color:rgba(14,24,43,.73)}
+/* The 630x630 original art is the default; allow responsive reduction only when needed. */
+#adventure .book-world-art{height:650px!important}
+#adventure .book-world-art img{width:630px!important;height:630px!important;max-width:100%!important;max-height:100%!important}
+#adventure .book-right-page{top:6%!important}
+
+/* Stage 71: final alignment pass */
+#items-page .item-management{top:107px!important}
+#home .hero.mini-noka{left:calc(50% + 5px)!important}
+#home .menu{bottom:23px!important}
+#title .stack{top:620px!important}
+/* Keep illustration visually large even when a 630px PNG contains transparent padding. */
+#adventure .book-world-art{height:650px!important;overflow:hidden!important}
+#adventure .book-world-art img{width:630px!important;height:630px!important;max-width:none!important;max-height:none!important;object-fit:contain!important}
+
+/* Stage 73: precise layout corrections requested after Stage 72. */
+/* Move both title buttons 200px below their Stage 72 position. */
+#title .stack{top:820px!important}
+/* Move the home dialogue bubble right 30px and down 360px. */
+#home .bubble{left:calc(53% + 30px)!important;top:490px!important}
+/* Item shop panel must have a visible gap above the two gacha cards. */
+#shop .shop-frame{top:100px!important;height:500px!important}
+#shop .shop-gacha{top:620px!important}
+/* Render scenario illustrations at the actual 630x630 CSS-pixel size. */
+#adventure .book-world-art{height:650px!important;overflow:visible!important}
+#adventure .book-world-art img{width:630px!important;height:630px!important;max-width:none!important;max-height:none!important;object-fit:contain!important}
+
+/* Stage 74: requested fine adjustments. */
+#title .stack{top:780px!important}
+/* 10px between the bottom of the item shop panel (110+500) and gacha (620). */
+#shop .shop-frame{top:110px!important;height:500px!important}
+/* Scenario art at 670x670 CSS pixels, without extra zoom. */
+#adventure .book-world-art{height:690px!important;overflow:visible!important}
+#adventure .book-world-art img{width:670px!important;height:670px!important;max-width:none!important;max-height:none!important;object-fit:contain!important}
+/* Stage 75: equipment destination selection and comparison */
+#picker .picker-comparison{margin-top:12px;padding:10px;border-top:1px solid #a48c68;line-height:1.5}
+#picker .picker-comparison h4{margin:0 0 8px;font-size:17px}
+#picker .picker-comparison p{margin:5px 0;font-size:15px}
+#picker .picker-detail h3{font-size:20px;margin:4px 0 12px}
+
+/* Stage 76: keyword panel below gacha. */
+#shop .keyword-reward{position:absolute;left:50%;transform:translateX(-50%);top:1010px;display:flex;align-items:center;gap:12px;z-index:8;background:rgba(10,20,37,.88);padding:8px 15px;border-radius:10px;color:#fff;font-size:17px}#shop .keyword-reward input{width:290px;height:33px;font-size:18px}#shop .keyword-reward button{height:35px;white-space:nowrap}
+
+/* Stage 77 follow-up: locked slot art and scenario battle background */
+#status .slot{position:relative;overflow:hidden}
+#status .slot .locked-slot-art{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:.42;pointer-events:none}
+#status .slot .locked-slot-art~strong{position:relative;z-index:1;text-shadow:0 2px 5px #000,0 0 7px #000}
+#battle{background-position:center!important;background-size:cover!important}
+
+/* Stage 77 continuation: gently blurred scenario artwork behind combat UI. */
+#battle.scenario-blurred-backdrop{background-image:none!important;isolation:isolate}
+#battle.scenario-blurred-backdrop::before{content:"";position:absolute;inset:-14px;background-image:var(--scenario-backdrop);background-position:center;background-size:cover;filter:blur(6px);z-index:-2;pointer-events:none}
+#battle.scenario-blurred-backdrop::after{content:"";position:absolute;inset:0;background:rgba(8,12,25,.25);z-index:-1;pointer-events:none}
+
+/* Stage 77: scenario art behind the active exploration progress panel. */
+#adventure.scenario-run-backdrop::before{content:"";position:absolute;inset:0;z-index:0;background-image:var(--run-backdrop);background-position:center;background-size:cover;filter:blur(6px) brightness(.65);pointer-events:none}
+#adventure.scenario-run-backdrop>.run-panel{z-index:2;position:absolute}
+#adventure.scenario-run-backdrop>.back{z-index:3}
+
+/* Custom event stands: pixel scale with screen-bottom anchor */
+#novel .novel-stage-art .novel-stand.stand-custom-position{display:block;overflow:visible}
+#novel .novel-stage-art .novel-stand.stand-custom-position img{position:absolute;bottom:0;left:0;object-fit:initial}
+
+.equipment-cv{font-size:.78em;opacity:.82;text-align:center;margin-top:2px;margin-bottom:8px}.difficulty-lock-image{width:1.2em;height:1.2em;object-fit:contain;vertical-align:middle;margin-left:6px}
+
+#shop .keyword-reward{left:760px;top:70px;transform:none}.upgrade-medicine-icon{width:1.15em;height:1.15em;object-fit:contain;vertical-align:-.18em;margin:0 4px}
+
+/* Stage 91: center adventure-book title and description */
+.book-right-page .book-centered-text{width:100%;text-align:center;margin-left:auto;margin-right:auto;overflow-wrap:anywhere}
+
+/* Stage 93: shared image buttons; original text stays accessible to assistive tech. */
+button.cq-shared-button{position:relative;display:inline-flex;align-items:center;justify-content:center;font-size:0!important;color:transparent!important;background:transparent!important;border-color:transparent!important;padding:0!important;min-width:92px;min-height:38px;overflow:visible}
+button.cq-shared-button .cq-shared-button-image{display:block;position:relative;max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;pointer-events:none}
+button.book-start.cq-shared-button{width:min(260px,100%);height:72px}
+button.book-start.cq-shared-button .cq-shared-button-image{max-width:100%;max-height:72px}
+
+/* Stage 107: shop keyword strip alignment and native-size shared button artwork */
+#shop .keyword-reward{top:60px;align-items:center;min-height:38px;box-sizing:border-box}
+#shop .keyword-reward button{display:inline-flex;align-items:center;justify-content:center;line-height:1.15;padding:0 14px;vertical-align:middle;box-sizing:border-box}
+#shop .keyword-reward input{box-sizing:border-box}
+button.cq-shared-button{box-sizing:border-box;max-width:100%;min-width:0;min-height:0;overflow:visible}
+button.cq-shared-button .cq-shared-button-image{width:100%;height:100%;max-width:100%;max-height:100%;object-fit:contain}
+#shop button.cq-shared-button{width:150px;height:80px;max-width:150px}
+button.book-start.cq-shared-button{width:260px;height:84px;max-width:100%}
+button.book-start.cq-shared-button .cq-shared-button-image{max-height:100%}
+
+/* Stage 108: keep illustrated navigation buttons anchored to their screen.
+   The shared-image rule must not replace the absolute positioning of .back. */
+.screen > button.back.cq-shared-button{
+ position:absolute!important;left:24px;bottom:22px;top:auto;right:auto;
+ width:204px;height:108px;min-width:0;min-height:0;
+ padding:0!important;margin:0!important;
+ background:none!important;background-color:transparent!important;
+ border:0!important;border-radius:0!important;
+ box-shadow:none!important;text-shadow:none!important;
+ filter:none!important;transform:none!important;
+ overflow:visible;z-index:6;
+}
+.screen > button.back.cq-shared-button:hover:not(:disabled),
+.screen > button.back.cq-shared-button:active{
+ background:none!important;box-shadow:none!important;filter:none!important;
+}
+.screen > button.back.cq-shared-button .cq-shared-button-image{
+ display:block;width:100%;height:100%;object-fit:contain;
+ box-shadow:none!important;filter:none!important;
+}
+/* Keep the adventure-book back control near the lower-left page corner. */
+#adventure > button#adventure-back.cq-shared-button{
+ left:20px!important;bottom:18px!important;
+}
+/* Enlarge the adventure-start illustration without stretching its aspect ratio;
+   move it down ~100 stage pixels relative to its original flow position. */
+
+
+
+/* Stage 109: unify the shop back artwork with every other back button. */
+#shop.screen > button.back.cq-shared-button{
+ width:204px!important;height:108px!important;max-width:none!important;
+ left:24px!important;bottom:22px!important;top:auto!important;right:auto!important;
+ padding:0!important;border:0!important;background:transparent!important;
+ box-shadow:none!important;filter:none!important;
+}
+/* Adventure start: a little larger, 100px above the Stage 108 placement. */
+
+
+/* Stage 110: start art has its final dimensions from the first paint.
+   Image is made visible only after load by applySharedButtonArt. */
+
+
+
+/* Stage 111: keyword entry placement and 800px adventure-start artwork. */
+#shop .keyword-reward{left:763px;top:50px;}
+
+
+/* Stage 112: high-and-low game table and multiline reward message */
+#reward-name{white-space:pre-line}
+.highlow-overlay{position:fixed;inset:0;z-index:9999;background:rgba(10,8,22,.88);display:flex;align-items:center;justify-content:center;padding:20px;box-sizing:border-box}
+.highlow-panel{width:min(690px,100%);max-height:95vh;overflow:auto;background:#221b36;color:#fff;border:2px solid #bd95e5;border-radius:18px;padding:24px;box-sizing:border-box;text-align:center;box-shadow:0 18px 55px #0009}
+.highlow-panel h2{margin:0 0 10px;font-size:32px}.highlow-table{display:flex;justify-content:center;gap:22px;margin:20px 0}.highlow-card{width:min(31vw,150px);aspect-ratio:2/3;border-radius:12px;border:3px solid #d9b9ff;background:#fff;color:#252033;font-size:70px;font-weight:bold;display:flex;align-items:center;justify-content:center;overflow:hidden}.highlow-card img{width:100%;height:100%;object-fit:contain}.highlow-message{min-height:2.5em;font-size:19px}.highlow-controls{display:flex;gap:10px;align-items:center;justify-content:center;flex-wrap:wrap}.highlow-controls button{min-height:44px;padding:10px 16px;cursor:pointer}.highlow-controls button:disabled{opacity:.45;cursor:default}.highlow-controls input{width:100px;font-size:18px;padding:8px}
+
+/* Stage 113: square card artwork, no white frames, precisely 20px between cards. */
+.highlow-table{gap:20px;align-items:center}
+.highlow-card{width:200px;height:200px;max-width:calc((100% - 20px)/2);aspect-ratio:1/1;box-sizing:border-box;border:0;border-radius:0;background:transparent;box-shadow:none;overflow:hidden}
+.highlow-card img{display:block;width:100%;height:100%;object-fit:contain}
+
+/* Stage 115: keep the persistent adventure-start art anchored to the full book,
+   rather than constrained by the narrow difficulty column. */
+
+
+
+/* Stage 116: adventure-start art fits directly below the difficulty choices.
+   The persistent element is preserved so switching stages never reloads its image. */
+
+
+
+/* Stage 119: keep the square artwork compact and place its visible top below HARD.
+   The adventure canvas scales CSS pixels on screen, so 135px renders near 280px. */
+/* Stage 118: size the complete square artwork and position it in normal flow.
+   Following the HARD choice avoids absolute positioning/clipping as the book scales. */
+#adventure .book-left-page > button.book-start{
+ position:relative!important;left:auto!important;right:auto!important;top:auto!important;bottom:auto!important;
+ display:flex!important;align-items:center!important;justify-content:center!important;
+ width:90px!important;height:90px!important;max-width:100%!important;min-width:0!important;
+ margin:180px auto 0!important;padding:0!important;transform:none!important;
+ background:transparent!important;border:0!important;border-radius:0!important;
+ box-shadow:none!important;filter:none!important;overflow:visible!important;
+ color:transparent!important;font-size:0!important;line-height:0!important;
+ cursor:pointer;z-index:4;
+}
+#adventure .book-left-page > button.book-start.cq-shared-button > img.cq-shared-button-image{
+ position:static!important;display:block!important;flex:none!important;
+ width:100%!important;height:100%!important;min-width:0!important;min-height:0!important;
+ max-width:100%!important;max-height:100%!important;object-fit:contain!important;
+ background:transparent!important;border:0!important;box-shadow:none!important;
+ transform:none!important;
+}
+
+/* Stage 122: the persistent start button must retain its shared-image class.
+   Explicit image bounds prevent intrinsic artwork dimensions from taking over. */
+#adventure .book-left-page > button.book-start.cq-shared-button {
+  width:280px!important;height:280px!important;
+  margin:60px auto 0!important;
+  min-width:0!important;min-height:0!important;
+  flex:0 0 auto!important;
+}
+#adventure .book-left-page > button.book-start.cq-shared-button > img.cq-shared-button-image {
+  display:block!important;width:280px!important;height:280px!important;
+  max-width:280px!important;max-height:280px!important;
+  object-fit:contain!important;
+}
+/* Locked difficulty choices should not show the browser's prohibited cursor. */
+#adventure .book-difficulty:disabled {cursor:default!important;}
+
+/* Stage 125: shared chest event presentation */
+.cq-treasure-overlay{position:fixed;inset:0;z-index:1100;background:#080b14d9;display:flex;align-items:center;justify-content:center;padding:20px}.cq-treasure-card{background:#202a3e;color:#fff;border:2px solid #a89468;border-radius:14px;padding:24px;text-align:center;width:min(460px,94vw);box-shadow:0 12px 45px #0008}.cq-treasure-image{display:block;width:min(270px,75vw);height:240px;object-fit:contain;margin:12px auto}.cq-treasure-buttons{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:15px}
+
+/* Stage 127: reclaim empty space between battle feedback and commands.
+   Keep the command row and bottom edge anchored; move the upper combat
+   composition down by the same 60px as the panel height reduction. */
+#battle .battle-bottom{height:210px!important;}
+#battle .battle-log{min-height:48px;max-height:60px;}
+#battle .battle-bottom>.battle-hp{top:-116px;}
+#battle .battle-enemy{top:115px;}
+
+/* Stage 128: readable enemy name plate on any background. */
+#battle .battle-enemy h2{left:50%;right:auto;transform:translateX(-50%);width:max-content;max-width:min(960px,95%);box-sizing:border-box;padding:6px 24px;background:rgba(8,12,20,.78);color:#fff;border:1px solid #c4a66d;border-radius:9px;-webkit-text-stroke:.4px #050505;text-shadow:0 2px 3px #000,0 0 6px #000;font-size:36px;line-height:1.2;z-index:2}
+
+/* Stage 138: collection */
+#collection{position:relative}.collection-portrait{position:absolute;left:6%;top:14%;width:38%;height:70%;background-size:contain;background-repeat:no-repeat;background-position:center bottom}.collection-right{position:absolute;left:48%;right:5%;top:15%;bottom:16%;display:flex;flex-direction:column;gap:8px}.collection-progress{font-weight:bold;text-align:right;color:#ffe5a2}.collection-tabs{display:flex;gap:6px}.collection-tabs button{flex:1;padding:9px 4px;background:#253049;color:white;border:1px solid #9a8e6d;cursor:pointer}.collection-tabs button.active{background:#69522f}.collection-list{height:39%;overflow-y:auto;border:1px solid #bca678;background:#111b2bd9;padding:6px}.collection-list button{display:block;width:100%;padding:9px;text-align:left;color:white;background:transparent;border:0;border-bottom:1px solid #576072;cursor:pointer}.collection-list button.active{background:#51432d}.collection-detail{flex:1;overflow-y:auto;background:#111b2be6;border:1px solid #bca678;color:#fff;padding:14px;white-space:pre-wrap;line-height:1.6}.collection-report{position:absolute;right:5%;bottom:4%;width:210px}.collection-report:disabled{opacity:.5}.collection-portrait:empty:before{content:'立ち絵未設定';color:#ddd}.collection-report-result{color:#ffdf89}
+
+/* Stage 140: collection is a full-screen overlay, not a flow-positioned section.
+   Stage 138 accidentally replaced .screen position:absolute with position:relative. */
+#collection.screen{position:absolute!important;inset:0!important;overflow:hidden;background-repeat:no-repeat;background-position:center;background-size:cover}
+#collection>.heading{display:none!important}
+#collection .collection-portrait{position:absolute;left:3%;top:8%;width:43%;height:80%;background-position:center bottom;background-repeat:no-repeat;background-size:contain;pointer-events:none}
+#collection .collection-portrait::before{display:none!important}
+#collection .collection-right{position:absolute;left:48%;right:5%;top:7%;bottom:16%;min-height:0;display:flex;flex-direction:column;gap:14px;font-size:25px}
+#collection .collection-progress{flex:none;font-size:26px}
+#collection .collection-tabs{flex:none;min-height:56px}
+#collection .collection-tabs button{font-size:26px}
+#collection .collection-list{flex:0 0 43%;height:auto;min-height:0;overflow-y:auto;font-size:25px}
+#collection .collection-list button{font-size:25px;padding:15px}
+#collection .collection-detail{flex:1 1 0;min-height:0;overflow-y:auto;font-size:25px;padding:22px}
+#collection .collection-detail h3{margin:0 0 12px;font-size:31px}
+#collection .collection-report{position:absolute;right:5%;bottom:4%;width:300px;font-size:27px;padding:17px}
+#home #save.home-image-button,#home #save.home-image-button.has-button-image{left:70px!important}
+
+/* Stage 143: anchor collection character to screen bottom; sizing/offset are controlled by Editor. */
+#collection .collection-portrait{top:0!important;bottom:0;left:3%;width:43%;height:100%;background-position:center bottom;background-size:auto 100%;}
+
+/* Home: collection is an independent right-side button, mirroring SAVE. */
+#home #collection-home-button.home-image-button {
+  position:absolute!important;right:70px!important;left:auto!important;
+  top:auto!important;bottom:93px!important;
+  width:224px!important;height:224px!important;
+  min-width:224px!important;min-height:224px!important;
+  transform:none!important;z-index:4;
+}
+#home #collection-home-button[hidden]{display:none!important;}
+
+/* Collection request detail spacing; authored internal newlines remain intact. */
+#collection .collection-detail p{margin:0 0 8px}
+#collection .collection-detail p:last-child{margin-bottom:0}
+
+/* Collection encyclopedia */
+#collection .collection-mode-tabs{display:flex;gap:12px;flex:none}#collection .collection-mode-tabs button{flex:1;padding:10px;background:#253049;border:1px solid #bca678;color:white;font-size:26px;cursor:pointer}#collection .collection-mode-tabs button.active{background:#69522f}#collection .collection-content{display:flex;flex-direction:column;gap:10px;flex:1;min-height:0}#collection .collection-content[hidden]{display:none!important}#collection #collection-book-total{text-align:right;color:#ffe5a2;font-weight:bold}#collection #collection-book-progress{display:flex;gap:6px}#collection .collection-book-category{flex:1;background:#253049;color:white;border:1px solid #9a8e6d;padding:10px 2px;font-size:19px;cursor:pointer}#collection .collection-book-category.active{background:#69522f}#collection #collection-book-list{flex:0 0 36%;overflow:auto;border:1px solid #bca678;background:#111b2bd9}#collection .collection-book-entry{display:block;width:100%;padding:10px;text-align:left;background:transparent;border:0;border-bottom:1px solid #576072;color:white;font-size:22px;cursor:pointer}#collection .collection-book-entry.active{background:#51432d}#collection #collection-book-detail{flex:1;min-height:0;overflow:auto;border:1px solid #bca678;background:#111b2be6;padding:14px;font-size:21px;white-space:pre-wrap}#collection #collection-book-detail h3{margin:0 0 10px}#collection .collection-book-art{height:125px;display:flex;align-items:center;justify-content:center}#collection .collection-book-art img{max-height:100%;max-width:100%;object-fit:contain}#collection:has(#collection-book-pane:not([hidden])) #collection-report{display:none}
+
+/* Encyclopedia: details on the left, large art on the right. */
+#collection .collection-book-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px;min-height:100%;align-items:stretch}
+#collection .collection-book-info{min-width:0;overflow-wrap:anywhere}
+#collection .collection-book-description{white-space:pre-wrap;margin:18px 0}
+#collection .collection-book-stat{margin:7px 0}
+#collection #collection-book-detail .collection-book-art{height:auto;min-height:230px;align-self:stretch;display:flex;align-items:center;justify-content:center;overflow:hidden}
+#collection #collection-book-detail .collection-book-art img{display:block;max-width:100%;max-height:310px;width:auto;height:auto;object-fit:contain}
+#modal #modal-text{white-space:pre-line}
+
+/* Skill entries have no artwork: use the entire detail width. */
+#collection .collection-book-layout--no-art{grid-template-columns:minmax(0,1fr)}
+
+/* Enemy name: transparent label with a crisp black outline (no name plate). */
+#battle .battle-enemy h2 {
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  color: #fff;
+  -webkit-text-stroke: 1.5px #000;
+  paint-order: stroke fill;
+  text-shadow: 2px 2px 0 #000, -2px 2px 0 #000,
+               2px -2px 0 #000, -2px -2px 0 #000,
+               0 3px 5px rgba(0,0,0,.8);
+}
+
+/* Scenario exploration: show the Editor-selected artwork across the entire 1920x1080 stage. */
+#adventure.scenario-run-backdrop{isolation:isolate}
+#adventure.scenario-run-backdrop::before{inset:0;filter:none;background-size:cover;background-position:center;z-index:-1}
+#adventure.scenario-run-backdrop>.run-panel{background:rgba(17,26,43,.66);z-index:1}
+
+/* Scenario art: paint on screen itself, avoiding hidden negative stacking layers. */
+#battle.scenario-blurred-backdrop{background-image:var(--scenario-backdrop)!important;background-position:center!important;background-size:cover!important;isolation:isolate}
+#battle.scenario-blurred-backdrop::before,#battle.scenario-blurred-backdrop::after{content:none!important}
+#adventure.scenario-run-backdrop{background-image:var(--run-backdrop)!important;background-position:center!important;background-size:cover!important;isolation:isolate}
+#adventure.scenario-run-backdrop::before{content:none!important}
+#adventure.scenario-run-backdrop>.run-panel{background:rgba(17,26,43,.66)}
+
+/* Background fix: use one verified image directly on the screen, not negative-z-index layers. */
+#battle.scenario-blurred-backdrop::before,#battle.scenario-blurred-backdrop::after,#adventure.scenario-run-backdrop::before{content:none!important}
+#battle,#adventure{background-position:center;background-size:cover;background-repeat:no-repeat}
+
+/* Battle layout: integrate the player's compact HP into the command panel. */
+#battle .battle-bottom > #battle-player-hp{
+  position:absolute;
+  top:22px;
+  right:26px;
+  left:auto;
+  width:390px;
+  box-sizing:border-box;
+  padding:0;
+  margin:0;
+  background:transparent;
+  border:0;
+  border-radius:0;
+  box-shadow:none;
+  z-index:2;
+}
+#battle #battle-player-hp .hp-caption{
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  font-size:24px;
+  line-height:1.2;
+}
+#battle #battle-player-hp .hp-caption strong{display:inline;font-weight:700}
+#battle #battle-player-hp .hp-track{height:13px;margin-top:8px;border-radius:9px}
+#battle .battle-log{width:calc(100% - 430px);box-sizing:border-box;min-width:0}
+/* Move the entire enemy group down together, keeping its name and HP aligned. */
+#battle .battle-enemy{top:155px}
+
+/* Battle spacing: bring enemy HP to approximately 10px above the command panel. */
+#battle .battle-enemy{top:166px}
+
+/* Battle spacing refinement: enemy HP bottom ~10px above command panel at 1920x1080.
+   Keep the name 5px above the HP track, with no label background. */
+#battle .battle-enemy{top:226px;}
+#battle .battle-enemy h2{top:494px;}
+
+/* Slot destination picker: when the detail pane is hidden, center the options. */
+#picker .picker-expanded:has(> .picker-detail[hidden]){display:flex;justify-content:center;align-items:flex-start;min-height:0;max-height:none;}
+#picker .picker-expanded:has(> .picker-detail[hidden]) > .picker-list{width:min(100%,560px);max-height:390px;min-height:0;grid-template-columns:minmax(0,1fr);}
+#picker .picker-expanded:has(> .picker-detail[hidden]) .pick-entry{text-align:center;overflow-wrap:anywhere;}
+
+/* One-line battle log with wheel-driven history, retaining the previous layout. */
+#battle .battle-log{display:flex;align-items:center;height:auto;min-height:48px;max-height:60px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;font-size:29px;line-height:1.3;padding:0;}
+#battle .battle-return{z-index:2;}
+
+/* Keep a 5px gap between the enemy name (36px * 1.2 line height) and HP bar. */
+#battle .battle-enemy h2{top:508.8px;}
+
+/* Wider equipment/item/guest/skill selection modal; preserve the preview panel. */
+#picker .picker-dialog{width:min(1120px,94vw);}
+#picker .picker-expanded{grid-template-columns:minmax(0,52%) minmax(0,48%);}
+#picker .picker-list{min-width:0;}
+#picker .picker-list .pick-entry{overflow-wrap:break-word;word-break:normal;}
+#picker .picker-detail{min-width:0;}
+
+/* Keep the equipment/item/guest picker preview at a consistent height regardless of text length. */
+#picker .picker-expanded:not(:has(> .picker-detail[hidden])){height:390px;min-height:390px;max-height:390px;}
+#picker .picker-expanded:not(:has(> .picker-detail[hidden])) > .picker-detail{height:390px;min-height:390px;max-height:390px;box-sizing:border-box;overflow-y:auto;}
+
+/* Shop/collection character art: smooth 0.5s crossfade, preserve alignment. */
+#shop .shop-npc{isolation:isolate}
+#shop .shop-npc .shop-portrait-layer{position:absolute;left:0;bottom:0;width:100%;height:100%;object-fit:contain;object-position:center bottom;transform:translateX(var(--portrait-x,0px)) scale(var(--portrait-scale,1));transform-origin:center bottom;transition:opacity .5s ease;pointer-events:none}
+#collection .collection-portrait{isolation:isolate}
+#collection .collection-portrait .collection-portrait-layer{position:absolute;left:0;bottom:0;width:100%;height:100%;object-fit:contain;object-position:center bottom;transition:opacity .5s ease;pointer-events:none}
+
+/* Shopkeeper portrait: expand usable display area without clipping scaled artwork. */
+#shop .shop-npc{left:0;width:755px;height:1040px;overflow:visible;}
+
+/* Shop entry: hide mouse-click focus outline without disabling keyboard focus. */
+#home [data-go="shop"]:focus:not(:focus-visible){outline:none!important;box-shadow:none!important;}
+/* Portrait swaps use a short single-image fade (no outgoing layer). */
+#shop .shop-npc .shop-portrait-layer,#collection .collection-portrait .collection-portrait-layer{transition:opacity .1s linear;}
+
+/* The shop portrait has no placeholder frame, even while its image is loading. */
+#shop .shop-npc{border:none!important;background:transparent!important;box-shadow:none!important;font-size:0!important;}
+
+/* Enemy portrait: honor per-enemy Editor settings and match its preview baseline.
+   The position/scale variables are assigned by startBattle() on the art container. */
+#battle .battle-enemy-art{top:18.8px;}
+#battle .battle-enemy-art img{
+  transform:translateY(var(--cq-enemy-offset-y, 0px)) scale(var(--cq-enemy-scale, 1));
+  transform-origin:center bottom;
+}
+
+.event-step-image-overlay{position:absolute;inset:0;z-index:900;display:block;background:rgba(0,0,0,.92);cursor:pointer;overflow:hidden}.event-step-image{position:absolute;left:50%;top:50%;max-width:100%;max-height:100%;object-fit:contain;transform-origin:center}.event-step-image-hint{position:absolute;bottom:4%;right:5%;color:white;font-size:20px;text-shadow:0 2px 4px #000;pointer-events:none}
+
+/* Event illustrations sit between the background and novel portraits/dialogue.
+   Other screens retain their normal appearance; the image layer is visible
+   while the event step is waiting, and beneath the novel UI thereafter. */
+#stage.event-image-visible .event-step-image-overlay{z-index:1;background:transparent;pointer-events:none}
+#stage.event-image-visible .event-step-image-overlay:focus{outline:none}
+#stage.event-image-visible .event-step-image-overlay .event-step-image-hint{pointer-events:none}
+#stage.event-image-visible .event-step-image-overlay[tabindex]{pointer-events:auto}
+#stage.event-image-visible #novel.active{z-index:2}
+#stage.event-image-visible #novel .novel-stage-art{z-index:1}
+#stage.event-image-visible #novel .novel-bottom{z-index:2}
+
+/* Keep the novel background visible behind event images, with portraits and dialogue above. */
+#stage.event-image-visible #novel .event-step-image-overlay{z-index:0;background:transparent}
+#stage.event-image-visible #novel .novel-stage-art{position:relative;position:absolute;z-index:1}
+#stage.event-image-visible #novel .novel-bottom{z-index:2}
+
+/* Event illustration fade and click area (behind dialogue and portraits). */
+#stage.event-image-visible #novel .event-step-image-overlay{opacity:0;transition:opacity .32s ease;pointer-events:none;cursor:default}
+#stage.event-image-visible #novel .event-step-image-overlay.event-step-image-shown{opacity:1}
+#stage #novel .event-step-image-overlay.event-step-image-leaving{opacity:0;pointer-events:none}
+#stage.event-image-visible #novel .event-step-image-overlay[tabindex]{pointer-events:auto;cursor:pointer}
+#stage.event-image-visible #novel .event-step-image-overlay .event-step-image-hint{pointer-events:none}
+@media(prefers-reduced-motion:reduce){#stage #novel .event-step-image-overlay{transition:none}}
+
+/* Event images remain behind novel choices, including their clickable buttons. */
+#stage.event-image-visible #novel .novel-choices{z-index:4;pointer-events:auto}
+#stage.event-image-visible #novel .novel-choices[hidden]{display:none}
+
+/* Gentler fade-out for event illustrations and departing stand portraits. */
+#stage #novel .event-step-image-overlay.event-step-image-leaving{opacity:0;transition:opacity .6s ease-in-out;pointer-events:none}
+#novel .novel-stage-art .novel-stand.stand-exiting{opacity:0;transform:translateY(8px);transition:opacity .6s ease-in-out,transform .6s ease-in-out;animation:none;pointer-events:none}
+@media(prefers-reduced-motion:reduce){#stage #novel .event-step-image-overlay.event-step-image-leaving,#novel .novel-stage-art .novel-stand.stand-exiting{transition:none}}
+
+/* RPG3: KO image blinks, then remains hidden until the next battle. */
+#battle .battle-enemy-art.enemy-defeated img{opacity:0!important;animation:none!important;visibility:hidden!important;}
+
+/* Battle log: wrap long messages within the existing log region. */
+#battle .battle-log{white-space:pre-wrap;overflow-wrap:anywhere;word-break:normal;text-overflow:clip;max-height:90px;min-height:48px;overflow-y:auto;align-items:center;}
+
+/* Dialogue speaker highlights: smoothly dim non-speaking stand portraits. */
+#novel .novel-stage-art .novel-stand > img{transition:filter .2s ease-in-out}
+@media(prefers-reduced-motion:reduce){#novel .novel-stage-art .novel-stand > img{transition:none}}
+
+/* Event dark wait: cover the full game stage and block input during the sequence. */
+.event-dark-wait-overlay{position:absolute;inset:0;background:#000;opacity:0;z-index:100;pointer-events:auto;}
+
+.event-color-flash-overlay{position:absolute;inset:0;z-index:101;opacity:0;pointer-events:auto;}
+
+/* Novel backlog: wheel up over dialogue opens it; replay is optional per line. */
+.novel-history[hidden]{display:none!important}
+.novel-history{position:absolute;z-index:15;inset:6% 10% 31%;background:#0d1525f5;border:2px solid #c8aa6b;border-radius:16px;color:#f7e6c4;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 12px 45px #000b}
+.novel-history-header{padding:14px 24px;font-size:27px;border-bottom:1px solid #8e784c;display:flex;justify-content:space-between;align-items:center}
+.novel-history-header button,.novel-history-play{background:#26334b;color:#f7e6c4;border:1px solid #c8aa6b;border-radius:7px;cursor:pointer;padding:7px 15px;font-size:18px}
+.novel-history-list{overflow-y:auto;overscroll-behavior:contain;flex:1;padding:12px 28px}
+.novel-history-entry{padding:12px 0;border-bottom:1px solid #526079;display:flex;flex-direction:column;gap:7px;font-size:22px;white-space:pre-wrap}
+.novel-history-entry strong{color:#efd28c;font-size:20px}
+.novel-history-play{align-self:flex-start}
+
+/* Speaker portraits reorder only within the standing-art layer.
+   Noka's dialogue portrait, message window, choices and history remain above them. */
+#novel .novel-stage-art{z-index:0}
+#novel .novel-bottom{z-index:10}
+#novel .novel-choices{z-index:11}
+#novel .novel-history{z-index:12}

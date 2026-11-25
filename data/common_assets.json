@@ -1,0 +1,307 @@
+{
+  "genericDialogues": [
+    {
+      "id": "generic_1",
+      "name": "汎用台詞1",
+      "speaker": "前田ノカ",
+      "text": "いいよー",
+      "voice": "assets/voices/voice_0037.mp3"
+    },
+    {
+      "id": "generic_2",
+      "name": "汎用台詞2",
+      "speaker": "前田ノカ",
+      "text": "嫌だよー",
+      "voice": "assets/voices/voice_0038.mp3"
+    },
+    {
+      "id": "generic_3",
+      "name": "汎用台詞3",
+      "speaker": "前田ノカ",
+      "text": "",
+      "voice": ""
+    },
+    {
+      "id": "generic_4",
+      "name": "汎用台詞4",
+      "speaker": "前田ノカ",
+      "text": "",
+      "voice": ""
+    },
+    {
+      "id": "generic_5",
+      "name": "汎用台詞5",
+      "speaker": "前田ノカ",
+      "text": "",
+      "voice": ""
+    }
+  ],
+  "openingEventId": "V001",
+  "initialLoadout": {
+    "coins": 2,
+    "medicine": 0,
+    "equipment": [
+      "S001"
+    ],
+    "items": [],
+    "guests": [],
+    "skills": [],
+    "equipped": {}
+  },
+  "slotUnlockCosts": {
+    "equipment": 30,
+    "item": 30,
+    "guest": 30
+  },
+  "images": {
+    "select": "assets/common/common_images_select.jpg",
+    "home": "assets/common/common_images_home.jpg",
+    "status": "assets/common/common_images_status.jpg",
+    "shop": "assets/common/common_images_shop.jpg",
+    "items-page": "assets/common/common_images_items-page.jpg",
+    "select-scenario": "assets/common/common_images_select-scenario.jpg",
+    "novel": "assets/common/common_images_novel.jpg",
+    "battle": "assets/common/common_images_battle.jpg",
+    "noka": "assets/common/common_images_noka.png",
+    "nokaFace": "",
+    "coin": "assets/common/common_images_coin.png",
+    "medicine": "assets/common/common_images_medicine.png",
+    "homeButton_save": "assets/common/common_images_homeButton_save.png",
+    "homeButton_shop": "assets/common/common_images_homeButton_shop.png",
+    "homeButton_adventure": "assets/common/common_images_homeButton_adventure.png",
+    "homeButton_status": "assets/common/common_images_homeButton_status.png",
+    "homeButton_items": "assets/common/common_images_homeButton_items.png",
+    "title": "assets/common/common_images_title.jpg",
+    "homeMiniNoka": "assets/common/common_images_homeMiniNoka.png",
+    "shopNpc": "assets/common/common_images_shopNpc.png",
+    "shopGachaEquipment": "assets/common/common_images_shopGachaEquipment.png",
+    "shopGachaSkills": "assets/common/common_images_shopGachaSkills.png",
+    "buttonBack": "assets/common/common_images_buttonBack.png",
+    "buttonAdventureStart": "assets/common/common_images_buttonAdventureStart.png",
+    "slotLocked": "assets/common/common_images_slotLocked.png",
+    "highLowCard1": "assets/common/common_images_highLowCard1.png",
+    "highLowCard2": "assets/common/common_images_highLowCard2.png",
+    "highLowCard3": "assets/common/common_images_highLowCard3.png",
+    "highLowCard4": "assets/common/common_images_highLowCard4.png",
+    "highLowCard5": "assets/common/common_images_highLowCard5.png",
+    "highLowCard6": "assets/common/common_images_highLowCard6.png",
+    "highLowCard7": "assets/common/common_images_highLowCard7.png",
+    "highLowCard8": "assets/common/common_images_highLowCard8.png",
+    "highLowCard9": "assets/common/common_images_highLowCard9.png",
+    "highLowCard10": "assets/common/common_images_highLowCard10.png",
+    "highLowCard11": "assets/common/common_images_highLowCard11.png",
+    "highLowCard12": "assets/common/common_images_highLowCard12.png",
+    "highLowCard13": "assets/common/common_images_highLowCard13.png",
+    "chestNoKey": "assets/common/common_images_chestNoKey.png",
+    "chestC": "assets/common/common_images_chestC.png",
+    "chestB": "assets/common/common_images_chestB.png",
+    "chestA": "assets/common/common_images_chestA.png",
+    "chestS": "assets/common/common_images_chestS.png",
+    "homeButton_collection": "assets/common/common_images_homeButton_collection.png",
+    "heartEmpty": "assets/common/common_images_heartEmpty.png",
+    "heartHalf": "assets/common/common_images_heartHalf.png",
+    "heartFull": "assets/common/common_images_heartFull.png",
+    "shopNpcB": "assets/common/common_images_shopNpcB.png"
+  },
+  "bgm": {
+    "home": "assets/audio/bgm/common_bgm_home.mp3",
+    "adventure": "assets/audio/bgm/common_bgm_adventure.mp3",
+    "battle": "assets/audio/bgm/common_bgm_battle.mp3",
+    "victory": "assets/audio/bgm/common_bgm_victory.mp3",
+    "defeat": "assets/audio/bgm/common_bgm_defeat.mp3"
+  },
+  "bgmVolume": {
+    "home": 50,
+    "adventure": 50,
+    "battle": 30,
+    "victory": 100,
+    "defeat": 100
+  },
+  "se": {
+    "confirm": {
+      "path": "assets/audio/se/common_se_confirm.mp3",
+      "volume": 100
+    },
+    "cancel": {
+      "path": "assets/audio/se/common_se_cancel.mp3",
+      "volume": 100
+    },
+    "attack": {
+      "path": "assets/audio/se/common_se_attack.mp3",
+      "volume": 60
+    },
+    "damage": {
+      "path": "assets/audio/se/common_se_damage.mp3",
+      "volume": 80
+    },
+    "heal": {
+      "path": "assets/audio/se/common_se_heal.mp3",
+      "volume": 60
+    },
+    "skill": {
+      "path": "assets/audio/se/common_se_skill.mp3",
+      "volume": 50
+    },
+    "skillFail": {
+      "path": "assets/audio/se/common_se_skillFail.mp3",
+      "volume": 70
+    },
+    "defend": {
+      "path": "assets/audio/se/common_se_defend.mp3",
+      "volume": 70
+    },
+    "victory": {
+      "path": "assets/audio/se/common_se_victory.mp3",
+      "volume": 60
+    },
+    "defeat": {
+      "path": "assets/audio/se/common_se_defeat.mp3",
+      "volume": 50
+    },
+    "rewardNormal": {
+      "path": "assets/audio/se/common_se_rewardNormal.mp3",
+      "volume": 60
+    },
+    "rewardS": {
+      "path": "assets/audio/se/common_se_rewardS.mp3",
+      "volume": 80
+    },
+    "chestFound": {
+      "path": "assets/audio/se/common_se_chestFound.mp3",
+      "volume": 70
+    },
+    "chestOpen": {
+      "path": "assets/audio/se/common_se_chestOpen.mp3",
+      "volume": 70
+    },
+    "cleanse": {
+      "path": "assets/audio/se/common_se_cleanse.mp3",
+      "volume": 60
+    },
+    "poison": {
+      "path": "assets/audio/se/common_se_poison.mp3",
+      "volume": 70
+    },
+    "paralysis": {
+      "path": "assets/audio/se/common_se_paralysis.mp3",
+      "volume": 70
+    },
+    "burn": {
+      "path": "assets/audio/se/common_se_burn.mp3",
+      "volume": 50
+    },
+    "blind": {
+      "path": "assets/audio/se/common_se_blind.mp3",
+      "volume": 50
+    },
+    "silence": {
+      "path": "assets/audio/se/common_se_silence.mp3",
+      "volume": 100
+    },
+    "curse": {
+      "path": "assets/audio/se/common_se_curse.mp3",
+      "volume": 100
+    },
+    "poisonTick": {
+      "path": "assets/audio/se/common_se_poisonTick.mp3",
+      "volume": 100
+    },
+    "burnTick": {
+      "path": "assets/audio/se/common_se_burnTick.mp3",
+      "volume": 100
+    },
+    "paralysisSkip": {
+      "path": "assets/audio/se/common_se_paralysisSkip.mp3",
+      "volume": 100
+    },
+    "chestTrap": {
+      "path": "assets/audio/se/common_se_chestTrap.mp3",
+      "volume": 60
+    },
+    "scenarioClear": {
+      "path": "assets/audio/se/common_se_scenarioClear.mp3",
+      "volume": 60
+    },
+    "affectionUp": {
+      "path": "assets/audio/se/common_se_affectionUp.mp3",
+      "volume": 70
+    }
+  },
+  "seMaster": 70,
+  "randomVoices": {
+    "departure": {
+      "paths": [
+        "assets/voices/voice_0001.mp3",
+        "assets/voices/voice_0002.mp3"
+      ],
+      "chance": 100,
+      "volume": 100
+    },
+    "return": {
+      "paths": [
+        "assets/voices/voice_0003.mp3",
+        "assets/voices/voice_0004.mp3"
+      ],
+      "chance": 100,
+      "volume": 100
+    },
+    "attack": {
+      "paths": [
+        "assets/voices/voice_0005.mp3",
+        "assets/voices/voice_0006.mp3"
+      ],
+      "chance": 100,
+      "volume": 100
+    },
+    "skill": {
+      "paths": [
+        "assets/voices/voice_0007.mp3",
+        "assets/voices/voice_0008.mp3"
+      ],
+      "chance": 100,
+      "volume": 100
+    },
+    "item": {
+      "paths": [
+        "assets/voices/voice_0009.mp3"
+      ],
+      "chance": 100,
+      "volume": 100
+    },
+    "victory": {
+      "paths": [
+        "assets/voices/voice_0010.mp3",
+        "assets/voices/voice_0011.mp3"
+      ],
+      "chance": 100,
+      "volume": 100
+    },
+    "defeat": {
+      "paths": [
+        "assets/voices/voice_0012.mp3",
+        "assets/voices/voice_0013.mp3",
+        "assets/voices/voice_0014.mp3"
+      ],
+      "chance": 100,
+      "volume": 100
+    },
+    "clear": {
+      "paths": [
+        "assets/voices/voice_0015.mp3",
+        "assets/voices/voice_0016.mp3"
+      ],
+      "chance": 100,
+      "volume": 100
+    },
+    "chest": {
+      "paths": [],
+      "chance": 100,
+      "volume": 100
+    },
+    "reward": {
+      "paths": [],
+      "chance": 100,
+      "volume": 100
+    }
+  }
+}

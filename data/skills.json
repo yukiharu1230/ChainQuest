@@ -1,0 +1,1316 @@
+[
+  {
+    "id": "K107",
+    "name": "女王命ずる十連突",
+    "description": "光の残像とともに解き放つ一撃必殺の高速連続突き。\n紫色の衝撃波が敵の装甲を粉砕・貫通し、いかなる強敵をも一瞬で打ち倒す。",
+    "rank": "A",
+    "gachaWeight": 10,
+    "skillType": "active",
+    "usesPerAdventure": 1,
+    "successRate": 100,
+    "accuracyBonus": 0,
+    "excludeFromGacha": true,
+    "availability": {
+      "gacha": {
+        "type": "always",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "randomEffectGroups": [],
+    "effects": [
+      {
+        "amountMode": "fixed",
+        "inflictChance": 100,
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "poison",
+        "type": "armor_pierce",
+        "target": "enemy",
+        "stat": "atk",
+        "amount": 100,
+        "chance": 100,
+        "duration": 0,
+        "trigger": "on_use"
+      },
+      {
+        "amountMode": "fixed",
+        "inflictChance": 100,
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "poison",
+        "type": "attack_multiplier",
+        "target": "enemy",
+        "stat": "atk",
+        "amount": 2,
+        "chance": 100,
+        "duration": 0,
+        "trigger": "on_use"
+      }
+    ],
+    "levels": {
+      "2": {
+        "effects": [
+          {
+            "amountMode": "fixed",
+            "inflictChance": 100,
+            "immunityKind": "both",
+            "charges": 0,
+            "stealMode": "temporary",
+            "percent": 10,
+            "cleanseType": "poison",
+            "type": "armor_pierce",
+            "target": "enemy",
+            "stat": "atk",
+            "amount": 100,
+            "chance": 100,
+            "duration": 0,
+            "trigger": "on_use"
+          },
+          {
+            "amountMode": "fixed",
+            "inflictChance": 100,
+            "immunityKind": "both",
+            "charges": 0,
+            "stealMode": "temporary",
+            "percent": 10,
+            "cleanseType": "poison",
+            "type": "attack_multiplier",
+            "target": "enemy",
+            "stat": "atk",
+            "amount": 2,
+            "chance": 100,
+            "duration": 0,
+            "trigger": "on_use"
+          }
+        ],
+        "usesPerAdventure": 2
+      },
+      "3": {
+        "effects": [
+          {
+            "amountMode": "fixed",
+            "inflictChance": 100,
+            "immunityKind": "both",
+            "charges": 0,
+            "stealMode": "temporary",
+            "percent": 10,
+            "cleanseType": "poison",
+            "type": "armor_pierce",
+            "target": "enemy",
+            "stat": "atk",
+            "amount": 100,
+            "chance": 100,
+            "duration": 0,
+            "trigger": "on_use"
+          },
+          {
+            "amountMode": "fixed",
+            "inflictChance": 100,
+            "immunityKind": "both",
+            "charges": 0,
+            "stealMode": "temporary",
+            "percent": 10,
+            "cleanseType": "poison",
+            "type": "attack_multiplier",
+            "target": "enemy",
+            "stat": "atk",
+            "amount": 3,
+            "chance": 100,
+            "duration": 0,
+            "trigger": "on_use"
+          }
+        ],
+        "usesPerAdventure": 3
+      }
+    },
+    "se": "assets/se/K107.mp3"
+  },
+  {
+    "id": "K202",
+    "name": "王命ずる十連突",
+    "description": "光の残像とともに解き放つ一撃必殺の高速連続突き。\n紫色の衝撃波が敵の装甲を粉砕・貫通し、いかなる強敵をも一瞬で打ち倒す。",
+    "rank": "A",
+    "gachaWeight": 10,
+    "skillType": "active",
+    "usesPerAdventure": 1,
+    "successRate": 100,
+    "accuracyBonus": 0,
+    "excludeFromGacha": true,
+    "availability": {
+      "gacha": {
+        "type": "always",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "randomEffectGroups": [],
+    "effects": [
+      {
+        "amountMode": "fixed",
+        "inflictChance": 100,
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "poison",
+        "type": "armor_pierce",
+        "target": "self",
+        "stat": "atk",
+        "amount": 100,
+        "chance": 100,
+        "duration": 0,
+        "trigger": "on_use"
+      },
+      {
+        "amountMode": "fixed",
+        "inflictChance": 100,
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "poison",
+        "type": "attack_multiplier",
+        "target": "self",
+        "stat": "atk",
+        "amount": 2,
+        "chance": 100,
+        "duration": 0,
+        "trigger": "on_use"
+      }
+    ],
+    "levels": {
+      "2": {
+        "effects": []
+      },
+      "3": {
+        "effects": []
+      }
+    },
+    "se": "assets/se/K107.mp3"
+  },
+  {
+    "id": "K201",
+    "name": "子守歌",
+    "description": "魔力を帯びた奇妙で心地よい旋律を響かせ、戦意を削ぎ落とす。\n聞いた者を強烈な睡魔の底へ誘い、【眠り】状態にする。",
+    "rank": "C",
+    "gachaWeight": 10,
+    "skillType": "active",
+    "usesPerAdventure": 1,
+    "successRate": 100,
+    "accuracyBonus": 0,
+    "excludeFromGacha": false,
+    "availability": {
+      "gacha": {
+        "type": "none",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "randomEffectGroups": [],
+    "effects": [
+      {
+        "amountMode": "fixed",
+        "inflictChance": 50,
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "poison",
+        "type": "sleep",
+        "target": "self",
+        "stat": "atk",
+        "amount": 1,
+        "chance": 100,
+        "duration": 2,
+        "trigger": "on_use"
+      }
+    ],
+    "levels": {
+      "2": {
+        "effects": []
+      },
+      "3": {
+        "effects": []
+      }
+    }
+  },
+  {
+    "id": "K200",
+    "name": "毒液",
+    "description": "腐食性の高い劇毒の液体を口や腕から激しく噴射して攻撃する。\n対象にダメージを与え、高確率で相手を【毒】状態にする。",
+    "rank": "C",
+    "gachaWeight": 10,
+    "skillType": "active",
+    "usesPerAdventure": 1,
+    "successRate": 100,
+    "accuracyBonus": 0,
+    "excludeFromGacha": true,
+    "availability": {
+      "gacha": {
+        "type": "always",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "randomEffectGroups": [],
+    "effects": [
+      {
+        "amountMode": "fixed",
+        "inflictChance": 50,
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "poison",
+        "type": "poison",
+        "target": "self",
+        "stat": "atk",
+        "amount": 2,
+        "chance": 100,
+        "duration": 3,
+        "trigger": "on_use"
+      },
+      {
+        "type": "damage",
+        "target": "self",
+        "stat": "atk",
+        "amount": 1,
+        "amountMode": "fixed",
+        "chance": 100,
+        "inflictChance": 100,
+        "duration": 0,
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "poison",
+        "trigger": "on_use"
+      }
+    ],
+    "levels": {
+      "2": {
+        "effects": []
+      },
+      "3": {
+        "effects": []
+      }
+    },
+    "seVolume": 50,
+    "se": "assets/se/K200.mp3"
+  },
+  {
+    "id": "K105",
+    "name": "フェンリル・スティール",
+    "description": "アイテムだけをスマートに持ち去る、手癖の悪い狼にふさわしいスキル。",
+    "rank": "C",
+    "gachaWeight": 60,
+    "skillType": "active",
+    "usesPerAdventure": 5,
+    "successRate": 100,
+    "accuracyBonus": 0,
+    "excludeFromGacha": true,
+    "availability": {
+      "gacha": {
+        "type": "always",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "randomEffectGroups": [],
+    "effects": [
+      {
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "poison",
+        "amountMode": "percent",
+        "inflictChance": 100,
+        "type": "steal_item",
+        "target": "enemy",
+        "stat": "atk",
+        "amount": 3,
+        "chance": 100,
+        "duration": 0,
+        "trigger": "on_use"
+      }
+    ],
+    "levels": {
+      "2": {
+        "effects": [
+          {
+            "immunityKind": "both",
+            "charges": 0,
+            "stealMode": "temporary",
+            "percent": 10,
+            "cleanseType": "poison",
+            "amountMode": "percent",
+            "inflictChance": 100,
+            "type": "steal_item",
+            "target": "enemy",
+            "stat": "atk",
+            "amount": 3,
+            "chance": 100,
+            "duration": 0,
+            "trigger": "on_use"
+          }
+        ],
+        "usesPerAdventure": 6,
+        "accuracyBonus": 0
+      },
+      "3": {
+        "effects": [
+          {
+            "immunityKind": "both",
+            "charges": 0,
+            "stealMode": "temporary",
+            "percent": 10,
+            "cleanseType": "poison",
+            "amountMode": "percent",
+            "inflictChance": 100,
+            "type": "steal_item",
+            "target": "enemy",
+            "stat": "atk",
+            "amount": 3,
+            "chance": 100,
+            "duration": 0,
+            "trigger": "on_use"
+          }
+        ],
+        "usesPerAdventure": 7,
+        "accuracyBonus": 0
+      }
+    },
+    "se": "assets/se/K105.mp3",
+    "seVolume": 50
+  },
+  {
+    "id": "K106",
+    "name": "ロシンアンショット",
+    "description": "辛いのか！？辛くないのかー！？",
+    "rank": "B",
+    "gachaWeight": 25,
+    "skillType": "active",
+    "usesPerAdventure": 1,
+    "successRate": 100,
+    "accuracyBonus": 0,
+    "excludeFromGacha": true,
+    "availability": {
+      "gacha": {
+        "type": "always",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "randomEffectGroups": [],
+    "effects": [
+      {
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "poison",
+        "amountMode": "percent",
+        "inflictChance": 100,
+        "type": "attack_multiplier",
+        "target": "enemy",
+        "stat": "atk",
+        "amount": 3,
+        "chance": 20,
+        "duration": 0,
+        "trigger": "on_use"
+      }
+    ],
+    "levels": {
+      "2": {
+        "effects": [
+          {
+            "immunityKind": "both",
+            "charges": 0,
+            "stealMode": "temporary",
+            "percent": 10,
+            "cleanseType": "poison",
+            "amountMode": "percent",
+            "inflictChance": 100,
+            "type": "attack_multiplier",
+            "target": "enemy",
+            "stat": "atk",
+            "amount": 3,
+            "chance": 25,
+            "duration": 0,
+            "trigger": "on_use"
+          }
+        ]
+      },
+      "3": {
+        "effects": [
+          {
+            "immunityKind": "both",
+            "charges": 0,
+            "stealMode": "temporary",
+            "percent": 10,
+            "cleanseType": "poison",
+            "amountMode": "percent",
+            "inflictChance": 100,
+            "type": "attack_multiplier",
+            "target": "enemy",
+            "stat": "atk",
+            "amount": 3,
+            "chance": 30,
+            "duration": 0,
+            "trigger": "on_use"
+          }
+        ]
+      }
+    },
+    "se": "assets/se/K106.mp3",
+    "seVolume": 50
+  },
+  {
+    "id": "K005",
+    "name": "瞬迅の獣性",
+    "description": "獲物を逃さぬ獣の反応速度。",
+    "rank": "B",
+    "gachaWeight": 25,
+    "skillType": "active",
+    "usesPerAdventure": 3,
+    "successRate": 100,
+    "accuracyBonus": 0,
+    "excludeFromGacha": true,
+    "availability": {
+      "gacha": {
+        "type": "always",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "randomEffectGroups": [],
+    "effects": [
+      {
+        "amountMode": "fixed",
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "poison",
+        "inflictChance": 100,
+        "type": "extra_turn",
+        "target": "self",
+        "stat": "atk",
+        "amount": 2,
+        "chance": 100,
+        "duration": 0,
+        "trigger": "on_use"
+      }
+    ],
+    "levels": {
+      "2": {
+        "effects": [
+          {
+            "amountMode": "fixed",
+            "immunityKind": "both",
+            "charges": 0,
+            "stealMode": "temporary",
+            "percent": 10,
+            "cleanseType": "poison",
+            "inflictChance": 100,
+            "type": "extra_turn",
+            "target": "self",
+            "stat": "atk",
+            "amount": 2,
+            "chance": 100,
+            "duration": 0,
+            "trigger": "on_use"
+          }
+        ],
+        "usesPerAdventure": 3,
+        "accuracyBonus": 0
+      },
+      "3": {
+        "effects": [
+          {
+            "amountMode": "fixed",
+            "immunityKind": "both",
+            "charges": 0,
+            "stealMode": "temporary",
+            "percent": 10,
+            "cleanseType": "poison",
+            "inflictChance": 100,
+            "type": "extra_turn",
+            "target": "self",
+            "stat": "atk",
+            "amount": 3,
+            "chance": 100,
+            "duration": 0,
+            "trigger": "on_use"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "K104",
+    "name": "ばぶばぶ",
+    "description": "ｷｬｯｷｬ🍼",
+    "rank": "B",
+    "gachaWeight": 25,
+    "skillType": "passive",
+    "usesPerAdventure": 0,
+    "successRate": 100,
+    "accuracyBonus": 0,
+    "excludeFromGacha": true,
+    "availability": {
+      "gacha": {
+        "type": "always",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "randomEffectGroups": [],
+    "effects": [
+      {
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "poison",
+        "amountMode": "percent",
+        "inflictChance": 100,
+        "type": "heal",
+        "target": "self",
+        "stat": "atk",
+        "amount": 10,
+        "chance": 40,
+        "duration": 0,
+        "trigger": "turn_start"
+      }
+    ],
+    "levels": {
+      "2": {
+        "effects": [
+          {
+            "immunityKind": "both",
+            "charges": 0,
+            "stealMode": "temporary",
+            "percent": 10,
+            "cleanseType": "poison",
+            "amountMode": "percent",
+            "inflictChance": 100,
+            "type": "heal",
+            "target": "self",
+            "stat": "atk",
+            "amount": 10,
+            "chance": 50,
+            "duration": 0,
+            "trigger": "turn_start"
+          }
+        ]
+      },
+      "3": {
+        "effects": [
+          {
+            "immunityKind": "both",
+            "charges": 0,
+            "stealMode": "temporary",
+            "percent": 10,
+            "cleanseType": "poison",
+            "amountMode": "percent",
+            "inflictChance": 100,
+            "type": "heal",
+            "target": "self",
+            "stat": "atk",
+            "amount": 10,
+            "chance": 60,
+            "duration": 0,
+            "trigger": "turn_start"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "K103",
+    "name": "良い子は寝ます",
+    "description": "戦闘中でも問答無用、良い子だから。",
+    "rank": "B",
+    "gachaWeight": 25,
+    "skillType": "active",
+    "usesPerAdventure": 1,
+    "successRate": 100,
+    "accuracyBonus": 0,
+    "excludeFromGacha": true,
+    "availability": {
+      "gacha": {
+        "type": "always",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "randomEffectGroups": [],
+    "effects": [
+      {
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "poison",
+        "amountMode": "fixed",
+        "type": "sleep",
+        "target": "self",
+        "stat": "atk",
+        "amount": 0,
+        "chance": 100,
+        "duration": 3,
+        "trigger": "on_use"
+      },
+      {
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "poison",
+        "amountMode": "fixed",
+        "type": "heal",
+        "target": "self",
+        "stat": "atk",
+        "amount": 20,
+        "chance": 100,
+        "duration": 0,
+        "trigger": "on_use"
+      }
+    ],
+    "levels": {
+      "2": {
+        "effects": [
+          {
+            "immunityKind": "both",
+            "charges": 0,
+            "stealMode": "temporary",
+            "percent": 10,
+            "cleanseType": "poison",
+            "amountMode": "fixed",
+            "type": "sleep",
+            "target": "self",
+            "stat": "atk",
+            "amount": 0,
+            "chance": 100,
+            "duration": 3,
+            "trigger": "on_use"
+          },
+          {
+            "immunityKind": "both",
+            "charges": 0,
+            "stealMode": "temporary",
+            "percent": 10,
+            "cleanseType": "poison",
+            "amountMode": "fixed",
+            "type": "heal",
+            "target": "self",
+            "stat": "atk",
+            "amount": 30,
+            "chance": 100,
+            "duration": 0,
+            "trigger": "on_use"
+          }
+        ]
+      },
+      "3": {
+        "effects": [
+          {
+            "immunityKind": "both",
+            "charges": 0,
+            "stealMode": "temporary",
+            "percent": 10,
+            "cleanseType": "poison",
+            "amountMode": "fixed",
+            "type": "sleep",
+            "target": "self",
+            "stat": "atk",
+            "amount": 0,
+            "chance": 100,
+            "duration": 3,
+            "trigger": "on_use"
+          },
+          {
+            "immunityKind": "both",
+            "charges": 0,
+            "stealMode": "temporary",
+            "percent": 10,
+            "cleanseType": "poison",
+            "amountMode": "fixed",
+            "type": "heal",
+            "target": "self",
+            "stat": "atk",
+            "amount": 40,
+            "chance": 100,
+            "duration": 0,
+            "trigger": "on_use"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "K102",
+    "name": "おともだち",
+    "description": "ギチギチがオススメだお。",
+    "rank": "B",
+    "gachaWeight": 25,
+    "skillType": "active",
+    "usesPerAdventure": 1,
+    "successRate": 100,
+    "accuracyBonus": 0,
+    "excludeFromGacha": true,
+    "availability": {
+      "gacha": {
+        "type": "always",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "randomEffectGroups": [],
+    "effects": [
+      {
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "poison",
+        "type": "paralysis",
+        "target": "self",
+        "stat": "atk",
+        "amount": 0,
+        "amountMode": "fixed",
+        "chance": 70,
+        "inflictChance": 100,
+        "duration": 2,
+        "trigger": "on_use"
+      }
+    ],
+    "levels": {
+      "2": {
+        "effects": [
+          {
+            "immunityKind": "both",
+            "charges": 0,
+            "stealMode": "temporary",
+            "percent": 10,
+            "cleanseType": "poison",
+            "type": "paralysis",
+            "target": "self",
+            "stat": "atk",
+            "amount": 0,
+            "amountMode": "fixed",
+            "chance": 80,
+            "inflictChance": 100,
+            "duration": 2,
+            "trigger": "on_use"
+          }
+        ]
+      },
+      "3": {
+        "effects": [
+          {
+            "immunityKind": "both",
+            "charges": 0,
+            "stealMode": "temporary",
+            "percent": 10,
+            "cleanseType": "poison",
+            "type": "paralysis",
+            "target": "self",
+            "stat": "atk",
+            "amount": 0,
+            "amountMode": "fixed",
+            "chance": 90,
+            "inflictChance": 100,
+            "duration": 2,
+            "trigger": "on_use"
+          }
+        ]
+      }
+    },
+    "se": "assets/se/K102.mp3"
+  },
+  {
+    "id": "K004",
+    "name": "新規スキル",
+    "description": "",
+    "rank": "C",
+    "gachaWeight": 10,
+    "skillType": "active",
+    "usesPerAdventure": 1,
+    "successRate": 100,
+    "accuracyBonus": 0,
+    "excludeFromGacha": false,
+    "availability": {
+      "gacha": {
+        "type": "always",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "randomEffectGroups": [],
+    "effects": [
+      {
+        "type": "heal",
+        "target": "self",
+        "stat": "atk",
+        "amount": 1,
+        "chance": 100,
+        "duration": 0,
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "poison",
+        "trigger": "on_use"
+      }
+    ],
+    "levels": {
+      "2": {
+        "effects": []
+      },
+      "3": {
+        "effects": []
+      }
+    }
+  },
+  {
+    "id": "K101",
+    "name": "踏んじゃった☆",
+    "description": "どかーん！",
+    "rank": "S",
+    "gachaWeight": 5,
+    "skillType": "active",
+    "usesPerAdventure": 1,
+    "successRate": 100,
+    "accuracyBonus": 0,
+    "excludeFromGacha": true,
+    "availability": {
+      "gacha": {
+        "type": "always",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "randomEffectGroups": [],
+    "effects": [
+      {
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "poison",
+        "type": "damage",
+        "target": "self",
+        "stat": "atk",
+        "amount": 100,
+        "amountMode": "fixed",
+        "chance": 100,
+        "inflictChance": 100,
+        "duration": 0,
+        "trigger": "on_use"
+      },
+      {
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "poison",
+        "type": "damage",
+        "target": "enemy",
+        "stat": "atk",
+        "amount": 100,
+        "amountMode": "fixed",
+        "chance": 100,
+        "inflictChance": 100,
+        "duration": 0,
+        "trigger": "on_use"
+      }
+    ],
+    "levels": {
+      "2": {
+        "effects": [
+          {
+            "immunityKind": "both",
+            "charges": 0,
+            "stealMode": "temporary",
+            "percent": 10,
+            "cleanseType": "poison",
+            "type": "damage",
+            "target": "self",
+            "stat": "atk",
+            "amount": 150,
+            "amountMode": "fixed",
+            "chance": 100,
+            "inflictChance": 100,
+            "duration": 0,
+            "trigger": "on_use"
+          },
+          {
+            "immunityKind": "both",
+            "charges": 0,
+            "stealMode": "temporary",
+            "percent": 10,
+            "cleanseType": "poison",
+            "type": "damage",
+            "target": "enemy",
+            "stat": "atk",
+            "amount": 150,
+            "amountMode": "fixed",
+            "chance": 100,
+            "inflictChance": 100,
+            "duration": 0,
+            "trigger": "on_use"
+          }
+        ]
+      },
+      "3": {
+        "effects": [
+          {
+            "immunityKind": "both",
+            "charges": 0,
+            "stealMode": "temporary",
+            "percent": 10,
+            "cleanseType": "poison",
+            "type": "damage",
+            "target": "self",
+            "stat": "atk",
+            "amount": 200,
+            "amountMode": "fixed",
+            "chance": 100,
+            "inflictChance": 100,
+            "duration": 0,
+            "trigger": "on_use"
+          },
+          {
+            "immunityKind": "both",
+            "charges": 0,
+            "stealMode": "temporary",
+            "percent": 10,
+            "cleanseType": "poison",
+            "type": "damage",
+            "target": "enemy",
+            "stat": "atk",
+            "amount": 200,
+            "amountMode": "fixed",
+            "chance": 100,
+            "inflictChance": 100,
+            "duration": 0,
+            "trigger": "on_use"
+          }
+        ]
+      }
+    },
+    "se": "assets/se/K101.mp3",
+    "seVolume": 40
+  },
+  {
+    "id": "K100",
+    "name": "ロイヤルヴェノム",
+    "description": "高貴な紫の猛毒。",
+    "rank": "A",
+    "gachaWeight": 10,
+    "skillType": "active",
+    "usesPerAdventure": 1,
+    "successRate": 100,
+    "accuracyBonus": 0,
+    "excludeFromGacha": true,
+    "availability": {
+      "gacha": {
+        "type": "always",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "randomEffectGroups": [],
+    "effects": [
+      {
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "poison",
+        "type": "poison",
+        "target": "enemy",
+        "stat": "atk",
+        "amount": 3,
+        "amountMode": "fixed",
+        "chance": 100,
+        "inflictChance": 100,
+        "duration": 3,
+        "trigger": "on_use"
+      }
+    ],
+    "levels": {
+      "2": {
+        "usesPerAdventure": 2,
+        "effects": []
+      },
+      "3": {
+        "usesPerAdventure": 3,
+        "effects": []
+      }
+    },
+    "seVolume": 50
+  },
+  {
+    "id": "K001",
+    "name": "痛いの飛んでけ",
+    "description": "気持ち次第って時もある。",
+    "price": 0,
+    "gachaWeight": 45,
+    "skillType": "active",
+    "usesPerAdventure": 2,
+    "effects": [
+      {
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "poison",
+        "type": "heal",
+        "target": "self",
+        "stat": "atk",
+        "amount": 5,
+        "chance": 100,
+        "duration": 0,
+        "trigger": "on_use"
+      }
+    ],
+    "rank": "C",
+    "successRate": 100,
+    "accuracyBonus": 0,
+    "excludeFromGacha": false,
+    "availability": {
+      "gacha": {
+        "type": "always",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "randomEffectGroups": [],
+    "levels": {
+      "2": {
+        "effects": [
+          {
+            "immunityKind": "both",
+            "charges": 0,
+            "stealMode": "temporary",
+            "percent": 10,
+            "cleanseType": "poison",
+            "type": "heal",
+            "target": "self",
+            "stat": "atk",
+            "amount": 10,
+            "chance": 100,
+            "duration": 0,
+            "trigger": "on_use"
+          }
+        ]
+      },
+      "3": {
+        "effects": [
+          {
+            "immunityKind": "both",
+            "charges": 0,
+            "stealMode": "temporary",
+            "percent": 10,
+            "cleanseType": "poison",
+            "type": "heal",
+            "target": "self",
+            "stat": "atk",
+            "amount": 20,
+            "chance": 100,
+            "duration": 0,
+            "trigger": "on_use"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "K002",
+    "name": "アーチッチ",
+    "description": "燃えてるんだろうか。",
+    "price": 0,
+    "gachaWeight": 35,
+    "skillType": "active",
+    "usesPerAdventure": 2,
+    "effects": [
+      {
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "poison",
+        "amountMode": "fixed",
+        "type": "damage",
+        "target": "enemy",
+        "stat": "atk",
+        "amount": 4,
+        "chance": 100,
+        "inflictChance": 100,
+        "duration": 0,
+        "trigger": "on_use"
+      }
+    ],
+    "rank": "C",
+    "successRate": 100,
+    "accuracyBonus": 0,
+    "excludeFromGacha": false,
+    "availability": {
+      "gacha": {
+        "type": "always",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "randomEffectGroups": [],
+    "levels": {
+      "2": {
+        "effects": []
+      },
+      "3": {
+        "effects": []
+      }
+    },
+    "se": "assets/se/K002.mp3",
+    "seVolume": 50
+  },
+  {
+    "id": "K003",
+    "name": "本気(ﾏﾁﾞ)",
+    "description": "ちょっと本気(ﾏﾁﾞ)になってみる。",
+    "price": 0,
+    "gachaWeight": 20,
+    "skillType": "active",
+    "usesPerAdventure": 2,
+    "effects": [
+      {
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "poison",
+        "type": "stat_up",
+        "target": "self",
+        "stat": "atk",
+        "amount": 3,
+        "amountMode": "fixed",
+        "chance": 100,
+        "duration": 2,
+        "trigger": "on_use"
+      }
+    ],
+    "rank": "C",
+    "successRate": 100,
+    "accuracyBonus": 0,
+    "excludeFromGacha": false,
+    "availability": {
+      "gacha": {
+        "type": "always",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "gachaAuto": true,
+    "randomEffectGroups": [],
+    "levels": {
+      "2": {
+        "effects": [
+          {
+            "immunityKind": "both",
+            "charges": 0,
+            "stealMode": "temporary",
+            "percent": 10,
+            "cleanseType": "poison",
+            "type": "stat_up",
+            "target": "self",
+            "stat": "atk",
+            "amount": 2,
+            "amountMode": "fixed",
+            "chance": 100,
+            "duration": 2,
+            "trigger": "on_use"
+          }
+        ],
+        "usesPerAdventure": 2,
+        "accuracyBonus": 0
+      },
+      "3": {
+        "effects": [
+          {
+            "immunityKind": "both",
+            "charges": 0,
+            "stealMode": "temporary",
+            "percent": 10,
+            "cleanseType": "poison",
+            "type": "stat_up",
+            "target": "self",
+            "stat": "atk",
+            "amount": 3,
+            "amountMode": "fixed",
+            "chance": 100,
+            "duration": 3,
+            "trigger": "on_use"
+          }
+        ],
+        "usesPerAdventure": 3,
+        "accuracyBonus": 0
+      }
+    }
+  }
+]

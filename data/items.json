@@ -1,0 +1,1541 @@
+[
+  {
+    "id": "I001",
+    "name": "卵とろとろオムライス",
+    "description": "真ん中から切ってとろ～っとするタイプ。\nHP5回復/冒険中に2回使用可能。\n",
+    "price": 2,
+    "usesPerAdventure": 2,
+    "effects": [
+      {
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "poison",
+        "amountMode": "fixed",
+        "type": "heal",
+        "trigger": "on_use",
+        "target": "self",
+        "stat": "atk",
+        "amount": 5,
+        "chance": 100,
+        "duration": 0
+      }
+    ],
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "accuracyBonus": 0,
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "useContext": "battle",
+    "keyRank": 0,
+    "availability": {
+      "shop": {
+        "type": "always",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "image": "assets/items/I001.png",
+    "autoRescue": "",
+    "rescueHp": 0
+  },
+  {
+    "id": "I002",
+    "name": "蠱惑ドロップ",
+    "description": "色々混ぜたからよくわかんないや。\nHP10回復/被ダメージ半減(1T)/冒険中に1回使用可能。\n",
+    "price": 2,
+    "usesPerAdventure": 1,
+    "effects": [
+      {
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "poison",
+        "amountMode": "fixed",
+        "type": "heal",
+        "trigger": "on_use",
+        "target": "self",
+        "stat": "atk",
+        "amount": 10,
+        "chance": 100,
+        "duration": 0
+      },
+      {
+        "amountMode": "fixed",
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "poison",
+        "type": "damage_reduction",
+        "trigger": "on_use",
+        "target": "self",
+        "stat": "atk",
+        "amount": 50,
+        "chance": 100,
+        "duration": 1
+      }
+    ],
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "accuracyBonus": 0,
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "useContext": "battle",
+    "keyRank": 0,
+    "availability": {
+      "shop": {
+        "type": "always",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "image": "assets/items/I002.png",
+    "autoRescue": "",
+    "rescueHp": 1
+  },
+  {
+    "id": "I003",
+    "name": "ばんそうこー",
+    "description": "イタいデザインが、ちょっぴりお気の毒。\n敵を毒状態にする/冒険中に1回使用可能。",
+    "price": 2,
+    "usesPerAdventure": 1,
+    "effects": [
+      {
+        "amountMode": "fixed",
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "poison",
+        "type": "poison",
+        "trigger": "on_use",
+        "target": "enemy",
+        "stat": "atk",
+        "amount": 2,
+        "chance": 100,
+        "inflictChance": 85,
+        "duration": 2
+      }
+    ],
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "autoRescue": "",
+    "rescueHp": 1,
+    "accuracyBonus": 0,
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "useContext": "battle",
+    "keyRank": 0,
+    "availability": {
+      "shop": {
+        "type": "always",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "image": "assets/items/I003.png"
+  },
+  {
+    "id": "I004",
+    "name": "クイックスコーン",
+    "description": "二回行動できちゃう。チョコチップ入ってるからね。\n冒険中に1回使用可能。",
+    "price": 3,
+    "usesPerAdventure": 1,
+    "effects": [
+      {
+        "amountMode": "fixed",
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "poison",
+        "type": "extra_turn",
+        "trigger": "on_use",
+        "target": "self",
+        "stat": "atk",
+        "amount": 2,
+        "chance": 100,
+        "duration": 3
+      }
+    ],
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "autoRescue": "",
+    "rescueHp": 1,
+    "accuracyBonus": 0,
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "useContext": "battle",
+    "keyRank": 0,
+    "availability": {
+      "shop": {
+        "type": "always",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "image": "assets/items/I004.png"
+  },
+  {
+    "id": "I005",
+    "name": "なんたらペチーノ",
+    "description": "注文時、呪文のような言葉の最後にペチーノって聞こえました。\nHP30％回復/冒険中に2回使用可能。",
+    "price": 3,
+    "bookmark": true,
+    "usesPerAdventure": 2,
+    "effects": [
+      {
+        "amountMode": "percent",
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "poison",
+        "type": "heal",
+        "trigger": "on_use",
+        "target": "self",
+        "stat": "atk",
+        "amount": 30,
+        "chance": 100,
+        "duration": 0
+      }
+    ],
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "autoRescue": "",
+    "rescueHp": 1,
+    "accuracyBonus": 0,
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "useContext": "battle",
+    "keyRank": 0,
+    "availability": {
+      "shop": {
+        "type": "always",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "image": "assets/items/I005.png"
+  },
+  {
+    "id": "I006",
+    "name": "琥珀の黒珠茶",
+    "description": "んぇ？　タピオカミルクティー？　知らない子ですね。\nHP10％回復/命中率20％上昇(2T)/冒険中に2回使用可能。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "price": 3,
+    "usesPerAdventure": 2,
+    "autoRescue": "",
+    "rescueHp": 1,
+    "accuracyBonus": 0,
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "useContext": "battle",
+    "keyRank": 0,
+    "availability": {
+      "shop": {
+        "type": "always",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [
+      {
+        "amountMode": "percent",
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "poison",
+        "type": "heal",
+        "trigger": "on_use",
+        "target": "self",
+        "stat": "atk",
+        "amount": 10,
+        "chance": 100,
+        "inflictChance": 100,
+        "duration": 0
+      },
+      {
+        "type": "accuracy",
+        "trigger": "on_use",
+        "target": "self",
+        "stat": "atk",
+        "amount": 20,
+        "amountMode": "fixed",
+        "chance": 100,
+        "inflictChance": 100,
+        "duration": 3,
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "poison"
+      }
+    ],
+    "image": "assets/items/I006.png"
+  },
+  {
+    "id": "I007",
+    "name": "ウィークハンドレッド",
+    "description": "ストローで飲むと余計に美味しいでしゅね。\n攻撃力2倍/命中率30％低下(1T)/冒険中に1回使用可能。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "price": 3,
+    "usesPerAdventure": 1,
+    "autoRescue": "",
+    "rescueHp": 1,
+    "accuracyBonus": 0,
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "useContext": "battle",
+    "keyRank": 0,
+    "availability": {
+      "shop": {
+        "type": "always",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [
+      {
+        "amountMode": "fixed",
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "poison",
+        "type": "accuracy",
+        "trigger": "on_use",
+        "target": "self",
+        "stat": "atk",
+        "amount": -30,
+        "chance": 100,
+        "inflictChance": 100,
+        "duration": 1
+      },
+      {
+        "amountMode": "fixed",
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "poison",
+        "type": "damage_multiplier",
+        "trigger": "on_use",
+        "target": "self",
+        "stat": "atk",
+        "amount": 100,
+        "chance": 100,
+        "inflictChance": 100,
+        "duration": 1
+      }
+    ],
+    "image": "assets/items/I007.png"
+  },
+  {
+    "id": "I008",
+    "name": "蒸しピャン",
+    "description": "甘く柔らかな極上うさぎ蒸しパン。\nHP30％回復/素早さ3上昇(2T)/冒険中に2回使用可能。",
+    "price": 3,
+    "bookmark": true,
+    "usesPerAdventure": 2,
+    "effects": [
+      {
+        "amountMode": "percent",
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "poison",
+        "type": "heal",
+        "trigger": "on_use",
+        "target": "self",
+        "stat": "atk",
+        "amount": 30,
+        "chance": 100,
+        "inflictChance": 100,
+        "duration": 0
+      },
+      {
+        "amountMode": "fixed",
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "poison",
+        "type": "stat_up",
+        "trigger": "on_use",
+        "target": "self",
+        "stat": "spd",
+        "amount": 3,
+        "chance": 100,
+        "inflictChance": 100,
+        "duration": 2
+      }
+    ],
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "autoRescue": "",
+    "rescueHp": 1,
+    "accuracyBonus": 0,
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "useContext": "battle",
+    "keyRank": 0,
+    "availability": {
+      "shop": {
+        "type": "always",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "image": "assets/items/I008.png"
+  },
+  {
+    "id": "I009",
+    "name": "堅めのプレッツェル",
+    "description": "想像してるよりも堅いですか？\n防御3上昇(2T)/冒険中に3回使用可能。",
+    "price": 3,
+    "bookmark": true,
+    "usesPerAdventure": 3,
+    "effects": [
+      {
+        "amountMode": "fixed",
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "poison",
+        "type": "stat_up",
+        "trigger": "on_use",
+        "target": "self",
+        "stat": "def",
+        "amount": 3,
+        "chance": 100,
+        "inflictChance": 100,
+        "duration": 2
+      }
+    ],
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "autoRescue": "",
+    "rescueHp": 1,
+    "accuracyBonus": 0,
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "useContext": "battle",
+    "keyRank": 0,
+    "availability": {
+      "shop": {
+        "type": "always",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "image": "assets/items/I009.png"
+  },
+  {
+    "id": "I010",
+    "name": "獄炎プリン",
+    "description": "業火のスパイスが牙を剥く試練の甘味。\n攻撃力3倍(1T)/火傷(5T)/冒険中に1回使用可能。",
+    "price": 4,
+    "bookmark": true,
+    "usesPerAdventure": 1,
+    "effects": [
+      {
+        "amountMode": "fixed",
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "poison",
+        "type": "damage_multiplier",
+        "trigger": "on_use",
+        "target": "self",
+        "stat": "def",
+        "amount": 200,
+        "chance": 100,
+        "inflictChance": 100,
+        "duration": 1
+      },
+      {
+        "amountMode": "fixed",
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "poison",
+        "type": "burn",
+        "trigger": "on_use",
+        "target": "self",
+        "stat": "atk",
+        "amount": 3,
+        "chance": 100,
+        "inflictChance": 100,
+        "duration": 5
+      }
+    ],
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "autoRescue": "",
+    "rescueHp": 1,
+    "accuracyBonus": 0,
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "useContext": "battle",
+    "keyRank": 0,
+    "availability": {
+      "shop": {
+        "type": "always",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "image": "assets/items/I010.png"
+  },
+  {
+    "id": "I011",
+    "name": "ゴージャスパンケーキ",
+    "description": "芳醇なバターの香りとふわふわ食感が疲弊した身体を癒してくれる。\nHP20％回復(3T)/冒険中に2回使用可能。",
+    "price": 4,
+    "bookmark": true,
+    "usesPerAdventure": 2,
+    "effects": [
+      {
+        "amountMode": "percent",
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "poison",
+        "inflictChance": 100,
+        "type": "regen_heal",
+        "trigger": "on_use",
+        "target": "self",
+        "stat": "atk",
+        "amount": 20,
+        "chance": 100,
+        "duration": 3
+      }
+    ],
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "autoRescue": "",
+    "rescueHp": 1,
+    "accuracyBonus": 0,
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "useContext": "battle",
+    "keyRank": 0,
+    "availability": {
+      "shop": {
+        "type": "always",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "image": "assets/items/I011.png"
+  },
+  {
+    "id": "I012",
+    "name": "おいちい苺牛乳",
+    "description": "苺の生命力を凝縮した、甘く爽やかな小瓶。\nHP20％回復/クリティカル率20％上昇(3T)/冒険中に2回使用可能。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "price": 4,
+    "usesPerAdventure": 2,
+    "autoRescue": "",
+    "rescueHp": 1,
+    "accuracyBonus": 0,
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "useContext": "battle",
+    "keyRank": 0,
+    "availability": {
+      "shop": {
+        "type": "always",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [
+      {
+        "amountMode": "fixed",
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "poison",
+        "inflictChance": 100,
+        "type": "crit",
+        "trigger": "on_use",
+        "target": "self",
+        "stat": "atk",
+        "amount": 20,
+        "chance": 100,
+        "duration": 3
+      },
+      {
+        "amountMode": "percent",
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "poison",
+        "inflictChance": 100,
+        "type": "heal",
+        "trigger": "on_use",
+        "target": "self",
+        "stat": "atk",
+        "amount": 20,
+        "chance": 100,
+        "duration": 0
+      }
+    ],
+    "image": "assets/items/I012.png"
+  },
+  {
+    "id": "I013",
+    "name": "好きなだけドーナッツ",
+    "description": "それはもう赴くままに。\nHP30％回復/冒険中に3回使用可能。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "price": 4,
+    "usesPerAdventure": 3,
+    "autoRescue": "",
+    "rescueHp": 1,
+    "accuracyBonus": 0,
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "useContext": "battle",
+    "keyRank": 0,
+    "availability": {
+      "shop": {
+        "type": "always",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [
+      {
+        "amountMode": "percent",
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "poison",
+        "type": "heal",
+        "trigger": "on_use",
+        "target": "self",
+        "stat": "atk",
+        "amount": 30,
+        "chance": 100,
+        "duration": 0
+      }
+    ],
+    "image": "assets/items/I013.png"
+  },
+  {
+    "id": "I014",
+    "name": "ジャァ～ムトースト",
+    "description": "黙々とジャムを食べるためにトーストを焼くのさ。\n敵を沈黙状態にする/冒険中に2回使用可能。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "price": 4,
+    "usesPerAdventure": 2,
+    "autoRescue": "",
+    "rescueHp": 1,
+    "accuracyBonus": 0,
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "useContext": "battle",
+    "keyRank": 0,
+    "availability": {
+      "shop": {
+        "type": "always",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [
+      {
+        "amountMode": "percent",
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "poison",
+        "inflictChance": 85,
+        "type": "silence",
+        "trigger": "on_use",
+        "target": "enemy",
+        "stat": "atk",
+        "amount": 100,
+        "chance": 100,
+        "duration": 2
+      }
+    ],
+    "image": "assets/items/I014.png"
+  },
+  {
+    "id": "I015",
+    "name": "茨鬼の鍵",
+    "description": "持ち手部分にリアルなドクロと鋭いスパイク、ボロ布が巻きつけられた\n狂気的なデザインの鍵。ってか使いづらいし痛ぇ。鍵LV.1",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "price": 0,
+    "usesPerAdventure": 3,
+    "autoRescue": "",
+    "rescueHp": 1,
+    "accuracyBonus": 0,
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "useContext": "event",
+    "keyRank": 1,
+    "availability": {
+      "shop": {
+        "type": "none",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [],
+    "image": "assets/items/I015.png"
+  },
+  {
+    "id": "I016",
+    "name": "解毒のクローバーグミ",
+    "description": "体内の毒素や麻痺物質を急速に分解・浄化する薬草エキスが凝縮されており\n食べるだけで体を蝕む毒状態を治癒する。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "price": 3,
+    "usesPerAdventure": 5,
+    "autoRescue": "",
+    "rescueHp": 1,
+    "accuracyBonus": 0,
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "useContext": "battle",
+    "keyRank": 0,
+    "availability": {
+      "shop": {
+        "type": "scenario_clear",
+        "eventId": "",
+        "scenarioId": "C001",
+        "difficulty": "NORMAL",
+        "itemId": ""
+      }
+    },
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [
+      {
+        "amountMode": "fixed",
+        "inflictChance": 100,
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "poison",
+        "type": "cleanse",
+        "trigger": "on_use",
+        "target": "self",
+        "stat": "atk",
+        "amount": 1,
+        "chance": 100,
+        "duration": 0
+      }
+    ],
+    "image": "assets/items/I016.png"
+  },
+  {
+    "id": "I017",
+    "name": "目覚ましスターロリポップ",
+    "description": "まばゆい星の形をした弾ける甘さのロリポップキャンディ。\n心地よい刺激と爽快な光が広がり、深い眠りから瞬時に目を覚ます。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "price": 3,
+    "usesPerAdventure": 5,
+    "autoRescue": "",
+    "rescueHp": 1,
+    "accuracyBonus": 0,
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "useContext": "battle",
+    "keyRank": 0,
+    "availability": {
+      "shop": {
+        "type": "scenario_clear",
+        "eventId": "",
+        "scenarioId": "C001",
+        "difficulty": "NORMAL",
+        "itemId": ""
+      }
+    },
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [
+      {
+        "amountMode": "fixed",
+        "inflictChance": 100,
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "sleep",
+        "type": "cleanse",
+        "trigger": "auto_status",
+        "target": "self",
+        "stat": "atk",
+        "amount": 1,
+        "chance": 100,
+        "duration": 0
+      }
+    ],
+    "image": "assets/items/I017.png"
+  },
+  {
+    "id": "I018",
+    "name": "おしゃべりドロップス",
+    "description": "カラフルなドロップが入った豪華なガラス瓶。\n魔法や呪いによる沈黙状態の喉を潤す。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "price": 3,
+    "usesPerAdventure": 5,
+    "autoRescue": "",
+    "rescueHp": 1,
+    "accuracyBonus": 0,
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "useContext": "battle",
+    "keyRank": 0,
+    "availability": {
+      "shop": {
+        "type": "scenario_clear",
+        "eventId": "",
+        "scenarioId": "C001",
+        "difficulty": "NORMAL",
+        "itemId": ""
+      }
+    },
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [
+      {
+        "amountMode": "fixed",
+        "inflictChance": 100,
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "silence",
+        "type": "cleanse",
+        "trigger": "on_use",
+        "target": "self",
+        "stat": "atk",
+        "amount": 1,
+        "chance": 100,
+        "duration": 0
+      }
+    ],
+    "image": "assets/items/I018.png"
+  },
+  {
+    "id": "I019",
+    "name": "星空の目薬",
+    "description": "澄み切った青い液体と星のモチーフがあしらわれた美しい目薬ボトル。\n暗闇状態の視界を一瞬でクリアにする。視力も良くなっちゃう！",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "price": 3,
+    "usesPerAdventure": 5,
+    "autoRescue": "",
+    "rescueHp": 1,
+    "accuracyBonus": 0,
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "useContext": "battle",
+    "keyRank": 0,
+    "availability": {
+      "shop": {
+        "type": "scenario_clear",
+        "eventId": "",
+        "scenarioId": "C001",
+        "difficulty": "NORMAL",
+        "itemId": ""
+      }
+    },
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [
+      {
+        "amountMode": "fixed",
+        "inflictChance": 100,
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "blind",
+        "type": "cleanse",
+        "trigger": "on_use",
+        "target": "self",
+        "stat": "atk",
+        "amount": 1,
+        "chance": 100,
+        "duration": 0
+      }
+    ],
+    "image": "assets/items/I019.png"
+  },
+  {
+    "id": "I020",
+    "name": "ハーブの清涼シップ",
+    "description": "爽やかなハーブ成分と生姜エキスがたっぷり染み込んだ医療用湿布シート。\n麻痺で動かなくなった筋肉や神経を強烈な清涼感でシャキーン！",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "price": 3,
+    "usesPerAdventure": 5,
+    "autoRescue": "",
+    "rescueHp": 1,
+    "accuracyBonus": 0,
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "useContext": "battle",
+    "keyRank": 0,
+    "availability": {
+      "shop": {
+        "type": "scenario_clear",
+        "eventId": "",
+        "scenarioId": "C001",
+        "difficulty": "NORMAL",
+        "itemId": ""
+      }
+    },
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [
+      {
+        "amountMode": "fixed",
+        "inflictChance": 100,
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "paralysis",
+        "type": "cleanse",
+        "trigger": "on_use",
+        "target": "self",
+        "stat": "atk",
+        "amount": 1,
+        "chance": 100,
+        "duration": 0
+      }
+    ],
+    "image": "assets/items/I020.png"
+  },
+  {
+    "id": "I021",
+    "name": "火傷冷やしの青軟膏",
+    "description": "涼しげな青いジェルとラベンダー等のハーブがブレンドされた薬用クリーム。\n火傷の患部に塗ることで、一瞬で熱を奪い皮膚を再生させる。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "price": 3,
+    "usesPerAdventure": 5,
+    "autoRescue": "",
+    "rescueHp": 1,
+    "accuracyBonus": 0,
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "useContext": "battle",
+    "keyRank": 0,
+    "availability": {
+      "shop": {
+        "type": "scenario_clear",
+        "eventId": "",
+        "scenarioId": "C001",
+        "difficulty": "NORMAL",
+        "itemId": ""
+      }
+    },
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [
+      {
+        "amountMode": "fixed",
+        "inflictChance": 100,
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "burn",
+        "type": "cleanse",
+        "trigger": "on_use",
+        "target": "self",
+        "stat": "atk",
+        "amount": 1,
+        "chance": 100,
+        "duration": 0
+      }
+    ],
+    "image": "assets/items/I021.png"
+  },
+  {
+    "id": "I022",
+    "name": "厄払いシュシュ",
+    "description": "厄払の札と清らかな音色を奏でる鈴がつけられた神社のお守りシュシュ。\n鈴を鳴らして祈りを捧げることで、悪霊や邪悪な呪いの術式を浄化して解き放つ。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "price": 3,
+    "usesPerAdventure": 5,
+    "autoRescue": "",
+    "rescueHp": 1,
+    "accuracyBonus": 0,
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "useContext": "battle",
+    "keyRank": 0,
+    "availability": {
+      "shop": {
+        "type": "scenario_clear",
+        "eventId": "",
+        "scenarioId": "C001",
+        "difficulty": "NORMAL",
+        "itemId": ""
+      }
+    },
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [
+      {
+        "amountMode": "fixed",
+        "inflictChance": 100,
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "curse",
+        "type": "cleanse",
+        "trigger": "on_use",
+        "target": "self",
+        "stat": "atk",
+        "amount": 1,
+        "chance": 100,
+        "duration": 0
+      }
+    ],
+    "image": "assets/items/I022.png"
+  },
+  {
+    "id": "I023",
+    "name": "オールリフレッシュシート",
+    "description": "ゴシックで高級感あふれるパッケージシート。聖水と特殊な浄化の香料が\n染み込んでおり、体を軽く拭くだけで状態異常を一気に清めて回復する",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "price": 5,
+    "usesPerAdventure": 3,
+    "autoRescue": "",
+    "rescueHp": 1,
+    "accuracyBonus": 0,
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "useContext": "battle",
+    "keyRank": 0,
+    "availability": {
+      "shop": {
+        "type": "scenario_clear",
+        "eventId": "",
+        "scenarioId": "C002",
+        "difficulty": "NORMAL",
+        "itemId": ""
+      }
+    },
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [
+      {
+        "amountMode": "fixed",
+        "inflictChance": 100,
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "all",
+        "type": "cleanse",
+        "trigger": "on_use",
+        "target": "self",
+        "stat": "atk",
+        "amount": 1,
+        "chance": 100,
+        "duration": 0
+      },
+      {
+        "type": "cleanse",
+        "trigger": "auto_status",
+        "target": "self",
+        "stat": "atk",
+        "amount": 1,
+        "amountMode": "fixed",
+        "chance": 100,
+        "inflictChance": 100,
+        "duration": 0,
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "paralysis"
+      }
+    ],
+    "image": "assets/items/I023.png"
+  },
+  {
+    "id": "I024",
+    "name": "七彩竜のしずく",
+    "description": "旋律郷を統べる七彩竜の祝福が込められた、虹色に煌めく伝説の霊薬。\n一口含めば神秘の調律が体を巡り、味方のHPと状態異常を完全に回復する。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "price": 0,
+    "usesPerAdventure": 1,
+    "autoRescue": "",
+    "rescueHp": 1,
+    "accuracyBonus": 0,
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "useContext": "battle",
+    "keyRank": 0,
+    "availability": {
+      "shop": {
+        "type": "none",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [
+      {
+        "amountMode": "percent",
+        "inflictChance": 100,
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "poison",
+        "type": "heal",
+        "trigger": "on_use",
+        "target": "self",
+        "stat": "atk",
+        "amount": 100,
+        "chance": 100,
+        "duration": 0
+      },
+      {
+        "amountMode": "fixed",
+        "inflictChance": 100,
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "all",
+        "type": "cleanse",
+        "trigger": "on_use",
+        "target": "self",
+        "stat": "atk",
+        "amount": 1,
+        "chance": 100,
+        "duration": 0
+      },
+      {
+        "amountMode": "fixed",
+        "inflictChance": 100,
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "poison",
+        "type": "dispel_debuff",
+        "trigger": "on_use",
+        "target": "self",
+        "stat": "atk",
+        "amount": 1,
+        "chance": 100,
+        "duration": 0
+      },
+      {
+        "type": "cleanse",
+        "trigger": "auto_status",
+        "target": "self",
+        "stat": "atk",
+        "amount": 1,
+        "amountMode": "fixed",
+        "chance": 100,
+        "inflictChance": 100,
+        "duration": 0,
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "paralysis"
+      }
+    ],
+    "image": "assets/items/I024.png"
+  },
+  {
+    "id": "I025",
+    "name": "七色金平糖",
+    "description": "七彩ハリネズミの金平糖瓶。\nHP15％回復/冒険中に7回使用可能。",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "price": 0,
+    "usesPerAdventure": 7,
+    "autoRescue": "",
+    "rescueHp": 1,
+    "accuracyBonus": 0,
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "useContext": "battle",
+    "keyRank": 0,
+    "availability": {
+      "shop": {
+        "type": "none",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [
+      {
+        "amountMode": "percent",
+        "inflictChance": 100,
+        "immunityKind": "both",
+        "charges": 0,
+        "stealMode": "temporary",
+        "percent": 10,
+        "cleanseType": "poison",
+        "type": "heal",
+        "trigger": "on_use",
+        "target": "self",
+        "stat": "atk",
+        "amount": 15,
+        "chance": 100,
+        "duration": 0
+      }
+    ],
+    "image": "assets/items/I025.png"
+  },
+  {
+    "id": "I026",
+    "name": "珠麿の鍵",
+    "description": "こんがり焼けた甘い香りを放つ、怪物の体の一部が凝固してできた鍵。\n触れるとまだほのかに温かい。鍵LV.2",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "price": 0,
+    "usesPerAdventure": 3,
+    "autoRescue": "",
+    "rescueHp": 1,
+    "accuracyBonus": 0,
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "useContext": "event",
+    "keyRank": 2,
+    "availability": {
+      "shop": {
+        "type": "none",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [],
+    "image": "assets/items/I026.png"
+  },
+  {
+    "id": "I027",
+    "name": "傀儡の鍵",
+    "description": "不気味な紫の鬼火を纏った異形の鍵。\n開けてはならない鍵穴の在処を静かに指し示す。鍵LV.3",
+    "trapDisarm": 0,
+    "trapResist": 0,
+    "price": 0,
+    "usesPerAdventure": 3,
+    "autoRescue": "",
+    "rescueHp": 1,
+    "accuracyBonus": 0,
+    "dropRateBonus": 0,
+    "chestRateBonus": 0,
+    "useContext": "event",
+    "keyRank": 3,
+    "availability": {
+      "shop": {
+        "type": "none",
+        "eventId": "",
+        "scenarioId": "",
+        "difficulty": "EASY",
+        "itemId": ""
+      }
+    },
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "effects": [],
+    "image": "assets/items/I027.png"
+  }
+]

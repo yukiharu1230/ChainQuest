@@ -1,0 +1,3455 @@
+[
+  {
+    "id": "E075",
+    "name": "境界管理課 魂魄回収係ジギーサイス",
+    "description": "",
+    "hp": 6,
+    "atk": 2,
+    "def": 0,
+    "spd": 2,
+    "coinReward": 2,
+    "medicineDropChance": 10,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "",
+    "bgm": "",
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 10,
+        "amount": 1
+      }
+    ],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [
+      {
+        "type": "attack",
+        "weight": 10
+      },
+      {
+        "type": "skill",
+        "weight": 5,
+        "amount": 2,
+        "skillId": "K200"
+      }
+    ],
+    "specialEnd": {},
+    "bgmVolume": 100,
+    "imageOffsetY": -30,
+    "imageScale": 100
+  },
+  {
+    "id": "E074",
+    "name": "怨嗟の群像",
+    "description": "",
+    "hp": 6,
+    "atk": 2,
+    "def": 0,
+    "spd": 2,
+    "coinReward": 2,
+    "medicineDropChance": 10,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "",
+    "bgm": "",
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 10,
+        "amount": 1
+      }
+    ],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [
+      {
+        "type": "attack",
+        "weight": 10
+      },
+      {
+        "type": "skill",
+        "weight": 5,
+        "amount": 2,
+        "skillId": "K200"
+      }
+    ],
+    "specialEnd": {},
+    "bgmVolume": 100,
+    "imageOffsetY": -30,
+    "imageScale": 100,
+    "image": "assets/enemies/E074.png"
+  },
+  {
+    "id": "E073",
+    "name": "沈黙の共犯者",
+    "description": "",
+    "hp": 6,
+    "atk": 2,
+    "def": 0,
+    "spd": 2,
+    "coinReward": 2,
+    "medicineDropChance": 10,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "",
+    "bgm": "",
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 10,
+        "amount": 1
+      }
+    ],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [
+      {
+        "type": "attack",
+        "weight": 10
+      },
+      {
+        "type": "skill",
+        "weight": 5,
+        "amount": 2,
+        "skillId": "K200"
+      }
+    ],
+    "specialEnd": {},
+    "bgmVolume": 100,
+    "imageOffsetY": -30,
+    "imageScale": 100,
+    "image": "assets/enemies/E073.png"
+  },
+  {
+    "id": "E072",
+    "name": "境界管理課 魂魄回収係ジギーサイス",
+    "description": "",
+    "hp": 6,
+    "atk": 2,
+    "def": 0,
+    "spd": 2,
+    "coinReward": 2,
+    "medicineDropChance": 10,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "",
+    "bgm": "",
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 10,
+        "amount": 1
+      }
+    ],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [
+      {
+        "type": "attack",
+        "weight": 10
+      },
+      {
+        "type": "skill",
+        "weight": 5,
+        "amount": 2,
+        "skillId": "K200"
+      }
+    ],
+    "specialEnd": {},
+    "bgmVolume": 100,
+    "imageOffsetY": -30,
+    "imageScale": 100,
+    "image": "assets/enemies/E072.png"
+  },
+  {
+    "id": "E071",
+    "name": "千魂の死霊アビス・セーラー",
+    "description": "",
+    "hp": 28,
+    "atk": 6,
+    "def": 1,
+    "spd": 2,
+    "coinReward": 3,
+    "medicineDropChance": 3,
+    "sample": true,
+    "estimatedNokaLevel": 2,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "assets/backgrounds/E071_battle.jpg",
+    "bgm": "assets/audio/bgm/bgm_enemies_E012.mp3",
+    "bgmVolume": 25,
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 30,
+        "amount": 2
+      },
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 100,
+        "amount": 5
+      }
+    ],
+    "imageOffsetY": 0,
+    "imageScale": 145,
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [],
+    "specialEnd": {},
+    "image": "assets/enemies/E071.png"
+  },
+  {
+    "id": "E070",
+    "name": "冥界の宣告者オーバーハーデス",
+    "description": "",
+    "hp": 30,
+    "atk": 6,
+    "def": 2,
+    "spd": 2,
+    "coinReward": 3,
+    "medicineDropChance": 3,
+    "sample": true,
+    "estimatedNokaLevel": 4,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "assets/backgrounds/E070_battle.jpg",
+    "bgm": "assets/audio/bgm/bgm_enemies_E012.mp3",
+    "bgmVolume": 25,
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 20,
+        "amount": 4
+      },
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 100,
+        "amount": 2
+      },
+      {
+        "kind": "equipment",
+        "id": "S055",
+        "chance": 15
+      },
+      {
+        "kind": "equipment",
+        "id": "S056",
+        "chance": 15
+      },
+      {
+        "kind": "equipment",
+        "id": "S059",
+        "chance": 10
+      }
+    ],
+    "imageOffsetY": 0,
+    "imageScale": 140,
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [],
+    "specialEnd": {},
+    "image": "assets/enemies/E070.png"
+  },
+  {
+    "id": "E069",
+    "name": "終刻の少女アビス・セーラー",
+    "description": "",
+    "hp": 20,
+    "atk": 4,
+    "def": 1,
+    "spd": 2,
+    "coinReward": 3,
+    "medicineDropChance": 3,
+    "sample": true,
+    "estimatedNokaLevel": 2,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "assets/backgrounds/E069_battle.jpg",
+    "bgm": "assets/audio/bgm/bgm_enemies_E012.mp3",
+    "bgmVolume": 25,
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 20,
+        "amount": 3
+      },
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 100,
+        "amount": 2
+      }
+    ],
+    "imageOffsetY": 0,
+    "imageScale": 135,
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [],
+    "specialEnd": {},
+    "image": "assets/enemies/E069.png"
+  },
+  {
+    "id": "E068",
+    "name": "居残り勉強でーす！",
+    "description": "",
+    "hp": 6,
+    "atk": 2,
+    "def": 0,
+    "spd": 2,
+    "coinReward": 2,
+    "medicineDropChance": 10,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "",
+    "bgm": "",
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 10,
+        "amount": 1
+      }
+    ],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [
+      {
+        "type": "attack",
+        "weight": 10
+      },
+      {
+        "type": "skill",
+        "weight": 5,
+        "amount": 2,
+        "skillId": "K200"
+      }
+    ],
+    "specialEnd": {},
+    "bgmVolume": 100,
+    "imageOffsetY": -30,
+    "imageScale": 80,
+    "image": "assets/enemies/E068.png"
+  },
+  {
+    "id": "E067",
+    "name": "一番美味しいという噂の水道さん",
+    "description": "",
+    "hp": 6,
+    "atk": 2,
+    "def": 0,
+    "spd": 2,
+    "coinReward": 2,
+    "medicineDropChance": 10,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "",
+    "bgm": "",
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 10,
+        "amount": 1
+      }
+    ],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [
+      {
+        "type": "attack",
+        "weight": 10
+      },
+      {
+        "type": "skill",
+        "weight": 5,
+        "amount": 2,
+        "skillId": "K200"
+      }
+    ],
+    "specialEnd": {},
+    "bgmVolume": 100,
+    "imageOffsetY": -30,
+    "imageScale": 80,
+    "image": "assets/enemies/E067.png"
+  },
+  {
+    "id": "E066",
+    "name": "テルミちゃん",
+    "description": "",
+    "hp": 6,
+    "atk": 2,
+    "def": 0,
+    "spd": 2,
+    "coinReward": 2,
+    "medicineDropChance": 10,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "",
+    "bgm": "",
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 15,
+        "amount": 1
+      },
+      {
+        "kind": "equipment",
+        "id": "S054",
+        "chance": 10
+      }
+    ],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [
+      {
+        "type": "attack",
+        "weight": 10
+      },
+      {
+        "type": "skill",
+        "weight": 5,
+        "amount": 2,
+        "skillId": "K200"
+      }
+    ],
+    "specialEnd": {},
+    "bgmVolume": 100,
+    "imageOffsetY": -75,
+    "imageScale": 60,
+    "image": "assets/enemies/E066.png"
+  },
+  {
+    "id": "E065",
+    "name": "ヘルハウンド・ポチ",
+    "description": "",
+    "hp": 6,
+    "atk": 2,
+    "def": 0,
+    "spd": 2,
+    "coinReward": 2,
+    "medicineDropChance": 10,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "",
+    "bgm": "",
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 16,
+        "amount": 1
+      }
+    ],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [
+      {
+        "type": "attack",
+        "weight": 10
+      },
+      {
+        "type": "skill",
+        "weight": 5,
+        "amount": 2,
+        "skillId": "K200"
+      }
+    ],
+    "specialEnd": {},
+    "bgmVolume": 100,
+    "imageOffsetY": -70,
+    "imageScale": 60,
+    "image": "assets/enemies/E065.png"
+  },
+  {
+    "id": "E064",
+    "name": "ツギハギノドゥーラビ",
+    "description": "",
+    "hp": 6,
+    "atk": 2,
+    "def": 0,
+    "spd": 2,
+    "coinReward": 2,
+    "medicineDropChance": 10,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "",
+    "bgm": "",
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 16,
+        "amount": 1
+      },
+      {
+        "kind": "items",
+        "id": "I027",
+        "chance": 15
+      }
+    ],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [
+      {
+        "type": "attack",
+        "weight": 10
+      },
+      {
+        "type": "skill",
+        "weight": 5,
+        "amount": 2,
+        "skillId": "K200"
+      }
+    ],
+    "specialEnd": {},
+    "bgmVolume": 100,
+    "imageOffsetY": -50,
+    "imageScale": 60,
+    "image": "assets/enemies/E064.png"
+  },
+  {
+    "id": "E063",
+    "name": "飼育係のシラツユちゃん",
+    "description": "",
+    "hp": 6,
+    "atk": 2,
+    "def": 0,
+    "spd": 2,
+    "coinReward": 2,
+    "medicineDropChance": 10,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "",
+    "bgm": "",
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 15,
+        "amount": 1
+      }
+    ],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [
+      {
+        "type": "attack",
+        "weight": 10
+      },
+      {
+        "type": "skill",
+        "weight": 5,
+        "amount": 2,
+        "skillId": "K200"
+      }
+    ],
+    "specialEnd": {},
+    "bgmVolume": 100,
+    "imageOffsetY": -60,
+    "imageScale": 80,
+    "image": "assets/enemies/E063.png"
+  },
+  {
+    "id": "E062",
+    "name": "THE☆亡霊",
+    "description": "",
+    "hp": 6,
+    "atk": 2,
+    "def": 0,
+    "spd": 2,
+    "coinReward": 2,
+    "medicineDropChance": 10,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "",
+    "bgm": "",
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 15,
+        "amount": 1
+      }
+    ],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [
+      {
+        "type": "attack",
+        "weight": 10
+      },
+      {
+        "type": "skill",
+        "weight": 5,
+        "amount": 2,
+        "skillId": "K200"
+      }
+    ],
+    "specialEnd": {},
+    "bgmVolume": 100,
+    "imageOffsetY": -80,
+    "imageScale": 70,
+    "image": "assets/enemies/E062.png"
+  },
+  {
+    "id": "E061",
+    "name": "ヘルスカル",
+    "description": "",
+    "hp": 6,
+    "atk": 2,
+    "def": 0,
+    "spd": 2,
+    "coinReward": 2,
+    "medicineDropChance": 10,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "",
+    "bgm": "",
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 10,
+        "amount": 1
+      }
+    ],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [
+      {
+        "type": "attack",
+        "weight": 10
+      },
+      {
+        "type": "skill",
+        "weight": 5,
+        "amount": 2,
+        "skillId": "K200"
+      }
+    ],
+    "specialEnd": {},
+    "bgmVolume": 100,
+    "imageOffsetY": -100,
+    "imageScale": 50,
+    "image": "assets/enemies/E061.png"
+  },
+  {
+    "id": "E060",
+    "name": "シャドウラビット",
+    "description": "",
+    "hp": 6,
+    "atk": 2,
+    "def": 0,
+    "spd": 2,
+    "coinReward": 2,
+    "medicineDropChance": 10,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "",
+    "bgm": "",
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 10,
+        "amount": 1
+      }
+    ],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [
+      {
+        "type": "attack",
+        "weight": 10
+      },
+      {
+        "type": "skill",
+        "weight": 5,
+        "amount": 2,
+        "skillId": "K200"
+      }
+    ],
+    "specialEnd": {},
+    "bgmVolume": 100,
+    "imageOffsetY": -70,
+    "imageScale": 50,
+    "image": "assets/enemies/E060.png"
+  },
+  {
+    "id": "E059",
+    "name": "アオノヒトダマ",
+    "description": "",
+    "hp": 6,
+    "atk": 2,
+    "def": 0,
+    "spd": 2,
+    "coinReward": 2,
+    "medicineDropChance": 10,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "",
+    "bgm": "",
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 10,
+        "amount": 1
+      }
+    ],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [
+      {
+        "type": "attack",
+        "weight": 10
+      },
+      {
+        "type": "skill",
+        "weight": 5,
+        "amount": 2,
+        "skillId": "K200"
+      }
+    ],
+    "specialEnd": {},
+    "bgmVolume": 100,
+    "imageOffsetY": -80,
+    "imageScale": 50,
+    "image": "assets/enemies/E059.png"
+  },
+  {
+    "id": "E058",
+    "name": "甘美なる苺女帝ルクレツィアルージュ",
+    "description": "",
+    "medicineDropChance": 3,
+    "hp": 10,
+    "atk": 2,
+    "def": 0,
+    "spd": 1,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "",
+    "bgm": "",
+    "bgmVolume": 100,
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 100,
+        "amount": 7
+      },
+      {
+        "kind": "equipment",
+        "id": "S047",
+        "chance": 15
+      }
+    ],
+    "imageOffsetY": 0,
+    "imageScale": 140,
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [],
+    "specialEnd": {},
+    "image": "assets/enemies/E058.png"
+  },
+  {
+    "id": "E057",
+    "name": "千層の尖竜ミルフィーユレヴィア",
+    "description": "",
+    "medicineDropChance": 3,
+    "hp": 10,
+    "atk": 2,
+    "def": 0,
+    "spd": 1,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "",
+    "bgm": "",
+    "bgmVolume": 100,
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 100,
+        "amount": 5
+      }
+    ],
+    "imageOffsetY": 5,
+    "imageScale": 140,
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [],
+    "specialEnd": {},
+    "image": "assets/enemies/E057.png"
+  },
+  {
+    "id": "E056",
+    "name": "暴走する焼成機ヴォルカノベイク",
+    "description": "",
+    "medicineDropChance": 3,
+    "hp": 10,
+    "atk": 2,
+    "def": 0,
+    "spd": 1,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "",
+    "bgm": "",
+    "bgmVolume": 100,
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 100,
+        "amount": 4
+      }
+    ],
+    "imageOffsetY": 0,
+    "imageScale": 135,
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [],
+    "specialEnd": {},
+    "image": "assets/enemies/E056.png"
+  },
+  {
+    "id": "E055",
+    "name": "苺聖剣士マリー",
+    "description": "",
+    "medicineDropChance": 3,
+    "hp": 10,
+    "atk": 2,
+    "def": 0,
+    "spd": 1,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "",
+    "bgm": "",
+    "bgmVolume": 100,
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 24,
+        "amount": 2
+      }
+    ],
+    "imageOffsetY": -20,
+    "imageScale": 100,
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [],
+    "specialEnd": {},
+    "image": "assets/enemies/E055.png"
+  },
+  {
+    "id": "E054",
+    "name": "苺聖棍士シャルロット",
+    "description": "",
+    "medicineDropChance": 3,
+    "hp": 10,
+    "atk": 2,
+    "def": 0,
+    "spd": 1,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "",
+    "bgm": "",
+    "bgmVolume": 100,
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 27,
+        "amount": 2
+      }
+    ],
+    "imageOffsetY": -10,
+    "imageScale": 100,
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [],
+    "specialEnd": {},
+    "image": "assets/enemies/E054.png"
+  },
+  {
+    "id": "E053",
+    "name": "苺聖斧士ベルベット",
+    "description": "",
+    "medicineDropChance": 3,
+    "hp": 10,
+    "atk": 2,
+    "def": 0,
+    "spd": 1,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "",
+    "bgm": "",
+    "bgmVolume": 100,
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 20,
+        "amount": 2
+      }
+    ],
+    "imageOffsetY": -20,
+    "imageScale": 100,
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [],
+    "specialEnd": {},
+    "image": "assets/enemies/E053.png"
+  },
+  {
+    "id": "E052",
+    "name": "苺聖槍士ロザリア",
+    "description": "",
+    "medicineDropChance": 3,
+    "hp": 10,
+    "atk": 2,
+    "def": 0,
+    "spd": 1,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "",
+    "bgm": "",
+    "bgmVolume": 100,
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 15,
+        "amount": 1
+      },
+      {
+        "kind": "equipment",
+        "id": "S043",
+        "chance": 15
+      }
+    ],
+    "imageOffsetY": -20,
+    "imageScale": 100,
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [],
+    "specialEnd": {},
+    "image": "assets/enemies/E052.png"
+  },
+  {
+    "id": "E051",
+    "name": "クッキー総帥ケティーノ",
+    "description": "",
+    "medicineDropChance": 3,
+    "hp": 10,
+    "atk": 2,
+    "def": 0,
+    "spd": 1,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "",
+    "bgm": "",
+    "bgmVolume": 100,
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 100,
+        "amount": 3
+      },
+      {
+        "kind": "equipment",
+        "id": "S045",
+        "chance": 15
+      }
+    ],
+    "imageOffsetY": -30,
+    "imageScale": 115,
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [],
+    "specialEnd": {},
+    "image": "assets/enemies/E051.png"
+  },
+  {
+    "id": "E050",
+    "name": "クッキー将軍ガレット",
+    "description": "",
+    "medicineDropChance": 3,
+    "hp": 10,
+    "atk": 2,
+    "def": 0,
+    "spd": 1,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "",
+    "bgm": "",
+    "bgmVolume": 100,
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 100,
+        "amount": 3
+      },
+      {
+        "kind": "equipment",
+        "id": "S044",
+        "chance": 15
+      },
+      {
+        "kind": "equipment",
+        "id": "S042",
+        "chance": 15
+      }
+    ],
+    "imageOffsetY": -20,
+    "imageScale": 110,
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [],
+    "specialEnd": {},
+    "image": "assets/enemies/E050.png"
+  },
+  {
+    "id": "E049",
+    "name": "クッキーバーサーカー",
+    "description": "",
+    "medicineDropChance": 3,
+    "hp": 10,
+    "atk": 2,
+    "def": 0,
+    "spd": 1,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "",
+    "bgm": "",
+    "bgmVolume": 100,
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 20,
+        "amount": 2
+      },
+      {
+        "kind": "equipment",
+        "id": "S046",
+        "chance": 15
+      }
+    ],
+    "imageOffsetY": -15,
+    "imageScale": 110,
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [],
+    "specialEnd": {},
+    "image": "assets/enemies/E049.png"
+  },
+  {
+    "id": "E048",
+    "name": "チョコクッキーゴーレム",
+    "description": "",
+    "medicineDropChance": 3,
+    "hp": 10,
+    "atk": 2,
+    "def": 0,
+    "spd": 1,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "",
+    "bgm": "",
+    "bgmVolume": 100,
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 20,
+        "amount": 2
+      }
+    ],
+    "imageOffsetY": -10,
+    "imageScale": 110,
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [],
+    "specialEnd": {},
+    "image": "assets/enemies/E048.png"
+  },
+  {
+    "id": "E047",
+    "name": "クッキーナイト隊",
+    "description": "",
+    "medicineDropChance": 3,
+    "hp": 10,
+    "atk": 2,
+    "def": 0,
+    "spd": 1,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "",
+    "bgm": "",
+    "bgmVolume": 100,
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 20,
+        "amount": 2
+      }
+    ],
+    "imageOffsetY": -30,
+    "imageScale": 100,
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [],
+    "specialEnd": {},
+    "image": "assets/enemies/E047.png"
+  },
+  {
+    "id": "E046",
+    "name": "クッキー衛士",
+    "description": "",
+    "medicineDropChance": 3,
+    "hp": 10,
+    "atk": 2,
+    "def": 0,
+    "spd": 1,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "",
+    "bgm": "",
+    "bgmVolume": 100,
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 20,
+        "amount": 1
+      }
+    ],
+    "imageOffsetY": -30,
+    "imageScale": 75,
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [],
+    "specialEnd": {},
+    "image": "assets/enemies/E046.png"
+  },
+  {
+    "id": "E045",
+    "name": "カラメル重斧卿",
+    "description": "",
+    "medicineDropChance": 3,
+    "hp": 10,
+    "atk": 2,
+    "def": 0,
+    "spd": 1,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "",
+    "bgm": "",
+    "bgmVolume": 100,
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 20,
+        "amount": 2
+      },
+      {
+        "kind": "equipment",
+        "id": "S048",
+        "chance": 15
+      }
+    ],
+    "imageOffsetY": -25,
+    "imageScale": 120,
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [],
+    "specialEnd": {},
+    "image": "assets/enemies/E045.png"
+  },
+  {
+    "id": "E044",
+    "name": "ベリーパックン",
+    "description": "",
+    "medicineDropChance": 3,
+    "hp": 10,
+    "atk": 2,
+    "def": 0,
+    "spd": 1,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "",
+    "bgm": "",
+    "bgmVolume": 100,
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 17,
+        "amount": 2
+      }
+    ],
+    "imageOffsetY": -20,
+    "imageScale": 60,
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [],
+    "specialEnd": {},
+    "image": "assets/enemies/E044.png"
+  },
+  {
+    "id": "E043",
+    "name": "アマクネット",
+    "description": "",
+    "medicineDropChance": 3,
+    "hp": 10,
+    "atk": 2,
+    "def": 0,
+    "spd": 1,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "",
+    "bgm": "",
+    "bgmVolume": 100,
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 20,
+        "amount": 2
+      }
+    ],
+    "imageOffsetY": -15,
+    "imageScale": 70,
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [],
+    "specialEnd": {},
+    "image": "assets/enemies/E043.png"
+  },
+  {
+    "id": "E042",
+    "name": "コンペッジホッグ",
+    "description": "",
+    "medicineDropChance": 3,
+    "hp": 10,
+    "atk": 2,
+    "def": 0,
+    "spd": 1,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "",
+    "bgm": "",
+    "bgmVolume": 100,
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 15,
+        "amount": 1
+      },
+      {
+        "kind": "items",
+        "id": "I025",
+        "chance": 15
+      }
+    ],
+    "imageOffsetY": -20,
+    "imageScale": 55,
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [],
+    "specialEnd": {},
+    "image": "assets/enemies/E042.png"
+  },
+  {
+    "id": "E041",
+    "name": "ショコラちゃん",
+    "description": "",
+    "medicineDropChance": 3,
+    "hp": 10,
+    "atk": 2,
+    "def": 0,
+    "spd": 1,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "",
+    "bgm": "",
+    "bgmVolume": 100,
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 15,
+        "amount": 1
+      }
+    ],
+    "imageOffsetY": -25,
+    "imageScale": 60,
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [],
+    "specialEnd": {},
+    "image": "assets/enemies/E041.png"
+  },
+  {
+    "id": "E040",
+    "name": "チョコリー",
+    "description": "",
+    "medicineDropChance": 3,
+    "hp": 10,
+    "atk": 2,
+    "def": 0,
+    "spd": 1,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "",
+    "bgm": "",
+    "bgmVolume": 100,
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 15,
+        "amount": 1
+      }
+    ],
+    "imageOffsetY": -35,
+    "imageScale": 30,
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [],
+    "specialEnd": {},
+    "image": "assets/enemies/E040.png"
+  },
+  {
+    "id": "E039",
+    "name": "バーニングメルティ",
+    "description": "",
+    "medicineDropChance": 3,
+    "hp": 10,
+    "atk": 2,
+    "def": 0,
+    "spd": 1,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "",
+    "bgm": "",
+    "bgmVolume": 100,
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 15,
+        "amount": 1
+      },
+      {
+        "kind": "items",
+        "id": "I026",
+        "chance": 20
+      }
+    ],
+    "imageOffsetY": -45,
+    "imageScale": 70,
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [],
+    "specialEnd": {},
+    "image": "assets/enemies/E039.png"
+  },
+  {
+    "id": "E038",
+    "name": "キラーキャンディ",
+    "description": "",
+    "medicineDropChance": 3,
+    "hp": 10,
+    "atk": 2,
+    "def": 0,
+    "spd": 1,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "",
+    "bgm": "",
+    "bgmVolume": 100,
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 15,
+        "amount": 1
+      }
+    ],
+    "imageOffsetY": -10,
+    "imageScale": 55,
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [],
+    "specialEnd": {},
+    "image": "assets/enemies/E038.png"
+  },
+  {
+    "id": "E037",
+    "name": "藍音の守護騎士セレスティア",
+    "description": "",
+    "medicineDropChance": 10,
+    "hp": 15,
+    "atk": 10,
+    "def": 5,
+    "spd": 10,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "assets/backgrounds/C002_adventure.jpg",
+    "bgm": "assets/audio/bgm/bgm_enemies_E022.mp3",
+    "bgmVolume": 100,
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 25,
+        "amount": 3
+      },
+      {
+        "kind": "equipment",
+        "id": "S032",
+        "chance": 15
+      }
+    ],
+    "imageOffsetY": -30,
+    "imageScale": 85,
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [],
+    "specialEnd": {},
+    "image": "assets/enemies/E037.png"
+  },
+  {
+    "id": "E036",
+    "name": "セラフィム・ハープ",
+    "description": "",
+    "medicineDropChance": 10,
+    "hp": 15,
+    "atk": 10,
+    "def": 5,
+    "spd": 10,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "assets/backgrounds/C002_adventure.jpg",
+    "bgm": "assets/audio/bgm/bgm_enemies_E022.mp3",
+    "bgmVolume": 100,
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 15,
+        "amount": 1
+      },
+      {
+        "kind": "equipment",
+        "id": "S030",
+        "chance": 15
+      }
+    ],
+    "imageOffsetY": -30,
+    "imageScale": 80,
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [],
+    "specialEnd": {},
+    "image": "assets/enemies/E036.png"
+  },
+  {
+    "id": "E035",
+    "name": "プリズム・メデューサ",
+    "description": "",
+    "medicineDropChance": 10,
+    "hp": 15,
+    "atk": 10,
+    "def": 5,
+    "spd": 10,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "assets/backgrounds/C002_adventure.jpg",
+    "bgm": "assets/audio/bgm/bgm_enemies_E022.mp3",
+    "bgmVolume": 100,
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 15,
+        "amount": 2
+      }
+    ],
+    "imageOffsetY": -50,
+    "imageScale": 85,
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [],
+    "specialEnd": {},
+    "image": "assets/enemies/E035.png"
+  },
+  {
+    "id": "E034",
+    "name": "ブラスメリー",
+    "description": "",
+    "medicineDropChance": 10,
+    "hp": 15,
+    "atk": 10,
+    "def": 5,
+    "spd": 10,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "assets/backgrounds/C002_adventure.jpg",
+    "bgm": "assets/audio/bgm/bgm_enemies_E022.mp3",
+    "bgmVolume": 100,
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 15,
+        "amount": 2
+      },
+      {
+        "kind": "equipment",
+        "id": "S036",
+        "chance": 10
+      }
+    ],
+    "imageOffsetY": -15,
+    "imageScale": 70,
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [],
+    "specialEnd": {},
+    "image": "assets/enemies/E034.png"
+  },
+  {
+    "id": "E033",
+    "name": "ゲコール",
+    "description": "",
+    "medicineDropChance": 10,
+    "hp": 15,
+    "atk": 10,
+    "def": 5,
+    "spd": 10,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "assets/backgrounds/C002_adventure.jpg",
+    "bgm": "assets/audio/bgm/bgm_enemies_E022.mp3",
+    "bgmVolume": 100,
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 25,
+        "amount": 1
+      },
+      {
+        "kind": "equipment",
+        "id": "S034",
+        "chance": 15
+      }
+    ],
+    "imageOffsetY": -20,
+    "imageScale": 80,
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [],
+    "specialEnd": {},
+    "image": "assets/enemies/E033.png"
+  },
+  {
+    "id": "E032",
+    "name": "ピエンゲ",
+    "description": "",
+    "medicineDropChance": 10,
+    "hp": 15,
+    "atk": 10,
+    "def": 5,
+    "spd": 10,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "assets/backgrounds/C002_adventure.jpg",
+    "bgm": "assets/audio/bgm/bgm_enemies_E022.mp3",
+    "bgmVolume": 100,
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 15,
+        "amount": 2
+      }
+    ],
+    "imageOffsetY": -20,
+    "imageScale": 70,
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [],
+    "specialEnd": {},
+    "image": "assets/enemies/E032.png"
+  },
+  {
+    "id": "E031",
+    "name": "シュガリー",
+    "description": "",
+    "medicineDropChance": 10,
+    "hp": 15,
+    "atk": 10,
+    "def": 5,
+    "spd": 10,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "assets/backgrounds/C002_adventure.jpg",
+    "bgm": "assets/audio/bgm/bgm_enemies_E022.mp3",
+    "bgmVolume": 100,
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 15,
+        "amount": 1
+      }
+    ],
+    "imageOffsetY": -65,
+    "imageScale": 70,
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [],
+    "specialEnd": {},
+    "image": "assets/enemies/E031.png"
+  },
+  {
+    "id": "E030",
+    "name": "聖音の重奏騎士",
+    "description": "",
+    "medicineDropChance": 10,
+    "hp": 15,
+    "atk": 10,
+    "def": 5,
+    "spd": 10,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "assets/backgrounds/C002_adventure.jpg",
+    "bgm": "assets/audio/bgm/bgm_enemies_E022.mp3",
+    "bgmVolume": 100,
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 25,
+        "amount": 2
+      },
+      {
+        "kind": "equipment",
+        "id": "S029",
+        "chance": 15
+      }
+    ],
+    "imageOffsetY": -50,
+    "imageScale": 105,
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [],
+    "specialEnd": {},
+    "image": "assets/enemies/E030.png"
+  },
+  {
+    "id": "E029",
+    "name": "ドラムリン",
+    "description": "",
+    "medicineDropChance": 10,
+    "hp": 15,
+    "atk": 10,
+    "def": 5,
+    "spd": 10,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "assets/backgrounds/C002_adventure.jpg",
+    "bgm": "assets/audio/bgm/bgm_enemies_E022.mp3",
+    "bgmVolume": 100,
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 20,
+        "amount": 1
+      }
+    ],
+    "imageOffsetY": -65,
+    "imageScale": 70,
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [],
+    "specialEnd": {},
+    "image": "assets/enemies/E029.png"
+  },
+  {
+    "id": "E028",
+    "name": "積乱の守護竜",
+    "description": "",
+    "medicineDropChance": 10,
+    "hp": 15,
+    "atk": 10,
+    "def": 5,
+    "spd": 10,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "assets/backgrounds/C002_adventure.jpg",
+    "bgm": "assets/audio/bgm/bgm_enemies_E022.mp3",
+    "bgmVolume": 100,
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 30,
+        "amount": 2
+      }
+    ],
+    "imageOffsetY": -50,
+    "imageScale": 130,
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [],
+    "specialEnd": {},
+    "image": "assets/enemies/E028.png"
+  },
+  {
+    "id": "E027",
+    "name": "楽譜庫の番人",
+    "description": "",
+    "medicineDropChance": 10,
+    "hp": 15,
+    "atk": 10,
+    "def": 5,
+    "spd": 10,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "assets/backgrounds/V033_event.jpg",
+    "bgm": "assets/audio/bgm/bgm_enemies_E022.mp3",
+    "bgmVolume": 100,
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 20,
+        "amount": 1
+      }
+    ],
+    "imageOffsetY": -50,
+    "imageScale": 85,
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [],
+    "specialEnd": {},
+    "image": "assets/enemies/E027.png"
+  },
+  {
+    "id": "E026",
+    "name": "純潔一角獣にがぴよユニコーンEX",
+    "description": "",
+    "hp": 30,
+    "atk": 6,
+    "def": 2,
+    "spd": 2,
+    "coinReward": 3,
+    "medicineDropChance": 10,
+    "sample": true,
+    "estimatedNokaLevel": 4,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "assets/backgrounds/E026_battle.jpg",
+    "bgm": "assets/audio/bgm/bgm_enemies_E012.mp3",
+    "bgmVolume": 25,
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 20,
+        "amount": 3
+      },
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 100,
+        "amount": 4
+      },
+      {
+        "kind": "equipment",
+        "id": "S028",
+        "chance": 50
+      }
+    ],
+    "imageOffsetY": -4,
+    "imageScale": 110,
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [],
+    "specialEnd": {},
+    "image": "assets/enemies/E026.png"
+  },
+  {
+    "id": "E025",
+    "name": "天響を架ける虹竜",
+    "description": "",
+    "hp": 30,
+    "atk": 6,
+    "def": 2,
+    "spd": 2,
+    "coinReward": 3,
+    "medicineDropChance": 10,
+    "sample": true,
+    "estimatedNokaLevel": 4,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "assets/backgrounds/E025_battle.jpg",
+    "bgm": "assets/audio/bgm/bgm_enemies_E012.mp3",
+    "bgmVolume": 25,
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 20,
+        "amount": 2
+      },
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 100,
+        "amount": 3
+      },
+      {
+        "kind": "items",
+        "id": "I024",
+        "chance": 15
+      }
+    ],
+    "imageOffsetY": -4,
+    "imageScale": 140,
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [],
+    "specialEnd": {},
+    "image": "assets/enemies/E025.png"
+  },
+  {
+    "id": "E024",
+    "name": "狂愛最前列にがぴよユニコーン",
+    "description": "",
+    "hp": 30,
+    "atk": 6,
+    "def": 2,
+    "spd": 2,
+    "coinReward": 3,
+    "medicineDropChance": 10,
+    "sample": true,
+    "estimatedNokaLevel": 4,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "assets/backgrounds/V028_event.jpg",
+    "bgm": "assets/audio/bgm/bgm_enemies_E012.mp3",
+    "bgmVolume": 25,
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 20,
+        "amount": 1
+      },
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 100,
+        "amount": 2
+      },
+      {
+        "kind": "equipment",
+        "id": "S027",
+        "chance": 50
+      }
+    ],
+    "imageOffsetY": -27,
+    "imageScale": 90,
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [],
+    "specialEnd": {},
+    "image": "assets/enemies/E024.png"
+  },
+  {
+    "id": "E023",
+    "name": "ベルジェリン",
+    "description": "",
+    "medicineDropChance": 10,
+    "hp": 15,
+    "atk": 10,
+    "def": 5,
+    "spd": 10,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "assets/backgrounds/V028_event.jpg",
+    "bgm": "assets/audio/bgm/bgm_enemies_E022.mp3",
+    "bgmVolume": 100,
+    "drops": [
+      {
+        "kind": "equipment",
+        "id": "S026",
+        "chance": 20
+      }
+    ],
+    "imageOffsetY": -50,
+    "imageScale": 75,
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [],
+    "specialEnd": {},
+    "image": "assets/enemies/E023.png"
+  },
+  {
+    "id": "E022",
+    "name": "テンペストホルン",
+    "description": "",
+    "medicineDropChance": 10,
+    "hp": 15,
+    "atk": 10,
+    "def": 5,
+    "spd": 10,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "",
+    "bgm": "assets/audio/bgm/bgm_enemies_E022.mp3",
+    "bgmVolume": 100,
+    "drops": [],
+    "imageOffsetY": -50,
+    "imageScale": 75,
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [],
+    "specialEnd": {},
+    "image": "assets/enemies/E022.png"
+  },
+  {
+    "id": "E021",
+    "name": "グラトニーワーム（蝙）",
+    "description": "",
+    "hp": 6,
+    "atk": 2,
+    "def": 0,
+    "spd": 2,
+    "coinReward": 2,
+    "medicineDropChance": 10,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "",
+    "bgm": "",
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 10,
+        "amount": 1
+      }
+    ],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [
+      {
+        "type": "attack",
+        "weight": 10
+      },
+      {
+        "type": "skill",
+        "weight": 5,
+        "amount": 2,
+        "skillId": "K200"
+      }
+    ],
+    "specialEnd": {},
+    "bgmVolume": 100,
+    "imageOffsetY": -11,
+    "imageScale": 80,
+    "image": "assets/enemies/E021.png"
+  },
+  {
+    "id": "E020",
+    "name": "グラトニーワーム（鬼）",
+    "description": "",
+    "hp": 6,
+    "atk": 2,
+    "def": 0,
+    "spd": 2,
+    "coinReward": 2,
+    "medicineDropChance": 10,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "",
+    "bgm": "",
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 10,
+        "amount": 1
+      }
+    ],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [
+      {
+        "type": "attack",
+        "weight": 10
+      },
+      {
+        "type": "skill",
+        "weight": 5,
+        "amount": 2,
+        "skillId": "K200"
+      }
+    ],
+    "specialEnd": {},
+    "bgmVolume": 100,
+    "imageOffsetY": -11,
+    "imageScale": 80,
+    "image": "assets/enemies/E020.png"
+  },
+  {
+    "id": "E019",
+    "name": "グラトニーワーム（群）",
+    "description": "",
+    "hp": 6,
+    "atk": 2,
+    "def": 0,
+    "spd": 2,
+    "coinReward": 2,
+    "medicineDropChance": 10,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "",
+    "bgm": "",
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 10,
+        "amount": 1
+      }
+    ],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [
+      {
+        "type": "attack",
+        "weight": 10
+      },
+      {
+        "type": "skill",
+        "weight": 5,
+        "amount": 2,
+        "skillId": "K200"
+      }
+    ],
+    "specialEnd": {},
+    "bgmVolume": 100,
+    "imageOffsetY": -11,
+    "imageScale": 80,
+    "image": "assets/enemies/E019.png"
+  },
+  {
+    "id": "E100",
+    "name": "百鬼の戴冠者ゴブリンキング",
+    "description": "",
+    "medicineDropChance": 3,
+    "hp": 30,
+    "atk": 500,
+    "def": 9999,
+    "spd": 3,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "assets/backgrounds/E013_battle.jpg",
+    "bgm": "assets/audio/bgm/bgm_enemies_E012.mp3",
+    "bgmVolume": 25,
+    "drops": [],
+    "imageOffsetY": -10,
+    "imageScale": 110,
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [],
+    "specialEnd": {},
+    "image": "assets/enemies/E100.png"
+  },
+  {
+    "id": "E018",
+    "name": "レガリアント",
+    "description": "",
+    "medicineDropChance": 15,
+    "hp": 15,
+    "atk": 3,
+    "def": 2,
+    "spd": 3,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "",
+    "bgm": "",
+    "bgmVolume": 100,
+    "drops": [
+      {
+        "kind": "equipment",
+        "id": "S019",
+        "chance": 20
+      },
+      {
+        "kind": "equipment",
+        "id": "S020",
+        "chance": 20
+      },
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 30,
+        "amount": 3
+      }
+    ],
+    "imageOffsetY": 0,
+    "imageScale": 100,
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [
+      {
+        "type": "attack",
+        "weight": 5
+      },
+      {
+        "type": "skill",
+        "weight": 1,
+        "skillId": "K202"
+      }
+    ],
+    "specialEnd": {},
+    "image": "assets/enemies/E018.png"
+  },
+  {
+    "id": "E017",
+    "name": "強欲のバンクピギー",
+    "description": "",
+    "medicineDropChance": 10,
+    "hp": 10,
+    "atk": 2,
+    "def": 0,
+    "spd": 1,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "",
+    "bgm": "",
+    "bgmVolume": 100,
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 100,
+        "amount": 5
+      },
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 50,
+        "amount": 5
+      }
+    ],
+    "imageOffsetY": -2,
+    "imageScale": 70,
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [
+      {
+        "schedule": "fixed",
+        "turn": 3,
+        "interval": 0,
+        "prepareTurns": 0,
+        "warning": "バンクピギーが逃げ出しそうだ。",
+        "type": "escape",
+        "message": "逃げるピギー！！！"
+      }
+    ],
+    "actions": [
+      {
+        "type": "steal_coins",
+        "weight": 10,
+        "percent": 10,
+        "amount": 1
+      }
+    ],
+    "specialEnd": {
+      "enabled": false,
+      "turn": 5,
+      "returnStolen": true
+    },
+    "image": "assets/enemies/E017.png"
+  },
+  {
+    "id": "E016",
+    "name": "ジェネラル・ゼリー",
+    "description": "",
+    "medicineDropChance": 3,
+    "hp": 10,
+    "atk": 3,
+    "def": 1,
+    "spd": 2,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "",
+    "bgm": "",
+    "bgmVolume": 100,
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 20,
+        "amount": 2
+      }
+    ],
+    "imageOffsetY": -20,
+    "imageScale": 80,
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [
+      {
+        "type": "attack",
+        "weight": 10
+      },
+      {
+        "type": "steal_coins",
+        "weight": 1,
+        "percent": 1
+      }
+    ],
+    "specialEnd": {},
+    "image": "assets/enemies/E016.png"
+  },
+  {
+    "id": "E001",
+    "name": "グラトニーワーム（卵）",
+    "description": "",
+    "hp": 4,
+    "atk": 1,
+    "def": 0,
+    "spd": 1,
+    "coinReward": 1,
+    "medicineDropChance": 0,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "bgm": "",
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 5,
+        "amount": 1
+      }
+    ],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [],
+    "specialEnd": {},
+    "image": "assets/enemies/E001.png",
+    "battleBackground": "",
+    "imageOffsetY": -24,
+    "bgmVolume": 100,
+    "imageScale": 70
+  },
+  {
+    "id": "E002",
+    "name": "グラトニーワーム",
+    "description": "",
+    "hp": 6,
+    "atk": 2,
+    "def": 0,
+    "spd": 2,
+    "coinReward": 2,
+    "medicineDropChance": 10,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "",
+    "bgm": "",
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 10,
+        "amount": 1
+      }
+    ],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [
+      {
+        "type": "attack",
+        "weight": 10
+      },
+      {
+        "type": "skill",
+        "weight": 5,
+        "amount": 2,
+        "skillId": "K200"
+      }
+    ],
+    "specialEnd": {},
+    "image": "assets/enemies/E002.png",
+    "bgmVolume": 100,
+    "imageOffsetY": 0,
+    "imageScale": 100
+  },
+  {
+    "id": "E003",
+    "name": "オコスライム",
+    "description": "",
+    "hp": 9,
+    "atk": 3,
+    "def": 1,
+    "spd": 2,
+    "coinReward": 3,
+    "medicineDropChance": 10,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "",
+    "bgm": "",
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 10,
+        "amount": 1
+      }
+    ],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [],
+    "specialEnd": {},
+    "image": "assets/enemies/E003.png",
+    "imageOffsetY": -5,
+    "bgmVolume": 100,
+    "imageScale": 50
+  },
+  {
+    "id": "E004",
+    "name": "古森くん",
+    "description": "",
+    "hp": 12,
+    "atk": 3,
+    "def": 2,
+    "spd": 1,
+    "coinReward": 4,
+    "medicineDropChance": 3,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "",
+    "bgm": "",
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 10,
+        "amount": 1
+      }
+    ],
+    "imageOffsetY": -80,
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [],
+    "specialEnd": {},
+    "image": "assets/enemies/E004.png",
+    "imageScale": 45,
+    "bgmVolume": 100
+  },
+  {
+    "id": "E005",
+    "name": "咲いたよ☆",
+    "description": "",
+    "hp": 15,
+    "atk": 4,
+    "def": 1,
+    "spd": 2,
+    "coinReward": 6,
+    "medicineDropChance": 3,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "",
+    "bgm": "",
+    "bgmVolume": 100,
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 10,
+        "amount": 1
+      }
+    ],
+    "imageOffsetY": -20,
+    "imageScale": 60,
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [],
+    "specialEnd": {},
+    "image": "assets/enemies/E005.png"
+  },
+  {
+    "id": "E006",
+    "name": "タヌヌ",
+    "description": "",
+    "hp": 8,
+    "atk": 2,
+    "def": 0,
+    "spd": 1,
+    "coinReward": 1,
+    "medicineDropChance": 3,
+    "sample": true,
+    "estimatedNokaLevel": 2,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "",
+    "bgm": "",
+    "bgmVolume": 100,
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 15,
+        "amount": 1
+      },
+      {
+        "kind": "equipment",
+        "id": "S024",
+        "chance": 15
+      }
+    ],
+    "imageOffsetY": -24,
+    "imageScale": 50,
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [],
+    "specialEnd": {},
+    "image": "assets/enemies/E006.png"
+  },
+  {
+    "id": "E007",
+    "name": "ベチョギャハー",
+    "description": "",
+    "hp": 10,
+    "atk": 2,
+    "def": 0,
+    "spd": 1,
+    "coinReward": 1,
+    "medicineDropChance": 3,
+    "sample": true,
+    "estimatedNokaLevel": 2,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "",
+    "bgm": "",
+    "bgmVolume": 100,
+    "drops": [
+      {
+        "kind": "equipment",
+        "id": "S018",
+        "chance": 20
+      }
+    ],
+    "imageOffsetY": -20,
+    "imageScale": 65,
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [],
+    "specialEnd": {},
+    "image": "assets/enemies/E007.png"
+  },
+  {
+    "id": "E008",
+    "name": "狸穴山",
+    "description": "",
+    "hp": 12,
+    "atk": 2,
+    "def": 0,
+    "spd": 1,
+    "coinReward": 1,
+    "medicineDropChance": 3,
+    "sample": true,
+    "estimatedNokaLevel": 2,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "",
+    "bgm": "",
+    "bgmVolume": 100,
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 10,
+        "amount": 2
+      }
+    ],
+    "imageOffsetY": -10,
+    "imageScale": 85,
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [],
+    "specialEnd": {},
+    "image": "assets/enemies/E008.png"
+  },
+  {
+    "id": "E009",
+    "name": "ゴブリン",
+    "description": "",
+    "hp": 14,
+    "atk": 3,
+    "def": 0,
+    "spd": 1,
+    "coinReward": 2,
+    "medicineDropChance": 3,
+    "sample": true,
+    "estimatedNokaLevel": 2,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "",
+    "bgm": "",
+    "bgmVolume": 100,
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 10,
+        "amount": 1
+      }
+    ],
+    "imageOffsetY": -25,
+    "imageScale": 75,
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [],
+    "specialEnd": {},
+    "image": "assets/enemies/E009.png"
+  },
+  {
+    "id": "E010",
+    "name": "ゴブリンシーフ",
+    "description": "",
+    "hp": 16,
+    "atk": 3,
+    "def": 1,
+    "spd": 1,
+    "coinReward": 2,
+    "medicineDropChance": 3,
+    "sample": true,
+    "estimatedNokaLevel": 2,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "",
+    "bgm": "",
+    "bgmVolume": 100,
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 10,
+        "amount": 1
+      }
+    ],
+    "imageOffsetY": -20,
+    "imageScale": 75,
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [],
+    "specialEnd": {},
+    "image": "assets/enemies/E010.png"
+  },
+  {
+    "id": "E011",
+    "name": "ゴブリンアーチャー",
+    "description": "",
+    "hp": 18,
+    "atk": 3,
+    "def": 1,
+    "spd": 2,
+    "coinReward": 2,
+    "medicineDropChance": 3,
+    "sample": true,
+    "estimatedNokaLevel": 2,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "",
+    "bgm": "",
+    "bgmVolume": 100,
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 20,
+        "amount": 1
+      }
+    ],
+    "imageOffsetY": -24,
+    "imageScale": 75,
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [],
+    "specialEnd": {},
+    "image": "assets/enemies/E011.png"
+  },
+  {
+    "id": "E012",
+    "name": "変異体グラトニーワーム",
+    "description": "",
+    "hp": 20,
+    "atk": 4,
+    "def": 1,
+    "spd": 2,
+    "coinReward": 3,
+    "medicineDropChance": 3,
+    "sample": true,
+    "estimatedNokaLevel": 2,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "assets/backgrounds/E012_battle.jpg",
+    "bgm": "assets/audio/bgm/bgm_enemies_E012.mp3",
+    "bgmVolume": 25,
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 20,
+        "amount": 1
+      },
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 100,
+        "amount": 1
+      }
+    ],
+    "imageOffsetY": 0,
+    "imageScale": 75,
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [],
+    "specialEnd": {},
+    "image": "assets/enemies/E012.png"
+  },
+  {
+    "id": "E014",
+    "name": "暴食の蟲女王グラトニークイーン",
+    "description": "",
+    "hp": 28,
+    "atk": 6,
+    "def": 1,
+    "spd": 2,
+    "coinReward": 3,
+    "medicineDropChance": 3,
+    "sample": true,
+    "estimatedNokaLevel": 2,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "assets/backgrounds/E014_battle.jpg",
+    "bgm": "assets/audio/bgm/bgm_enemies_E012.mp3",
+    "bgmVolume": 25,
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 30,
+        "amount": 2
+      },
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 100,
+        "amount": 3
+      }
+    ],
+    "imageOffsetY": 0,
+    "imageScale": 140,
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [],
+    "specialEnd": {},
+    "image": "assets/enemies/E014.png"
+  },
+  {
+    "id": "E013",
+    "name": "百鬼の戴冠者ゴブリンキング",
+    "description": "",
+    "hp": 30,
+    "atk": 6,
+    "def": 2,
+    "spd": 2,
+    "coinReward": 3,
+    "medicineDropChance": 3,
+    "sample": true,
+    "estimatedNokaLevel": 4,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "assets/backgrounds/E013_battle.jpg",
+    "bgm": "assets/audio/bgm/bgm_enemies_E012.mp3",
+    "bgmVolume": 25,
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 20,
+        "amount": 1
+      },
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 100,
+        "amount": 2
+      }
+    ],
+    "imageOffsetY": -10,
+    "imageScale": 110,
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [],
+    "specialEnd": {},
+    "image": "assets/enemies/E013.png"
+  },
+  {
+    "id": "E015",
+    "name": "寄生暴喰姫グラトニーエンプレス",
+    "description": "",
+    "hp": 32,
+    "atk": 7,
+    "def": 2,
+    "spd": 2,
+    "coinReward": 4,
+    "medicineDropChance": 3,
+    "sample": true,
+    "estimatedNokaLevel": 6,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "battleBackground": "assets/backgrounds/E014_battle.jpg",
+    "bgm": "assets/audio/bgm/bgm_enemies_E012.mp3",
+    "bgmVolume": 25,
+    "drops": [
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 20,
+        "amount": 2
+      },
+      {
+        "kind": "coins",
+        "id": "",
+        "chance": 100,
+        "amount": 3
+      }
+    ],
+    "imageOffsetY": 20,
+    "imageScale": 150,
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0,
+      "sleep": 0
+    },
+    "actionPatterns": [],
+    "actions": [],
+    "specialEnd": {},
+    "image": "assets/enemies/E015.png"
+  },
+  {
+    "id": "E149",
+    "name": "蝋涙の白騎士ルミナリア",
+    "description": "忘却の時計塔に現れる強敵。",
+    "hp": 52,
+    "atk": 9,
+    "def": 3,
+    "spd": 4,
+    "coinReward": 8,
+    "medicineDropChance": 3,
+    "sample": true,
+    "estimatedNokaLevel": 14,
+    "accuracy": 100,
+    "accuracyBonus": 0,
+    "bgm": "",
+    "drops": [],
+    "statusResistances": {
+      "poison": 0,
+      "paralysis": 0,
+      "burn": 0,
+      "blind": 0,
+      "silence": 0,
+      "curse": 0
+    },
+    "actionPatterns": [],
+    "actions": [],
+    "specialEnd": {},
+    "image": "assets/enemies/E149.png"
+  },
+  {
+    "id": "E900",
+    "name": "怪盗ネズミ（サンプル）",
+    "description": "1ターン目に一時強奪、3ターン目の敵行動前に確実に逃走。倒せば奪ったコインを返還。",
+    "hp": 18,
+    "atk": 2,
+    "def": 0,
+    "spd": 2,
+    "coinReward": 8,
+    "medicineDropChance": 0,
+    "sample": true,
+    "specialEnd": {
+      "enabled": true,
+      "condition": "turn",
+      "turn": 3,
+      "chance": 100,
+      "result": "escape",
+      "message": "怪盗ネズミは盗んだコインを抱えて逃走した！",
+      "rewardCoins": 0,
+      "returnStolen": false
+    },
+    "actionPatterns": [
+      {
+        "schedule": "fixed",
+        "turn": 1,
+        "type": "steal_coins",
+        "amount": 15,
+        "stealMode": "temporary"
+      }
+    ]
+  },
+  {
+    "id": "E901",
+    "name": "五刻の門番（サンプル）",
+    "description": "5ターン目に戦闘が特殊終了。倒した場合は通常勝利。",
+    "hp": 90,
+    "atk": 1,
+    "def": 3,
+    "spd": 1,
+    "coinReward": 5,
+    "medicineDropChance": 0,
+    "sample": true,
+    "specialEnd": {
+      "enabled": true,
+      "condition": "turn",
+      "turn": 5,
+      "chance": 100,
+      "result": "special",
+      "message": "門番は武器を下ろした。「五度の攻防、見事に耐えた」",
+      "rewardCoins": 0,
+      "returnStolen": true
+    }
+  }
+]

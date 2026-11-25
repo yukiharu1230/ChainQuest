@@ -1,0 +1,14 @@
+[
+  {
+    "id": "counter_1",
+    "name": "ジェネラルゼリー",
+    "initial": 0,
+    "scope": "save"
+  },
+  {
+    "id": "counter_2",
+    "name": "マゴポクル",
+    "initial": 0,
+    "scope": "save"
+  }
+]
