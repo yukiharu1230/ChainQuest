@@ -193,27 +193,10 @@ async function setVerifiedBackground(id,paths){
 const chainQuestStaticHosting=location.hostname.endsWith('.github.io');
 async function refreshScenarioBackgrounds(){
  if(chainQuestStaticHosting){
-  // On Pages the server's directory scan is unavailable. Background paths in
-  // scenarios.json/enemies.json remain authoritative; probe ID-based filenames
-  // for older records that relied on the local server's auto-discovery.
-  const discovered={scenarios:{},enemies:{}};
-  const candidates=[];
-  for(const [kind,prefix] of [['scenarios','C'],['enemies','E']]){
-   for(const row of catalog?.[kind]||[]){
-    for(const [suffix,key] of (kind==='scenarios'?[['adventure','adventureBackground'],['battle','battleBackground']]:[['battle','battleBackground']])){
-     if(row[key])continue;
-     for(const ext of ['jpg','png','webp']){
-      const path=`assets/backgrounds/${row.id}_${suffix}.${ext}`;
-      candidates.push((async()=>{if(await probeBackground(path)&&!discovered[kind][row.id]?.[key]){
-       (discovered[kind][row.id]??={})[key]=path;
-      }})());
-     }
-    }
-   }
-  }
-  await Promise.all(candidates);
-  discoveredBackgrounds=discovered;
-  if(state){renderAdventure();applyCommonImages()}
+  // GitHub Pages: do not scan for optional ID-named background files.
+  // Explicit backgrounds from the JSON data are used by applyCommonImages();
+  // missing individual backgrounds fall back to the configured common image.
+  discoveredBackgrounds={scenarios:{},enemies:{}};
   return;
  }
  try{const r=await fetch('/api/scenario-backgrounds',{cache:'no-store'});if(!r.ok)return;
