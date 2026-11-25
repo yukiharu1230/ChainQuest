@@ -157,12 +157,38 @@ async function setVerifiedBackground(id,paths){
  node.classList.remove('scenario-blurred-backdrop','scenario-run-backdrop');
  console.warn('[ChainQuest 背景] 表示可能な画像がありません:',id,paths);
 }
+// GitHub Pages serves static files only. Keep the local Editor API when available.
+const chainQuestStaticHosting=location.hostname.endsWith('.github.io');
 async function refreshScenarioBackgrounds(){
+ if(chainQuestStaticHosting){
+  // On Pages the server's directory scan is unavailable. Background paths in
+  // scenarios.json/enemies.json remain authoritative; probe ID-based filenames
+  // for older records that relied on the local server's auto-discovery.
+  const discovered={scenarios:{},enemies:{}};
+  const candidates=[];
+  for(const [kind,prefix] of [['scenarios','C'],['enemies','E']]){
+   for(const row of catalog?.[kind]||[]){
+    for(const [suffix,key] of (kind==='scenarios'?[['adventure','adventureBackground'],['battle','battleBackground']]:[['battle','battleBackground']])){
+     if(row[key])continue;
+     for(const ext of ['jpg','png','webp']){
+      const path=`assets/backgrounds/${row.id}_${suffix}.${ext}`;
+      candidates.push((async()=>{if(await probeBackground(path)&&!discovered[kind][row.id]?.[key]){
+       (discovered[kind][row.id]??={})[key]=path;
+      }})());
+     }
+    }
+   }
+  }
+  await Promise.all(candidates);
+  discoveredBackgrounds=discovered;
+  if(state){renderAdventure();applyCommonImages()}
+  return;
+ }
  try{const r=await fetch('/api/scenario-backgrounds',{cache:'no-store'});if(!r.ok)return;
  discoveredBackgrounds=await r.json();if(state){renderAdventure();applyCommonImages()}
  }catch(e){console.warn('背景画像の自動検出に失敗',e)}
 }
-refreshScenarioBackgrounds();
+if(!chainQuestStaticHosting)refreshScenarioBackgrounds();
 function activeEventBackground(){
  const eventId=state?.eventProgress?.id;
  const ev=eventId?item('events',eventId):null;
@@ -551,7 +577,29 @@ function renderSaves(){const root=$('save-list');root.replaceChildren();for(cons
 $('save').onclick=()=>{if(!saveSafe()||screen!=='home'){notice('手動セーブはホーム画面で行ってください。');return}modal('現在のデータを手動セーブ枠に保存しますか？',()=>{if(write(MANUAL))notice('手動セーブしました。')})};
 document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>go(b.dataset.go)));
 $('hero').onclick=()=>{if(!state)return;hideBubble();let choices=lines.map((_,i)=>i).filter(i=>i!==previous);if(!choices.length)choices=lines.map((_,i)=>i);const index=choices[Math.floor(Math.random()*choices.length)];previous=index;const line=lines[index];$('bubble').textContent=line.text;$('bubble').hidden=false;if(line.voice){voice=new Audio('assets/voices/'+line.voice);voice.onended=hideBubble;voice.onerror=()=>bubbleTimer=setTimeout(hideBubble,3000);voice.play().catch(()=>bubbleTimer=setTimeout(hideBubble,3000))}else bubbleTimer=setTimeout(hideBubble,3000)};
-async function refreshCatalog(){const results=await Promise.all([...Object.keys(TYPES),'enemies','scenarios','events'].map(async k=>{try{const r=await fetch(`${['scenarios','enemies'].includes(k)?'/api/data/':'data/'}${k}${['scenarios','enemies'].includes(k)?'':'.json'}?t=${Date.now()}`,{cache:'no-store'});if(!r.ok)throw Error(r.status);const a=await r.json();return [k,Array.isArray(a)?a:[]]}catch(e){console.warn('データ読込失敗',k,e);return[k,[]]}}));catalog=Object.fromEntries(results);await refreshScenarioBackgrounds();if(state)update();musicSync()}
+async function refreshCatalog(){
+ const results=await Promise.all([...Object.keys(TYPES),'enemies','scenarios','events'].map(async k=>{
+  const useApi=!chainQuestStaticHosting&&['scenarios','enemies'].includes(k);
+  const urls=useApi?[`/api/data/${k}`,`data/${k}.json`]:[`data/${k}.json`];
+  for(const url of urls){
+   try{
+    const r=await fetch(`${url}?t=${Date.now()}`,{cache:'no-store'});
+    if(!r.ok)throw Error(`HTTP ${r.status}`);
+    const rows=await r.json();
+    if(!Array.isArray(rows))throw Error('JSON配列ではありません');
+    return [k,rows];
+   }catch(e){
+    if(url===urls[urls.length-1])console.warn('データ読込失敗',k,url,e);
+    else console.warn('ローカルAPIが利用できないためJSONへ切り替え',k,e);
+   }
+  }
+  return [k,[]];
+ }));
+ catalog=Object.fromEntries(results);
+ await refreshScenarioBackgrounds();
+ if(state)update();
+ musicSync();
+}
 function imgHTML(k,row){
  const folder=k==='equipment'||k==='items'?'items':k==='guests'?'guests':'ui';
  const explicit=String(row.image||row.asset||'').replace(/^\/+/, '');
