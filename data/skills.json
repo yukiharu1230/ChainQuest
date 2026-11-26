@@ -34,6 +34,7 @@
         "target": "enemy",
         "stat": "atk",
         "amount": 100,
+        "attackCount": 1,
         "chance": 100,
         "duration": 0,
         "trigger": "on_use"
@@ -50,6 +51,7 @@
         "target": "enemy",
         "stat": "atk",
         "amount": 2,
+        "attackCount": 1,
         "chance": 100,
         "duration": 0,
         "trigger": "on_use"
@@ -70,6 +72,7 @@
             "target": "enemy",
             "stat": "atk",
             "amount": 100,
+            "attackCount": 1,
             "chance": 100,
             "duration": 0,
             "trigger": "on_use"
@@ -86,6 +89,7 @@
             "target": "enemy",
             "stat": "atk",
             "amount": 2,
+            "attackCount": 1,
             "chance": 100,
             "duration": 0,
             "trigger": "on_use"
@@ -107,6 +111,7 @@
             "target": "enemy",
             "stat": "atk",
             "amount": 100,
+            "attackCount": 1,
             "chance": 100,
             "duration": 0,
             "trigger": "on_use"
@@ -123,6 +128,7 @@
             "target": "enemy",
             "stat": "atk",
             "amount": 3,
+            "attackCount": 1,
             "chance": 100,
             "duration": 0,
             "trigger": "on_use"

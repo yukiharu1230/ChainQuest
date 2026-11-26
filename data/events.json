@@ -5074,7 +5074,7 @@
             ],
             "choices": [
               {
-                "text": "おめぇ、さては厄介リスナーだな？",
+                "text": "アンタ、さては厄介リスナーだな？",
                 "eventNext": 2
               },
               {
@@ -5095,7 +5095,7 @@
           {
             "speaker": "前田ノカ",
             "expression": 2,
-            "text": "おめぇ、さては厄介リスナーだな？",
+            "text": "アンタ、さては厄介リスナーだな？",
             "keepStands": true,
             "voice": "assets/voices/V027_008.mp3"
           },

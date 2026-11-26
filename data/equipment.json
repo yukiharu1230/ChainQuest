@@ -2244,7 +2244,16 @@
       }
     },
     "gachaAuto": true,
-    "weaponSkills": [],
+    "weaponSkills": [
+      {
+        "skillId": "K107",
+        "skillLevels": {
+          "1": 1,
+          "2": 2,
+          "3": 3
+        }
+      }
+    ],
     "statusResistances": {
       "poison": 0,
       "paralysis": 0,
