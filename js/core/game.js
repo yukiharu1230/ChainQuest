@@ -1373,6 +1373,22 @@ async function enemySkill(move,name){
  const template=skill.successMessage||'';logBattle(template?template.replaceAll('{skill}',skill.name).replaceAll('{effects}',messages.join(' ')).replaceAll('{guest}',name):`${name}の${skill.name}！ ${messages.join(' ')||'効果が発動した。'}`);
 }
 async function doEnemyAction(){const {move,preparing}=scheduledEnemyMove();const name=battle.enemy.name||'敵';if(checkSpecialBattleEnd('enemy'))return;if(preparing){logBattle(move.warning);await pauseBattle(Math.max(700,BATTLE_DELAY.result));return}const enemyUsedSkill=move.type==='skill'?item('skills',move.skillId):null;const enemyActionSe=enemyUsedSkill?(enemyUsedSkill.useSe||enemyUsedSkill.se||actionSE('enemy',battle.enemy,move)):actionSE('enemy',battle.enemy,move);const enemyActionSeVolume=enemyUsedSkill&&((enemyUsedSkill.useSe||enemyUsedSkill.se))?enemyUsedSkill.seVolume??100:move?.seVolume??battle.enemy?.seVolume??100;playSE(enemyActionSe,enemyActionSeVolume);logBattle(`${name}の行動！`);await pauseBattle(BATTLE_DELAY.startup);if(move.type==='skill')await enemySkill(move,name);else if(move.type==='steal_coins'){logBattle(stealBattleCoins(move))}else if(move.type==='escape'){specialBattleEnd('escape',move)}else if(move.type==='force_end'){specialBattleEnd('special',move)}else if(move.type==='guard'){battle.enemyGuard=true;logBattle(`${name}は身を守った！`)}else if(move.type==='heal'){const n=Math.max(0,Math.floor(Number(move.amount)||0));const before=battle.enemyHP;battle.enemyHP=Math.min(battle.enemyMaxHP,battle.enemyHP+statusHealAmount('enemy',n));logBattle(`${name}はHPを${battle.enemyHP-before}回復した！`)}else if(STATUS_NAMES[move.type]){const msg=applyEffect({type:move.type,target:'self',amount:move.amount??1,duration:move.duration??3,chance:100,skipChance:move.skipChance??50},name);if(msg)logBattle(`${name}の特殊攻撃！ ${msg}`)}else{enemyAttack();if(!battle.ended){for(const id of equippedEquipmentIds()){const armor=item('equipment',id);const msgs=processEffects(armor,'on_hit',armor?.name||'装備');if(msgs.length)msgs.forEach(logBattle);}endCheck()}}endCheck()}
+// ゲストのターン開始時自動効果。Lv別の効果は item() で解決済み。
+function doGuestTurnStart(){
+ if(!battle||battle.ended)return;
+ for(const id of equippedGuestIds()){
+  const guest=item('guests',id);
+  if(!guest)continue;
+  const source=guest.name||'ゲスト';
+  const effects=[...processEffects(guest,'turn_start',source),
+   ...(Number(state.guestAffection?.[id]||0)>=10?processEffects(guest.affectionBonus,'turn_start',source+'の絆'):[])];
+  if(!effects.length)continue;
+  playGuestSkillVoice(id,'auto');
+  playSE(actionSE('guest',guest));
+  logBattle(guest.supportMessage?guestMessage(guest.supportMessage,source,'支援',effects.join(' ')):`${source}の支援！ ${effects.join(' ')}`);
+  if(endCheck())break;
+ }
+}
 async function doGuestSupport(){if(battle.ended)return;for(const id of equippedGuestIds()){const guest=item('guests',id);if(!guest)continue;await pauseBattle(BATTLE_DELAY.guestLead);if(battle.ended)return;const effects=[...processEffects(guest,'after_player_action',guest.name||'ゲスト'),...(Number(state.guestAffection?.[id]||0)>=10?processEffects(guest.affectionBonus,'after_player_action',(guest.name||'ゲスト')+'の絆'):[])];if(effects.length){playGuestSkillVoice(id,'auto');playSE(actionSE('guest',guest));logBattle(guest.supportMessage?guestMessage(guest.supportMessage,guest.name,'支援',effects.join(' ')):`${guest.name||'ゲスト'}の支援！ ${effects.join(' ')}`);endCheck();await pauseBattle(BATTLE_DELAY.guestSupport)}}}
 async function selectAction(kind){if(!battle||battle.ended||battleLocked)return;if(kind==='attack'||kind==='defend'){battle.selection=null;await takeTurn(kind);return}const rows=kind==='item'?equippedItemIds().map(id=>item('items',id)).filter(x=>x&&x.useContext!=='event'&&Array.isArray(x.effects)&&x.effects.some(e=>(e.trigger||'on_use')==='on_use')):[...equippedSkillChoices().filter(x=>x.skillType!=='passive'&&Array.isArray(x.effects)&&x.effects.some(e=>(e.trigger||'on_use')==='on_use')),...weaponSkillChoices().filter(x=>x.skillType!=='passive'&&Array.isArray(x.effects)&&x.effects.some(e=>(e.trigger||'on_use')==='on_use')),...guestManualChoices()];const available=rows.filter(row=>remainingUses(row,row.guestManual?'guest_skill':row.weaponSkill?'weapon_skill':kind)>0&&!(battle.extraTurnGranted?.p&&onlyExtraTurn(row)));if(!available.length){logBattle(kind==='item'?'使用できるアイテムがありません。':'使用できるスキルがありません。');return}const root=$('combat-choice-list');root.replaceChildren();$('combat-choice-title').textContent=kind==='item'?'アイテムを選択':'スキルを選択';for(const row of available){const b=document.createElement('button');b.className='pick-entry';b.textContent=row.weaponSkill?`${row.name} Lv.${row.skillLevel} / 残り${remainingUses(row,'weapon_skill')}回`:row.guestManual?`${row.name} / ${row.guestName} / 残り${remainingUses(row,'guest_skill')}回`:`${row.name}（残り${remainingUses(row,kind)}回）`;b.onclick=()=>{if(row.guestManual&&(row.effects||[]).some(effect=>effect.type==='restore_item_uses')){
  const options=equippedItemIds().map(id=>item('items',id)).filter(x=>x&&x.useContext!=='event');
@@ -1498,7 +1514,7 @@ async function takeTurn(action){
   let acted=false;
   while(battle?.pendingOrder?.length&&!battle.ended){
    const who=battle.pendingOrder.shift();
-   if(who==='p'){autoCleanseEquippedItems();for(const msg of tickRegens('self'))logBattle(msg);if(endCheck())break;for(const row of [...equippedSkillChoices(),...weaponSkillChoices()].filter(x=>x.skillType==='passive')){const msgs=processEffects(row,'turn_start',row.name);if(msgs.length)msgs.forEach(logBattle)}if(endCheck())break;}
+   if(who==='p'){autoCleanseEquippedItems();for(const msg of tickRegens('self'))logBattle(msg);if(endCheck())break;for(const row of [...equippedSkillChoices(),...weaponSkillChoices()].filter(x=>x.skillType==='passive')){const msgs=processEffects(row,'turn_start',row.name);if(msgs.length)msgs.forEach(logBattle)}if(endCheck())break;doGuestTurnStart();if(endCheck())break;}
    await pauseBattle(BATTLE_DELAY.between);
    const sleeping=statusOn(who==='p'?'self':'enemy','sleep');
    const paralysis=battle.statuses.find(x=>x.target===(who==='p'?'self':'enemy')&&x.type==='paralysis');

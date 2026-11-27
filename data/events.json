@@ -1976,7 +1976,7 @@
           {
             "speaker": "綿飴ユウちゃん",
             "expression": 3,
-            "text": "どうして私のギター持ってるの！？",
+            "text": "どうしてユウちゃんのギター持ってるの！？",
             "keepStands": true,
             "choices": [
               {
@@ -20876,7 +20876,7 @@
           {
             "speaker": "紫雲しあ",
             "expression": 2,
-            "text": "きゃっ……！？　な、なんて禍々しいな力……。",
+            "text": "きゃっ……！？　な、なんて禍々しい力……。",
             "keepStands": true,
             "speakerPositions": [
               "left"
