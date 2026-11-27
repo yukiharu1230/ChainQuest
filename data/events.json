@@ -1363,6 +1363,12 @@
         ]
       },
       {
+        "type": "EVENT_COMPLETE"
+      },
+      {
+        "type": "SCENARIO_CLEAR"
+      },
+      {
         "type": "EVENT_END"
       }
     ],
@@ -4457,7 +4463,7 @@
     ],
     "repeatMode": "until_complete",
     "afterOnceMode": "event",
-    "afterOnceEventId": "V043",
+    "afterOnceEventId": "V044",
     "eventBackground": "assets/backgrounds/V028_event.jpg"
   },
   {
@@ -20101,10 +20107,10 @@
         "enemyId": "E073"
       },
       {
-        "type": "EVENT_END"
+        "type": "EVENT_COMPLETE"
       },
       {
-        "type": "EVENT_COMPLETE"
+        "type": "EVENT_END"
       }
     ],
     "eventBackground": "assets/backgrounds/V079_event.jpg"
