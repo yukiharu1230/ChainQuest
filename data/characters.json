@@ -70,5 +70,77 @@
     "image": "assets/characters/nigapiyo_00.png",
     "unlockMode": "event",
     "eventId": "V027"
+  },
+  {
+    "id": "P009",
+    "name": "サクル",
+    "description": "クッキー族のチャーミングな人気者！",
+    "cv": "砂糖ちか",
+    "image": "assets/characters/sakuru_00.png",
+    "unlockMode": "event",
+    "eventId": "V047"
+  },
+  {
+    "id": "P010",
+    "name": "王国兵士",
+    "description": "苺女王の命令に忠実です！",
+    "cv": "みじかいねこ",
+    "image": "assets/enemies/E052.png",
+    "unlockMode": "event",
+    "eventId": "V061"
+  },
+  {
+    "id": "P011",
+    "name": "ルクレツィアルージュ",
+    "description": "お菓子の国を統べる女王。\n国にとって有益な選択を常に選びます！",
+    "cv": "みじかいねこ",
+    "image": "assets/enemies/E058.png",
+    "unlockMode": "event",
+    "eventId": "V064"
+  },
+  {
+    "id": "P012",
+    "name": "トスティーノ",
+    "description": "フレンチトーストになるはずだったが\nオーブン事件でこんがりしてしまった。\nブレッドマフィア構成員。",
+    "cv": "jouji",
+    "image": "assets/characters/tosu_00.png",
+    "unlockMode": "event",
+    "eventId": "V059"
+  },
+  {
+    "id": "P013",
+    "name": "校長",
+    "description": "とぉ～っても生徒想いの校長先生です。",
+    "cv": "根占幸治",
+    "image": "assets/characters/04koucho_00.png",
+    "unlockMode": "event",
+    "eventId": "V065"
+  },
+  {
+    "id": "P014",
+    "name": "コヨミ",
+    "description": "来世では間違いなく幸せになる女の子。",
+    "cv": "萃茜",
+    "image": "assets/characters/04boss_00.png",
+    "unlockMode": "event",
+    "eventId": "V082"
+  },
+  {
+    "id": "P015",
+    "name": "アゲハ",
+    "description": "生前は新聞部だったギャルゾンビちゃん！\n来世でもコヨミとはズッ友です。",
+    "cv": "みじかいねこ",
+    "image": "assets/characters/04ageha_00.png",
+    "unlockMode": "event",
+    "eventId": "V077"
+  },
+  {
+    "id": "P016",
+    "name": "オーバーハーデス",
+    "description": "霊界のそこそこ偉い亡者。\n霊界の門を守護する中間管理職。",
+    "cv": "根占幸治",
+    "image": "assets/enemies/E070.png",
+    "unlockMode": "event",
+    "eventId": "V076"
   }
 ]

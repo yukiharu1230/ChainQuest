@@ -72,10 +72,10 @@
             "id": "I023"
           }
         ],
-        "keyRank": 0,
-        "trapChance": 30,
-        "trapDifficulty": 10,
-        "trapDamage": 2,
+        "keyRank": 1,
+        "trapChance": 40,
+        "trapDifficulty": 20,
+        "trapDamage": 5,
         "foundText": "宝箱を発見した！",
         "openText": "宝箱を開けた！"
       },
@@ -120,24 +120,6 @@
             "kind": "coin",
             "amount": 3,
             "weight": 20
-          },
-          {
-            "kind": "items",
-            "amount": 100,
-            "weight": 10,
-            "id": "I019"
-          },
-          {
-            "kind": "items",
-            "amount": 100,
-            "weight": 10,
-            "id": "I022"
-          },
-          {
-            "kind": "items",
-            "amount": 100,
-            "weight": 10,
-            "id": "I021"
           }
         ],
         "keyRank": 0,
@@ -15065,7 +15047,7 @@
                 "position": "center",
                 "expression": 0,
                 "scale": 75,
-                "offsetX": -580
+                "offsetX": 0
               }
             ],
             "speakerPositions": [
@@ -15187,7 +15169,7 @@
         "type": "EVENT_END"
       }
     ],
-    "eventBackground": ""
+    "eventBackground": "assets/backgrounds/V062_event.jpg"
   },
   {
     "id": "V065",

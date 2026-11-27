@@ -95,7 +95,8 @@
     "bgm": "assets/audio/bgm/bgm_scenarios_C002.mp3",
     "bgmVolume": 40,
     "unlock": {
-      "type": "always"
+      "type": "bookmark",
+      "itemId": "I901"
     },
     "adventurePrompts": {
       "EASY": "乱れたメロディを調律する！",
@@ -475,7 +476,8 @@
     "bgm": "",
     "bgmVolume": 100,
     "unlock": {
-      "type": "always"
+      "type": "bookmark",
+      "itemId": "I905"
     },
     "adventurePrompts": {
       "EASY": "エリアを進めて戦闘に挑戦しましょう。",
@@ -748,7 +750,8 @@
     "bgm": "",
     "bgmVolume": 100,
     "unlock": {
-      "type": "always"
+      "type": "bookmark",
+      "itemId": "I907"
     },
     "adventurePrompts": {
       "EASY": "エリアを進めて戦闘に挑戦しましょう。",
@@ -994,6 +997,9 @@
         "coins": 7,
         "equipment": [
           "S021"
+        ],
+        "guests": [
+          "G003"
         ]
       }
     },
@@ -1233,6 +1239,7 @@
         "eventId": "V090",
         "weight": 10,
         "difficulties": [
+          "NORMAL",
           "HARD"
         ]
       }
@@ -1399,7 +1406,8 @@
     "description": "幸福に満たされたお菓子だらけのメルヘンな甘い王国。\nあなたは、王国の異変を解決する救世主（パティシエール）である。",
     "areaCount": 10,
     "unlock": {
-      "type": "always"
+      "type": "bookmark",
+      "itemId": "I902"
     },
     "areas": [
       {
@@ -1580,19 +1588,39 @@
     "chestEvents": [
       {
         "eventId": "V100",
-        "weight": 20
+        "weight": 20,
+        "difficulties": [
+          "EASY",
+          "NORMAL",
+          "HARD"
+        ]
       },
       {
         "eventId": "V101",
-        "weight": 25
+        "weight": 25,
+        "difficulties": [
+          "EASY",
+          "NORMAL",
+          "HARD"
+        ]
       },
       {
         "eventId": "V102",
-        "weight": 30
+        "weight": 30,
+        "difficulties": [
+          "EASY",
+          "NORMAL",
+          "HARD"
+        ]
       },
       {
         "eventId": "V103",
-        "weight": 35
+        "weight": 35,
+        "difficulties": [
+          "EASY",
+          "NORMAL",
+          "HARD"
+        ]
       }
     ],
     "difficultyStats": {
@@ -1790,7 +1818,8 @@
     "description": "終わらない放課後、紫煙に包まれた廃校舎で、忘れられた記憶が怪異となって彷徨う。\nあなたは、迷宮の異変を解決する救世主（カウンセラー）である。",
     "areaCount": 10,
     "unlock": {
-      "type": "always"
+      "type": "bookmark",
+      "itemId": "I903"
     },
     "areas": [
       {
@@ -1971,19 +2000,39 @@
     "chestEvents": [
       {
         "eventId": "V110",
-        "weight": 20
+        "weight": 20,
+        "difficulties": [
+          "EASY",
+          "NORMAL",
+          "HARD"
+        ]
       },
       {
         "eventId": "V111",
-        "weight": 25
+        "weight": 25,
+        "difficulties": [
+          "EASY",
+          "NORMAL",
+          "HARD"
+        ]
       },
       {
         "eventId": "V112",
-        "weight": 30
+        "weight": 30,
+        "difficulties": [
+          "EASY",
+          "NORMAL",
+          "HARD"
+        ]
       },
       {
         "eventId": "V113",
-        "weight": 35
+        "weight": 35,
+        "difficulties": [
+          "EASY",
+          "NORMAL",
+          "HARD"
+        ]
       }
     ],
     "difficultyStats": {
@@ -2168,7 +2217,8 @@
     "description": "光の消えた世界で、禁じられた知識と消された歴史を封じ続ける巨大な図書館。\nあなたは、書庫の異変を解決する救世主（語り部）である。",
     "areaCount": 10,
     "unlock": {
-      "type": "always"
+      "type": "bookmark",
+      "itemId": "I904"
     },
     "areas": [
       {
@@ -2554,7 +2604,8 @@
     "description": "青白い光に照らされた世界で、正体不明の病と患者たちの絶望が蔓延する閉鎖病棟。\nあなたは、病棟の異変を解決する救世主（レジデント）である。",
     "areaCount": 10,
     "unlock": {
-      "type": "always"
+      "type": "bookmark",
+      "itemId": "I908"
     },
     "areas": [
       {
@@ -2940,7 +2991,8 @@
     "description": "流星が降り注ぐ丘に建つ大聖堂。祈りが奇跡を生む一方、その代償は静かに空を駆ける。\nあなたは、大聖堂の異変を解決する救世主（シスター）である。",
     "areaCount": 10,
     "unlock": {
-      "type": "always"
+      "type": "bookmark",
+      "itemId": "I906"
     },
     "areas": [
       {
@@ -3065,7 +3117,7 @@
         },
         {
           "mode": "EVENT",
-          "eventId": "V145"
+          "eventId": ""
         }
       ],
       "NORMAL": [
@@ -3136,7 +3188,7 @@
         },
         {
           "mode": "EVENT",
-          "eventId": "V146"
+          "eventId": ""
         }
       ],
       "HARD": [
@@ -3207,26 +3259,46 @@
         },
         {
           "mode": "EVENT",
-          "eventId": "V147"
+          "eventId": ""
         }
       ]
     },
     "chestEvents": [
       {
         "eventId": "V140",
-        "weight": 20
+        "weight": 20,
+        "difficulties": [
+          "EASY",
+          "NORMAL",
+          "HARD"
+        ]
       },
       {
         "eventId": "V141",
-        "weight": 25
+        "weight": 25,
+        "difficulties": [
+          "EASY",
+          "NORMAL",
+          "HARD"
+        ]
       },
       {
         "eventId": "V142",
-        "weight": 30
+        "weight": 30,
+        "difficulties": [
+          "EASY",
+          "NORMAL",
+          "HARD"
+        ]
       },
       {
         "eventId": "V143",
-        "weight": 35
+        "weight": 35,
+        "difficulties": [
+          "EASY",
+          "NORMAL",
+          "HARD"
+        ]
       }
     ],
     "difficultyStats": {

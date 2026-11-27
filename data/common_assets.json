@@ -43,7 +43,9 @@
     "equipment": [
       "S001"
     ],
-    "items": [],
+    "items": [
+      "I900"
+    ],
     "guests": [],
     "skills": [],
     "equipped": {}

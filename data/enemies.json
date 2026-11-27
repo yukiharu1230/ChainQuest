@@ -875,9 +875,9 @@
     "spd": 1,
     "accuracy": 100,
     "accuracyBonus": 0,
-    "battleBackground": "",
-    "bgm": "",
-    "bgmVolume": 100,
+    "battleBackground": "assets/backgrounds/V062_event.jpg",
+    "bgm": "assets/audio/bgm/bgm_enemies_E012.mp3",
+    "bgmVolume": 25,
     "drops": [
       {
         "kind": "coins",
@@ -918,9 +918,9 @@
     "spd": 1,
     "accuracy": 100,
     "accuracyBonus": 0,
-    "battleBackground": "",
-    "bgm": "",
-    "bgmVolume": 100,
+    "battleBackground": "assets/backgrounds/V058_event.jpg",
+    "bgm": "assets/audio/bgm/bgm_enemies_E012.mp3",
+    "bgmVolume": 25,
     "drops": [
       {
         "kind": "coins",
@@ -956,9 +956,9 @@
     "spd": 1,
     "accuracy": 100,
     "accuracyBonus": 0,
-    "battleBackground": "",
-    "bgm": "",
-    "bgmVolume": 100,
+    "battleBackground": "assets/backgrounds/V051_event.jpg",
+    "bgm": "assets/audio/bgm/bgm_enemies_E012.mp3",
+    "bgmVolume": 25,
     "drops": [
       {
         "kind": "coins",

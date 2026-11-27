@@ -569,7 +569,7 @@ function hideBubble(){clearTimeout(bubbleTimer);$('bubble').hidden=true;if(voice
 let queuedScreen=null;function go(id){if(!$(id))return;if(!state?.eventProgress)clearEventDarkWait();if(!state?.eventProgress)clearEventStepImage();if(busy){queuedScreen=id;return}busy=true;if(id==='shop'){document.activeElement?.blur?.();shopPortraitType=Math.random()<0.5?'A':'B';shopExpression=null;prepareShopPortraitEntry()}hideBubble();$('fade').classList.add('on');setTimeout(()=>{if(id==='shop')applyCommonImages();document.querySelectorAll('.screen').forEach(e=>e.classList.toggle('active',e.id===id));screen=id;if(id==='shop')shopExpressionVoice('shopEnter');else if(shopExpression!==null||shopExpressionAudio)resetShopExpression();if(id==='collection')collectionExpressionVoice('collectionEnter');else if(collectionExpression!==null||collectionExpressionAudio)resetCollectionExpression();$('bgm-settings').hidden=true;update();musicSync();if(state&&id!=='title'&&id!=='select')auto();applyCommonImages();refreshSharedBackButtons();$('fade').classList.remove('on');setTimeout(()=>{busy=false;if(queuedScreen){const next=queuedScreen;queuedScreen=null;if(next!==screen)go(next)}},250)},250)}
 function notice(message,duration=1400){const box=$('notice');box.textContent=message;box.classList.add('open');clearTimeout(notice.timer);notice.timer=setTimeout(()=>box.classList.remove('open'),duration)}
 function showReward(kind,row){const box=$('reward-modal');$('reward-kind').textContent=kind==='equipment'?'装備を獲得！':'スキルを獲得！';$('reward-name').textContent=row.name||'名称未設定';const art=$('reward-art');art.replaceChildren();art.classList.remove('reward-small-icon');art.hidden=kind!=='equipment';if(kind==='equipment'){const p=row.image||row.asset;if(typeof p==='string'&&/^assets\/(items|equipment)\/[\w.-]+\.(png|jpg|jpeg|webp)$/i.test(p)){const img=document.createElement('img');img.src=p;img.alt=row.name||'獲得した装備';img.onerror=()=>{art.textContent='画像未登録'};art.append(img)}else art.textContent='画像未登録'}box.classList.add('open');playRewardSE(row);$('reward-close').focus()}
-$('reward-close').onclick=()=>{$('reward-modal').classList.remove('open');const next=rewardAfterClose;rewardAfterClose=null;if(next)next()};
+$('reward-close').onclick=e=>{e.stopPropagation();$('reward-modal').classList.remove('open');const next=rewardAfterClose;rewardAfterClose=null;if(next)next()};
 // Stage 59: story reward presentation, reusing the gacha reward dialog.
 function eventRewardPopup(type,st,done){
  if(st.showReward===false){done();return}
@@ -835,7 +835,9 @@ function openPicker(kind,index){
 
 /* Stage 10: basic scenario/area loop (FIXED battles only; full event engine later). */
 function scenarioUnlocked(c){const u=c.unlock||{};if(u.type==='always'||!u.type)return true;if(u.type==='bookmark')return !!state.bookmarksUnlocked[c.id]||state.inventory.items.includes(u.itemId);return false}
-function grantBookmark(row){if(!row||state.inventory.items.includes(row.id))return false;state.inventory.items.push(row.id);const worlds=catalog.scenarios.filter(c=>c.unlock?.type==='bookmark'&&c.unlock.itemId===row.id);for(const c of worlds)state.bookmarksUnlocked[c.id]=true;auto();if(worlds.length)notifyDialog('新しい栞を入手', '冒険の書に新たなページが解放されました。',row.image||'assets/ui/bookmark_icon.png');return true}
+function bookmarkWorlds(row){return catalog.scenarios.filter(c=>c.unlock?.type==='bookmark'&&c.unlock.itemId===row?.id)}
+function bookmarkShopItems(){return catalog.items.filter(row=>row.bookmark||bookmarkWorlds(row).length)}
+function grantBookmark(row){if(!row||state.inventory.items.includes(row.id))return false;const worlds=bookmarkWorlds(row).filter(c=>!scenarioUnlocked(c));state.inventory.items.push(row.id);for(const c of bookmarkWorlds(row))state.bookmarksUnlocked[c.id]=true;auto();if(worlds.length)notifyDialog('新しい冒険の書が解放！',worlds.map(c=>`「${c.name||c.id}」`).join('、')+'が冒険の書に追加されました。',row.image||'assets/ui/bookmark_icon.png');return true}
 function bookProgress(c){const r=state.scenarios[c.id]||{};return r.difficulties||{EASY:{clears:r.clears||0}}}
 function scenarioAreas(c,d){let areas=(c.areas||[]).map(a=>({...a}));for(const difficulty of DIFFICULTIES){const direct=c.difficultyAreas?.[difficulty];if(Array.isArray(direct)&&direct.length)areas=direct.map(a=>({...a}));const patch=c.difficultyAreaOverrides?.[difficulty]||{};for(const [idx,override] of Object.entries(patch)){const n=Number(idx)-1;if(Number.isInteger(n)&&n>=0&&n<areas.length)areas[n]={...areas[n],...override}}if(difficulty===d)break}return areas}
 // Difficulty coefficients are absolute per difficulty, not cumulative. Invalid values fall back safely.
@@ -928,6 +930,7 @@ function applyScenarioRewards(rewards){
 }
 function finishAdventure(clear){const run=state.adventure;if(!run)return;
  if(clear){
+  const bookmarkShopBefore=new Set(bookmarkShopItems().filter(row=>!state.inventory.items.includes(row.id)&&rewardUnlocked(row,'shop')).map(row=>row.id));
   state.player.coins+=run.coins;
   const record=state.scenarios[run.scenarioId]||{clears:0};record.clears=(record.clears||0)+1;record.difficulties??={};
   const diff=DIFFICULTIES.includes(run.difficulty)?run.difficulty:'EASY';record.difficulties[diff]??={clears:0};
@@ -936,8 +939,15 @@ function finishAdventure(clear){const run=state.adventure;if(!run)return;
   const rewards=first?c?.firstClearRewards?.[diff]:c?.repeatClearRewards?.[diff];
   const summary=applyScenarioRewards(rewards);commonSE('scenarioClear');randomVoice('clear');const affections=grantAffection();
   const unlocked=summary.some(x=>x.includes('冒険の書を解放'));
+  const newlyAvailableBookmarks=bookmarkShopItems().filter(row=>!state.inventory.items.includes(row.id)&&!bookmarkShopBefore.has(row.id)&&rewardUnlocked(row,'shop'));
   const guestNext=()=>{const show=(index)=>{if(index>=affections.length){nextGuestAffectionEvent();return}const affection=affections[index];playGuestAffectionVoice(affection.id);notifyDialog(affection.bonus?'好感度ボーナス解放':'好感度アップ',affection.bonus?`${affection.name}の好感度ボーナスが解放されました。`:`${affection.name}との絆が深まりました。`,null,()=>show(index+1))};show(0)};
-  const afterClear=()=>{if(affections.length)commonSE('affectionUp');if(unlocked)notifyDialog('冒険の書','冒険の書に新たなページが解放されました。',null,guestNext);else guestNext()};
+  const afterClear=()=>{
+   const afterBookmarkAnnouncement=()=>{if(affections.length)commonSE('affectionUp');if(unlocked)notifyDialog('冒険の書','冒険の書に新たなページが解放されました。',null,guestNext);else guestNext()};
+   if(newlyAvailableBookmarks.length){
+    const show=(index)=>{if(index>=newlyAvailableBookmarks.length){afterBookmarkAnnouncement();return}const row=newlyAvailableBookmarks[index];notifyDialog('ショップに新しい栞が追加！',`「${row.name||row.id}」がショップに追加されました。`,row.image||row.asset||'assets/ui/bookmark_icon.png',()=>show(index+1))};
+    show(0);
+   }else afterBookmarkAnnouncement();
+  };
   const message=[...(run.coins>0?[`${run.coins}コインを獲得しました。`]:[]),...(summary.length?['クリア報酬：'+summary.join('、')]:[])].join('\n')||'シナリオをクリアしました！';
   setTimeout(()=>notifyDialog('シナリオクリア！',message,null,afterClear),550);
  }else{notice('敗北……冒険中に獲得したコインを失った。');}
@@ -2075,23 +2085,35 @@ $('novel-dialogue').onclick=novelAdvance;$('novel-dialogue').onkeydown=e=>{if(e.
 // No back/exit button during novel playback; choices and dialogue control progress.
 window.ChainQuestNovel={play:novelPlay};
 $('battle-attack').onclick=()=>selectAction('attack');$('battle-defend').onclick=()=>selectAction('defend');$('battle-item').onclick=()=>selectAction('item');$('battle-skill').onclick=()=>selectAction('skill');
-// Show acquired battle drops one by one before leaving the battle screen.
-// Items are already granted in endBattle; this presentation never grants them again.
+// Present every earned drop in order. The inventory was already updated by
+// endBattle, so this queue only controls presentation (never grants twice).
+let battleDropPresentationActive=false;
 function showBattleDropRewards(drops,done){
- const queue=Array.isArray(drops)?drops.slice():[];
- const next=()=>{
-  if(!queue.length){done();return;}
-  const reward=queue.shift();
-  notifyDialog('ドロップアイテムを獲得！',reward.name||'アイテム',reward.image||'',next);
+ const queue=Array.isArray(drops)?drops.map(reward=>({...reward})):[];
+ if(!queue.length){done();return;}
+ battleDropPresentationActive=true;
+ let index=0;
+ const showNext=()=>{
+  if(index>=queue.length){
+   battleDropPresentationActive=false;
+   done();
+   return;
+  }
+  const reward=queue[index++];
+  // Each reward waits for its own Close action before advancing.
+  notifyDialog('ドロップアイテムを獲得！',reward.name||'アイテム',reward.image||'',showNext);
  };
- next();
+ showNext();
 }
 $('battle-return').onclick=()=>{
- if(!battle?.ended||battle.logBusy||battle.logQueue.length)return;
+ if(battleDropPresentationActive||!battle?.ended||battle.logBusy||battle.logQueue.length)return;
  if(!battle.rewardDropsShown&&battle.victory&&battle.rewardDrops?.length){
   battle.rewardDropsShown=true;
-  const rewards=battle.rewardDrops;
-  showBattleDropRewards(rewards,()=>{$('battle-return').click()});
+  const rewards=battle.rewardDrops.slice();
+  showBattleDropRewards(rewards,()=>{
+   // Leave the battle only after the final reward was explicitly closed.
+   if(battle?.ended)$('battle-return').click();
+  });
   return;
  }
  const win=battle.victory,adventure=battle.inAdventure;
